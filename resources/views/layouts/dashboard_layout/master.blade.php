@@ -104,17 +104,7 @@
 <!-- Chart JS -->
 <script src="{{asset('js/dashboard1.js')}}"></script>
 <script src="{{asset('js/toastr.js')}}"></script>
-<script>
-    $.toast({
-        heading: 'Welcome to Monster admin',
-        text: 'Use the predefined ones, or specify a custom position object.',
-        position: 'top-right',
-        loaderBg: '#ff6849',
-        icon: 'info',
-        hideAfter: 3000,
-        stack: 6
-    });
-</script>
+
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->

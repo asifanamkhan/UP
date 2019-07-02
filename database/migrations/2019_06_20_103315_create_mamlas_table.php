@@ -19,7 +19,15 @@ class CreateMamlasTable extends Migration
             $table->string('subject')->nullable();
             $table->string('mamlar_date')->nullable();
             $table->string('sunanir_date')->nullable();
+            $table->string('badi_name')->nullable();
+            $table->string('badi_fname')->nullable();
+            $table->string('badi_gram')->nullable();
+            $table->string('bibadi_name')->nullable();
+            $table->string('bibadi_fname')->nullable();
+            $table->string('bibadi_gram')->nullable();
+            $table->string('condition')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

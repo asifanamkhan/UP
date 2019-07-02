@@ -14,7 +14,7 @@ class MamlaController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -24,7 +24,10 @@ class MamlaController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.mamla.create');
+        $mamla_count = Mamla::get('id')->count();
+        $mamla = $mamla_count+1;
+
+        return view('pages.dashboard.mamla.create',compact('mamla'));
     }
 
     /**
@@ -35,8 +38,123 @@ class MamlaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $mamla = new Mamla();
+
+        $mamla->create([
+            'subject'      => $request->subject,
+            'mamla_no'      => $request->mamla_no,
+            'mamlar_date'   => $request->mamlar_date,
+            'sunanir_date'   => $request->sunanir_date,
+            'condition'   => $request->condition,
+            'badi_name'  => implode("|",$request->badi_name),
+            'badi_fname'  => implode("|",$request->badi_fname),
+            'badi_gram'  => implode("|",$request->badi_gram),
+            'bibadi_name'  => implode("|",$request->bibadi_name),
+            'bibadi_fname'  => implode("|",$request->bibadi_fname),
+            'bibadi_gram'  => implode("|",$request->bibadi_gram),
+
+        ]);
+
+        return redirect()->route('mamla.create');
+
+
     }
+
+    public function mamlaShow(Request $request){
+
+        $columns = array(
+            0 =>'id',
+            1 =>'id',
+            2 => 'subject',
+            3 => 'mamlar_date',
+            4 => 'sunanir_date',
+            5 => 'condition',
+            6 => 'action',
+
+        );
+
+        $totalData = Mamla::count();
+
+        $totalFiltered = $totalData;
+
+        $limit = $request->input('length');
+        $start = $request->input('start');
+        $order = $columns[$request->input('order.0.column')];
+        $dir = $request->input('order.0.dir');
+
+        if(empty($request->input('search.value')))
+        {
+            $mamla = Mamla::offset($start)
+                ->limit($limit)
+                ->orderBy($order,$dir)
+                ->get();
+        }
+        else {
+            $search = $request->input('search.value');
+
+            $mamla =  Mamla::where('id','LIKE',"%{$search}%")
+                ->orWhere('subject', 'LIKE',"%{$search}%")
+                ->orWhere('mamlar_date', 'LIKE',"%{$search}%")
+                ->orWhere('sunanir_date', 'LIKE',"%{$search}%")
+                ->offset($start)
+                ->limit($limit)
+                ->orderBy($order,$dir)
+                ->get();
+
+            $totalFiltered = Mamla::where('id','LIKE',"%{$search}%")
+                ->orWhere('subject', 'LIKE',"%{$search}%")
+                ->orWhere('mamlar_date', 'LIKE',"%{$search}%")
+                ->orWhere('sunanir_date', 'LIKE',"%{$search}%")
+                ->count();
+        }
+
+        $data = array();
+
+        if(!empty($mamla))
+        {
+            foreach ($mamla as $key => $value)
+            {
+                $nestedData['id'] = $value->id;
+                $nestedData['id'] = $value->id;
+                $nestedData['subject'] = $value->subject;
+                $nestedData['mamlar_date'] = $value->mamlar_date ;
+                $nestedData['sunanir_date'] = $value->sunanir_date ;
+                if($value->condition == 0){
+                    $nestedData['condition'] = '<a href="" id="condition" class="btn btn-primary btn-sm">
+                                    চলমান
+                                </a>';
+                }
+                elseif ($value->condition == 1){
+                    $nestedData['condition'] = 'সম্পাদিত';
+                }
+                else{
+                    $nestedData['condition'] = 'বাতিল';
+                }
+                $nestedData['action'] = ' <div class="btn-group">
+                                <a href="'.route('NewNagorikSonodFeeDash',$value->id) .'" class="btn btn-primary btn-sm" title="Print">
+                                    Print
+                                </a>
+                            </div>';
+                $data[] = $nestedData;
+
+
+            }
+        }
+
+        $json_data = array(
+            "draw"            => intval($request->input('draw')),
+            "recordsTotal"    => intval($totalData),
+            "recordsFiltered" => intval($totalFiltered),
+            "data"            => $data
+        );
+
+        echo json_encode($json_data);
+
+
+
+    }
+
 
     /**
      * Display the specified resource.

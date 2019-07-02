@@ -184,3 +184,5 @@ Route::get('nagorikFormDash','NagorikAbedonController@nagorikFormDash')->name('n
 //});
 Route::get('aaa','NagorikAbedonController@aaa')->name('aaa');
 
+Route::post('mamlaShow','MamlaController@mamlaShow')->name('mamlaShow');
+

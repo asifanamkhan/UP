@@ -1,21 +1,10 @@
 @extends('layouts.dashboard_layout.master')
 @section('content')
-    <div class="row page-titles">
-        <div class="col-md-6 col-8 align-self-center">
-            <h3 class="text-themecolor mb-0 mt-0">মামলার নোটিশ</h3>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                <li class="breadcrumb-item">মামলার নোটিশ</li>
-                <li class="breadcrumb-item active">মামলার নোটিশ</li>
-            </ol>
-        </div>
-    </div>
-
     <!-- left Content Start-->
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading" style=" color:white; font-size: 20px;background:#40A291;text-align:center;">মামলার নোটিশ</div>
+                <div class="panel-heading" style=" color:white; font-size: 15px;background:#40A291;text-align:center;">মামলার নোটিশ</div>
                 <div class="panel-body"  style="min-height:310px;">
                     <div class="row">
 
@@ -32,35 +21,36 @@
                                     </div>
                                 </div>
                                 <div class="card" id="mamla_notice_form">
-                                    <form action="" method="post">
+                                    <form action="{{route('mamla.store')}}" method="post">
+                                        @csrf
                                         <div class="container">
                                             <div class="card-header " > মামলার নোটিশের আবেদন ফরম:</div>
                                             <div class="card-body text-right">
                                                 <div class="row mt-4">
                                                     <label for="" class="col-sm-2">মামলা নং</label>
                                                     <div class="col-sm-4">
-                                                        <input type="text" class="form-control" name="mamla_no" readonly>
+                                                        <input type="text" class="form-control" value="{{$mamla}}" name="mamla_no" readonly>
                                                     </div>
                                                 </div>
 
                                                 <div class="row mt-4 text-right">
                                                     <label for="" class="col-sm-2">বিষয়</label>
                                                     <div class="col-sm-8">
-                                                        <input type="text" name="subject" class="form-control">
+                                                        <input type="text" id="subject" name="subject" class="form-control">
                                                     </div>
                                                 </div>
 
                                                 <div class="row mt-4 text-right">
                                                     <label for="" class="col-sm-2">মামলার তারিখ</label>
                                                     <div class="col-sm-4">
-                                                        <input type="date" name="mamlar_date" class="form-control">
+                                                        <input type="date" id="mamlar_date" name="mamlar_date" class="form-control">
                                                     </div>
                                                 </div>
 
                                                 <div class="row mt-4 text-right">
                                                     <label for="" class="col-sm-2">শুনানীর তারিখ</label>
                                                     <div class="col-sm-4">
-                                                        <input type="date" name="sunanir_date" class="form-control">
+                                                        <input type="date" id="sunanir_date" name="sunanir_date" class="form-control">
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,45 +61,58 @@
                                             `<div class="card">
                                                 <div class="card-header ">বাদীর তথ্য:</div>
                                                 <div class="card-body">
+                                                    <div id="badir_info">
+
+
                                                     <div class="row">
-                                                        <div id="bibadir_info">
-                                                            <div class="col-sm-3 col-sm-offset-1">
+                                                        <div class="col-sm-9 col-sm-offset-1">
+                                                            <div class="col-sm-4 ">
                                                                 <label for="" class="col-sm-offset-5">নাম</label>
                                                                 <div>
-                                                                    <input type="text" name="badi_name[]" class="form-control">
+                                                                    <input type="text" id="" name="badi_name[]"  class="form-control badi_name">
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-sm-3 ">
+                                                            <div class="col-sm-4 ">
                                                                 <label for="" class="col-sm-offset-5">পিতার নাম</label>
                                                                 <div>
-                                                                    <input type="text" name="badi_fname[]" class="form-control">
+                                                                    <input type="text" id="badi_fname" name="badi_fname[]" class="form-control badi_fname">
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-sm-3 ">
+                                                            <div class="col-sm-4 ">
                                                                 <label for="" class="col-sm-offset-5">গ্রাম</label>
                                                                 <div>
-                                                                    <input type="text" name="badi_gram[]" class="form-control">
+                                                                    <input type="text" id="badi_gram" name="badi_gram[]" class="form-control badi_gram1">
                                                                 </div>
                                                             </div>
+
                                                         </div>
                                                         <div class="col-sm-2 mt-5">
 
-                                                            <a href="" class="btn-sm btn-primary ">যোগ করুন</a>
+                                                            <a href="" id="badi_add" class="btn-sm btn-primary ">যোগ করুন</a>
                                                         </div>
 
+                                                    </div>
                                                     </div>
                                                     <div class="row mt-4">
-                                                        <label for="" class="col-sm-1" >গ্রাম</label>
-                                                        <div class="col-sm-3">
-                                                            <input type="text" name="bibadi_name" class="form-control" readonly>
+                                                        <div class="col-sm-1 text-right">
+                                                            <label for="" >গ্রাম</label>
+
                                                         </div>
-                                                        <div class="col-md-3 text-left">
-                                                            <input type="checkbox" id="badi_Check" > হাঁ (সবাই একই গ্রামের)
+                                                        <div class="col-sm-9 ">
+                                                            <div class="col-sm-4 ">
+                                                                <div>
+                                                                    <input type="text" disabled name="badi_gram[]" id="badi_gram2" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 ">
+                                                                <div>
+                                                                    <input id="badi_check" type="checkbox">হাঁ (সবাই একই গ্রামের)
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
@@ -117,47 +120,63 @@
                                             `<div class="card">
                                                 <div class="card-header ">বিবাদীর তথ্য:</div>
                                                 <div class="card-body">
+                                                    <div id="bibadir_info">
+
+
                                                     <div class="row">
-                                                        <div class="col-sm-3 col-sm-offset-1">
-                                                            <label for="" class="col-sm-offset-5">নাম</label>
-                                                            <div>
-                                                                <input type="text" name="bibadi_name[]" class="form-control">
+                                                        <div class="col-sm-9 col-sm-offset-1">
+                                                            <div class="col-sm-4 ">
+                                                                <label for="" class="col-sm-offset-5">নাম</label>
+                                                                <div>
+                                                                    <input type="text" name="bibadi_name[]"  class="form-control bibadi_name">
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="col-sm-3 ">
-                                                            <label for="" class="col-sm-offset-5">পিতার নাম</label>
-                                                            <div>
-                                                                <input type="text" name="bibadi_fname[]" class="form-control">
+                                                            <div class="col-sm-4 ">
+                                                                <label for="" class="col-sm-offset-5">পিতার নাম</label>
+                                                                <div>
+                                                                    <input type="text" name="bibadi_fname[]" class="form-control bibadi_fname">
+                                                                </div>
                                                             </div>
-                                                        </div>
 
-                                                        <div class="col-sm-3 ">
-                                                            <label for="" class="col-sm-offset-5">গ্রাম</label>
-                                                            <div>
-                                                                <input type="text" name="bibadi_gram[]" class="form-control">
+                                                            <div class="col-sm-4 ">
+                                                                <label for="" class="col-sm-offset-5">গ্রাম</label>
+                                                                <div>
+                                                                    <input type="text" name="bibadi_gram[]" class="form-control bibadi_gram1">
+                                                                </div>
                                                             </div>
+
                                                         </div>
                                                         <div class="col-sm-2 mt-5">
 
-                                                            <a href="" class="btn-sm btn-primary ">যোগ করুন</a>
+                                                            <a href="" id="bibadi_add" class="btn-sm btn-primary ">যোগ করুন</a>
                                                         </div>
 
+                                                    </div>
                                                     </div>
                                                     <div class="row mt-4">
-                                                        <label for="" class="col-sm-1" >গ্রাম</label>
-                                                        <div class="col-sm-3">
-                                                            <input type="text" name="bibadi_gram" class="form-control" readonly>
+                                                        <div class="col-sm-1 text-right">
+                                                            <label for="">গ্রাম</label>
+
                                                         </div>
-                                                        <div class="col-md-3 text-left">
-                                                            <input type="checkbox" id="bibadi_Check" > হাঁ (সবাই একই গ্রামের)
+                                                        <div class="col-sm-9 ">
+                                                            <div class="col-sm-4 ">
+                                                                <div>
+                                                                    <input type="text" disabled name="bibadi_gram[]" id="bibadi_gram2" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 ">
+                                                                <div>
+                                                                    <input id="bibadi_check" type="checkbox">হাঁ (সবাই একই গ্রামের)
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="" class="col-sm-offset-5 btn btn-info">Generate</a>
+                                        <input type="hidden" name="condition" value="0">
+                                        <button id="Generate" class="col-sm-offset-5 btn btn-info"> Generate</button>
                                 </form>
 
                             </div>
@@ -195,6 +214,29 @@
             </div>
         </div>
     </div>
+
+    {{--Modals--}}
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 @endsection
 @section('script')
 
@@ -209,18 +251,277 @@
     <script>
 
         $('#all_mamla').hide();
+
         $('#notice_talika').on('click',function () {
             $('#all_mamla').show();
             $('#mamla_notice_form').hide();
+
+            //Mamla Talika Show Ajax
+
+            $('#example'). DataTable( {
+                "lengthMenu": [[ 25, 50,100, -1], [ 25, 50,100, "All"]],
+
+                "processing": true,
+                "serverSide": true,
+                "bDestroy": true,
+                "language": {
+                    processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> '},
+
+                "ajax":{
+                    "url": "{{ route('mamlaShow') }}",
+                    "dataType": "json",
+                    "type": "POST",
+                    "data":{ _token: "{{ csrf_token() }}"}
+
+                },
+                "columns": [
+                    { "data": "id" },
+                    { "data": "id" },
+                    { "data": "subject" },
+                    { "data": "mamlar_date" },
+                    { "data": "sunanir_date" },
+                    { "data": "condition" },
+                    { "data": "action" },
+                ],
+
+            });
+
         });
+
         $('#mamla_notice').on('click',function () {
             $('#all_mamla').hide();
             $('#mamla_notice_form').show();
         });
-        $('#example'). DataTable( {
-            "lengthMenu": [[ 25, 50,100, -1], [ 25, 50,100, "All"]],
+
+        //badi
+
+        var max_fields1 = 30;
+        x=0;
+        $('#badi_add').on('click',function (e) {
+            e.preventDefault();
+            var name=0;
+            var fname=0;
+           $('.badi_name').each(function () {
+               if ($(this).val() == '') {
+                   name++;
+               }
+           });
+           $('.badi_fname').each(function () {
+                if ($(this).val() == '') {
+                    fname++;
+                    console.log(fname);
+                }
+            });
+
+           if(name>0){
+
+               alert('দু:খিত! বাদীর নাম দিতে হবে')
+           }
+           else if(fname>0){
+               alert('দু:খিত! বাদীর পিতার নাম দিতে হবে')
+           }
+           else{
+               if(x<max_fields1){
+                   x++;
+                   $('#badir_info').append('<div class="row">\n' +
+                       '                                                        <div class="col-sm-9 col-sm-offset-1">\n' +
+                       '                                                            <div class="col-sm-4 ">\n' +
+                       '                                                                <label for="" class="col-sm-offset-5">নাম</label>\n' +
+                       '                                                                <div>\n' +
+                       '                                                                    <input type="text" name="badi_name[]" class="form-control badi_name">\n' +
+                       '                                                                </div>\n' +
+                       '                                                            </div>\n' +
+                       '\n' +
+                       '                                                            <div class="col-sm-4 ">\n' +
+                       '                                                                <label for="" class="col-sm-offset-5">পিতার নাম</label>\n' +
+                       '                                                                <div>\n' +
+                       '                                                                    <input type="text" name="badi_fname[]" class="form-control badi_fname">\n' +
+                       '                                                                </div>\n' +
+                       '                                                            </div>\n' +
+                       '\n' +
+                       '                                                            <div class="col-sm-4 ">\n' +
+                       '                                                                <label for="" class="col-sm-offset-5">গ্রাম</label>\n' +
+                       '                                                                <div>\n' +
+                       '                                                                    <input type="text" name="badi_gram[]" class="form-control badi_gram1">\n' +
+                       '                                                                </div>\n' +
+                       '                                                            </div>\n' +
+                       '\n' +
+                       '                                                        </div>\n' +
+                       '                                                        <div class="col-sm-2 mt-5">\n' +
+                       '\n' +
+                       '                                                            <a href="" id="badi_remove" class="btn-sm btn-danger ">Remove</a>\n' +
+                       '                                                        </div>\n' +
+                       '\n' +
+                       '                                                    </div>');
+               }
+           }
+        });
+
+        $('#badir_info').on("click","#badi_remove", function(e){
+            e.preventDefault();
+            $(this).parent('div').parent().remove();
+            x--;
+        });
+
+        // Bibadi
+        var max_fields2 = 30;
+        y=0;
+        $('#bibadi_add').on('click',function (e) {
+            e.preventDefault();
+
+            var bibadi_name=0;
+            var bibadi_fname=0;
+            $('.bibadi_name').each(function () {
+                if ($(this).val() == '') {
+                    bibadi_name++;
+                }
+            });
+            $('.bibadi_fname').each(function () {
+                if ($(this).val() == '') {
+                    bibadi_fname++;
+
+                }
+            });
+
+            if(bibadi_name>0){
+
+                alert('দু:খিত! বিবাদীর নাম দিতে হবে')
+            }
+            else if(bibadi_fname>0){
+                alert('দু:খিত! বিবাদীর পিতার নাম দিতে হবে')
+            }
+            else{
+                if(y<max_fields2){
+                    x++;
+                    $('#bibadir_info').append('<div class="row">\n' +
+                        '                                                        <div class="col-sm-9 col-sm-offset-1">\n' +
+                        '                                                            <div class="col-sm-4 ">\n' +
+                        '                                                                <label for="" class="col-sm-offset-5">নাম</label>\n' +
+                        '                                                                <div>\n' +
+                        '                                                                    <input type="text" name="bibadi_name[]" class="form-control bibadi_name">\n' +
+                        '                                                                </div>\n' +
+                        '                                                            </div>\n' +
+                        '\n' +
+                        '                                                            <div class="col-sm-4 ">\n' +
+                        '                                                                <label for="" class="col-sm-offset-5">পিতার নাম</label>\n' +
+                        '                                                                <div>\n' +
+                        '                                                                    <input type="text" name="bibadi_fname[]" class="form-control bibadi_fname">\n' +
+                        '                                                                </div>\n' +
+                        '                                                            </div>\n' +
+                        '\n' +
+                        '                                                            <div class="col-sm-4 ">\n' +
+                        '                                                                <label for="" class="col-sm-offset-5">গ্রাম</label>\n' +
+                        '                                                                <div>\n' +
+                        '                                                                    <input type="text" name="bibadi_gram[]" class="form-control bibadi_gram1">\n' +
+                        '                                                                </div>\n' +
+                        '                                                            </div>\n' +
+                        '\n' +
+                        '                                                        </div>\n' +
+                        '                                                        <div class="col-sm-2 mt-5">\n' +
+                        '\n' +
+                        '                                                            <a href="" id="bibadi_remove" class="btn-sm btn-danger ">Remove</a>\n' +
+                        '                                                        </div>\n' +
+                        '\n' +
+                        '                                                    </div>');
+                }
+            }
 
         });
+
+        $('#bibadir_info').on("click","#bibadi_remove", function(e){
+            e.preventDefault();
+            $(this).parent('div').parent().remove();
+            y--;
+        });
+
+        $('#badi_check').on('click',function () {
+
+            if($('#badi_check').prop('checked')){
+                   $('#badi_gram2').prop('disabled',false);
+                   $('.badi_gram1').prop('disabled',true);
+            }
+            else{
+                $('#badi_gram2').prop('disabled',true);
+                $('.badi_gram1').prop('disabled',false);
+            }
+
+        });
+
+        $('#bibadi_check').on('click',function () {
+
+            if($('#bibadi_check').prop('checked')){
+                $('#bibadi_gram2').prop('disabled',false);
+                $('.bibadi_gram1').prop('disabled',true);
+            }
+            else{
+                $('#bibadi_gram2').prop('disabled',true);
+                $('.bibadi_gram1').prop('disabled',false);
+            }
+        });
+
+        $('#Generate').on('click',function (e) {
+            if($('#subject').val()==''){
+                alert('বিষয় প্রদান করুন ');
+                e.preventDefault();
+            }
+            else if($('#mamlar_date').val()==''){
+                alert('মামলা এবং শুনানীর তারিখ ঠিকমত প্রদান করুন  ');
+                e.preventDefault();
+            }
+
+            else if($('#sunanir_date').val()==''){
+                alert('মামলা এবং শুনানীর তারিখ ঠিকমত প্রদান করুন  ');
+                e.preventDefault();
+            }
+
+            var name=0;
+            var fname=0;
+            $('.badi_name').each(function () {
+                if ($(this).val() == '') {
+                    name++;
+                }
+            });
+            $('.badi_fname').each(function () {
+                if ($(this).val() == '') {
+                    fname++;
+                }
+            });
+
+            if(name>0){
+                alert('দু:খিত! বাদীর নাম দিতে হবে')
+                e.preventDefault();
+            }
+            else if(fname>0){
+                alert('দু:খিত! বাদীর পিতার নাম দিতে হবে')
+                e.preventDefault();
+            }
+
+            var bibadi_name=0;
+            var bibadi_fname=0;
+            $('.bibadi_name').each(function () {
+                if ($(this).val() == '') {
+                    bibadi_name++;
+                }
+            });
+            $('.bibadi_fname').each(function () {
+                if ($(this).val() == '') {
+                    bibadi_fname++;
+                }
+            });
+
+            if(bibadi_name>0){
+                alert('দু:খিত! বিবাদীর নাম দিতে হবে')
+                e.preventDefault();
+            }
+            else if(bibadi_fname>0){
+                alert('দু:খিত! বিবাদীর পিতার নাম দিতে হবে')
+                e.preventDefault();
+            }
+
+        });
+
+
+// Conditin Modal
 
 
 
