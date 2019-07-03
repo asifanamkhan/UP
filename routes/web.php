@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('warish_sonod_abedon', 'WarishSonodAbedonController');
     Route::resource('others_sonod_abedon', 'OthersSonodAbedonController');
     Route::resource('mamla', 'MamlaController');
+    Route::resource('tax', 'TaxController');
 
 
 Route::get('mrittu_sonod', 'OthersSonodAbedonController@mrittusonod')->name('mrittu_sonod');

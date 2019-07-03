@@ -22,7 +22,7 @@
     <!-- ============================================================== -->
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
-    <header class="topbar" >
+    <header style="" class="topbar" >
         @include('layouts.dashboard_layout.nav')
     </header>
     <!-- ============================================================== -->

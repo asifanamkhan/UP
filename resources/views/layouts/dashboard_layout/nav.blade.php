@@ -1,4 +1,4 @@
-<nav class="navbar top-navbar navbar-expand-md navbar-light" >
+<nav style=" height: 10px" class="navbar top-navbar navbar-expand-md navbar-light" >
     <!-- ============================================================== -->
     <!-- Logo -->
     <!-- ============================================================== -->
@@ -10,15 +10,15 @@
                 <!-- Dark Logo icon -->
                 <img src="{{asset('images/logo-icon.png')}}" alt="homepage" class="dark-logo" />
                 <!-- Light Logo icon -->
-                <img src="{{asset('images/logo-light-icon.png')}}" alt="homepage" class="light-logo" />
+
             </b>
             <!--End Logo icon -->
             <!-- Logo text -->
             <span>
                          <!-- dark Logo text -->
-                         <img src="{{asset('images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                         <img  src="{{asset('images/logo-text.png')}}" alt="homepage" class="dark-logo" />
                 <!-- Light Logo text -->
-                         <img src="{{asset('images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
+                         <img style="margin-top: 18px" src="{{asset('images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
     </div>
     <!-- ============================================================== -->
     <!-- End Logo -->
@@ -59,8 +59,8 @@
         <ul class="navbar-nav my-lg-0">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{{asset('images/users/1.jpg')}}" alt="user" class="profile-pic" /></a>
-                <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                    <ul class="dropdown-user">
+                <div style="background-color: white" class="dropdown-menu dropdown-menu-right animated flipInY">
+                    <ul class="dropdown-user" style="background-color: white">
                         <li>
                             <div class="dw-user-box">
                                 <div class="u-img"><img src="{{asset('images/users/1.jpg')}}" alt="user"></div>

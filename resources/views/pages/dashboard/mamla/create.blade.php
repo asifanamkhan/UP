@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading" style=" color:white; font-size: 15px;background:#40A291;text-align:center;">মামলার নোটিশ</div>
+                <div class="panel-heading" style=" color:white; font-size: 14px;background:#40A291;text-align:center;"><b>মামলার নোটিশ</b></div>
                 <div class="panel-body"  style="min-height:310px;">
                     <div class="row">
 
@@ -14,8 +14,8 @@
                                     <div class="row box" style="padding-bottom:20px;margin-top:10px;">
                                         <div class="container">
                                             <ul class="nav nav-tabs" id="myTab">
-                                                <li class="active"><a data-toggle="tab" href="#menu" id="mamla_notice" style="font-size:16px;">মামলার নোটিশ ফরম</a></li>
-                                                <li class=""><a data-toggle="tab" href="#menu1" id="notice_talika" style="font-size:16px;">নোটিশের তালিকা</a></li>
+                                                <li id="mamla_notice" class="active"><a data-toggle="tab" href="#menu"  style="font-size:16px;">মামলার নোটিশ ফরম</a></li>
+                                                <li id="notice_talika" class=""><a data-toggle="tab" href="#menu1"  style="font-size:16px;">নোটিশের তালিকা</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -178,7 +178,6 @@
                                         <input type="hidden" name="condition" value="0">
                                         <button id="Generate" class="col-sm-offset-5 btn btn-info"> Generate</button>
                                 </form>
-
                             </div>
 
                             <div class="card" id="all_mamla">
@@ -215,27 +214,7 @@
         </div>
     </div>
 
-    {{--Modals--}}
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
-                </div>
-                <div class="modal-body">
-                    <p>Some text in the modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
 @endsection
 @section('script')
@@ -519,6 +498,8 @@
             }
 
         });
+
+
 
 
 // Conditin Modal
