@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tax;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class TaxController extends Controller
 {
@@ -24,7 +25,8 @@ class TaxController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.tax.create');
+        $result = null;
+        return view('pages.dashboard.tax.create',compact('result'));
     }
 
     /**
@@ -35,7 +37,7 @@ class TaxController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Tax::create($request->all());
     }
 
     /**
@@ -81,5 +83,17 @@ class TaxController extends Controller
     public function destroy(Tax $tax)
     {
         //
+    }
+
+    //bosot_kor_aday_table_ajax
+
+    public function bosot_kor_aday(Request $request){
+
+        $holding = Tax::where('word_no',$request->word_no)
+            ->where('holding_no',$request->holding_no)
+            ->get();
+
+
+        return $holding;
     }
 }

@@ -1815,7 +1815,9 @@ File: scss
 *******************/
 .topbar {
   position: relative;
-  z-index: 50; }
+  z-index: 50;
+
+}
   .topbar .top-navbar {
     min-height: 70px;
     margin: 0 auto;

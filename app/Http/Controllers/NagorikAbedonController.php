@@ -41,6 +41,9 @@ class NagorikAbedonController extends Controller
     {
         //dd($request);
         //dd($request->attached);
+        $year = Carbon::now()->year;
+        $sonod_no = $year . time().mt_rand(100, 999);
+        //dd($sonod_no);
         if ($request->hasfile('image')){
             $images = $request->file('image');
                 $attached  = str_random( 2 ) . time() . '.' . $images->getClientOriginalExtension();
@@ -56,6 +59,7 @@ class NagorikAbedonController extends Controller
         $img1 = $attached;
         $nagorikAbedon->update([
             'image'=>$img1,
+            'sonod_no'=>$sonod_no,
         ]);
 
 
@@ -149,7 +153,7 @@ class NagorikAbedonController extends Controller
             0 =>'image',
             1 =>'bname',
             2 => 'token',
-            3 => 'id',
+            3 => 'sonod_no',
             4 => 'delivery_type',
             5 => 'mob',
             6 => 'created_at',
@@ -221,7 +225,7 @@ class NagorikAbedonController extends Controller
 
             $NagorikAbedon =  NagorikAbedon::where('bname','LIKE',"%{$search}%")
                 ->orWhere('token', 'LIKE',"%{$search}%")
-                ->orWhere('id', 'LIKE',"%{$search}%")
+                ->orWhere('sonod_no', 'LIKE',"%{$search}%")
                 ->orWhere('delivery_type', 'LIKE',"%{$search}%")
                 ->orWhere('mob', 'LIKE',"%{$search}%")
                 ->offset($start)
@@ -231,7 +235,7 @@ class NagorikAbedonController extends Controller
 
             $totalFiltered = NagorikAbedon::where('bname','LIKE',"%{$search}%")
                 ->orWhere('token', 'LIKE',"%{$search}%")
-                ->orWhere('id', 'LIKE',"%{$search}%")
+                ->orWhere('sonod_no', 'LIKE',"%{$search}%")
                 ->orWhere('delivery_type', 'LIKE',"%{$search}%")
                 ->orWhere('mob', 'LIKE',"%{$search}%")
                 ->count();
@@ -248,7 +252,7 @@ class NagorikAbedonController extends Controller
                    $nestedData['image'] = $nestedData['image'] = '<a class=""  href="'.url("images/$value->image").'"><img class="card-img" style="width: 45px;height: 45px"  src="'.url("images/$value->image").'"  alt=""></a>';
                    $nestedData['bname'] = $value->bname;
                    $nestedData['token'] = $value->token;
-                   $nestedData['id'] = $value->id ;
+                   $nestedData['sonod_no'] = $value->sonod_no ;
                    if($value->delivery_type == 1){
                        $nestedData['delivery_type'] = 'জরুরী';
                    }

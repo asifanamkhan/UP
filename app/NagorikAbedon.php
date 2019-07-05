@@ -23,4 +23,6 @@ class NagorikAbedon extends Model
      */
     protected $dates = ['deleted_at'];
 
+
+
 }

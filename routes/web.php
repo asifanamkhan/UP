@@ -32,21 +32,33 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('tax', 'TaxController');
 
 
-Route::get('mrittu_sonod', 'OthersSonodAbedonController@mrittusonod')->name('mrittu_sonod');
-Route::get('charitrik_sonod', 'OthersSonodAbedonController@charitrik_sonod')->name('charitrik_sonod');
-Route::get('obobahito_sonod', 'OthersSonodAbedonController@obobahito_sonod')->name('obobahito_sonod');
-Route::get('vumihin_sonod', 'OthersSonodAbedonController@vumihin_sonod')->name('vumihin_sonod');
-Route::get('pun_bibah_na_howa_sonod', 'OthersSonodAbedonController@pun_bibah_na_howa_sonod')->name('pun_bibah_na_howa_sonod');
-Route::get('barshik_income', 'OthersSonodAbedonController@barshik_income')->name('barshik_income');
-Route::get('eki_name', 'OthersSonodAbedonController@eki_name')->name('eki_name');
-Route::get('sonaton_dhormo', 'OthersSonodAbedonController@sonaton_dhormo')->name('sonaton_dhormo');
-Route::get('onumoti_potro', 'OthersSonodAbedonController@onumoti_potro')->name('onumoti_potro');
-Route::get('prottyon_potro', 'OthersSonodAbedonController@prottyon_potro')->name('prottyon_potro');
-Route::get('muktijoddha_sonod', 'OthersSonodAbedonController@muktijoddha_sonod')->name('muktijoddha_sonod');
-Route::get('muktijoddha_possho_sonod', 'OthersSonodAbedonController@muktijoddha_possho_sonod')->name('muktijoddha_possho_sonod');
-Route::get('bak_srobon_protibondhi', 'OthersSonodAbedonController@bak_srobon_protibondhi')->name('bak_srobon_protibondhi');
+Route::get('mrittu_sonod', 'others_controller\MrittuSonodController@mrittusonod')->name('mrittu_sonod');
 
-//nagorik abedon
+Route::get('charitrik_sonod', 'others_controller\CharitrikSonodController@charitrik_sonod')->name('charitrik_sonod');
+
+Route::get('obobahito_sonod', 'others_controller\ObibahitoSonodController@obobahito_sonod')->name('obobahito_sonod');
+
+Route::get('vumihin_sonod', 'others_controller\VumihinSonodController@vumihin_sonod')->name('vumihin_sonod');
+
+Route::get('pun_bibah_na_howa_sonod', 'others_controller\PunBibahNaHowaSonodController@pun_bibah_na_howa_sonod')->name('pun_bibah_na_howa_sonod');
+
+Route::get('barshik_income', 'others_controller\BarshikIncomeSonodController@barshik_income')->name('barshik_income');
+
+Route::get('eki_name', 'others_controller\EkiNamerSonodController@eki_name')->name('eki_name');
+
+Route::get('sonaton_dhormo', 'others_controller\SonatonDhormoSonodController@sonaton_dhormo')->name('sonaton_dhormo');
+
+Route::get('onumoti_potro', 'others_controller\OnumotiPotroSonodController@onumoti_potro')->name('onumoti_potro');
+
+Route::get('prottyon_potro', 'others_controller\ProttyonPotroSonodController@prottyon_potro')->name('prottyon_potro');
+
+Route::get('muktijoddha_sonod', 'others_controller\MuktijoddhaSonodController@muktijoddha_sonod')->name('muktijoddha_sonod');
+
+Route::get('muktijoddha_possho_sonod', 'others_controller\MuktijoddhaPosshoSonodController@muktijoddha_possho_sonod')->name('muktijoddha_possho_sonod');
+
+Route::get('bak_srobon_protibondhi', 'others_controller\BakSrobonProtibondhiSonodController@bak_srobon_protibondhi')->name('bak_srobon_protibondhi');
+
+//nagorik abedon new
 Route::get('New_nagorik_abedon','NagorikAbedonController@New_nagorik_abedon')->name('New_nagorik_abedon');
 
 //New_TradeLicense_abedon
@@ -62,58 +74,58 @@ Route::get('nagorik_abedon_jachay', 'NagorikAbedonController@nagorik_abedon_jach
 Route::get('trade_lincense_jachay', 'TradeLicenseAbedonController@trade_lincense_jachay');
 
 //dashboard
-Route::get('mrittu_sonod_dash', 'OthersSonodAbedonController@mrittusonoddash')->name('mrittu_sonod_dash');
-Route::get('mrittu_sonod_show/{id}', 'OthersSonodAbedonController@mrittusonodshow');
-Route::get('mrittu_sonod_edit/{id}', 'OthersSonodAbedonController@mrittu_sonod_edit');
+Route::get('mrittu_sonod_dash', 'others_controller\MrittuSonodController@mrittusonoddash')->name('mrittu_sonod_dash');
+Route::get('mrittu_sonod_show/{id}', 'others_controller\MrittuSonodController@mrittusonodshow');
+Route::get('mrittu_sonod_edit/{id}', 'others_controller\MrittuSonodController@mrittu_sonod_edit');
 
 
-Route::get('charitrik_sonod_dash', 'OthersSonodAbedonController@charitriksonoddash')->name('charitrik_sonod_dash');
-Route::get('charitrik_sonod_show/{id}', 'OthersSonodAbedonController@charitriksonodshow');
-Route::get('charitrik_sonod_edit/{id}', 'OthersSonodAbedonController@charitrik_sonod_edit');
+Route::get('charitrik_sonod_dash', 'others_controller\CharitrikSonodController@charitriksonoddash')->name('charitrik_sonod_dash');
+Route::get('charitrik_sonod_show/{id}', 'others_controller\CharitrikSonodController@charitriksonodshow');
+Route::get('charitrik_sonod_edit/{id}', 'others_controller\CharitrikSonodController@charitrik_sonod_edit');
 
-Route::get('obibahito_sonod_dash', 'OthersSonodAbedonController@obibahitosonoddash')->name('obibahitosonoddash');
-Route::get('obibahito_sonod_show/{id}', 'OthersSonodAbedonController@obibahitosonodshow');
-Route::get('obibahito_sonod_edit/{id}', 'OthersSonodAbedonController@obibahito_sonod_edit');
+Route::get('obibahito_sonod_dash', 'others_controller\ObibahitoSonodController@obibahitosonoddash')->name('obibahitosonoddash');
+Route::get('obibahito_sonod_show/{id}', 'others_controller\ObibahitoSonodController@obibahitosonodshow');
+Route::get('obibahito_sonod_edit/{id}', 'others_controller\ObibahitoSonodController@obibahito_sonod_edit');
 
-Route::get('vumihin_sonod_dash', 'OthersSonodAbedonController@vumihinsonoddash')->name('vumihinsonoddash');
-Route::get('vumihin_sonod_show/{id}', 'OthersSonodAbedonController@vumihinsonodshow');
-Route::get('vumihin_sonod_edit/{id}', 'OthersSonodAbedonController@vumihin_sonod_edit');
+Route::get('vumihin_sonod_dash', 'others_controller\VumihinSonodController@vumihinsonoddash')->name('vumihinsonoddash');
+Route::get('vumihin_sonod_show/{id}', 'others_controller\VumihinSonodController@vumihinsonodshow');
+Route::get('vumihin_sonod_edit/{id}', 'others_controller\VumihinSonodController@vumihin_sonod_edit');
 
-Route::get('pun_bibah_na_sonod_dash', 'OthersSonodAbedonController@punbibahnasonoddash')->name('punbibahnasonoddash');
-Route::get('pun_bibah_show/{id}', 'OthersSonodAbedonController@pun_bibah_show');
-Route::get('pun_bibah_edit/{id}', 'OthersSonodAbedonController@pun_bibah_edit');
+Route::get('pun_bibah_na_sonod_dash', 'others_controller\PunBibahNaHowaSonodController@punbibahnasonoddash')->name('punbibahnasonoddash');
+Route::get('pun_bibah_show/{id}', 'others_controller\PunBibahNaHowaSonodController@pun_bibah_show');
+Route::get('pun_bibah_edit/{id}', 'others_controller\PunBibahNaHowaSonodController@pun_bibah_edit');
 
-Route::get('barshik_ay', 'OthersSonodAbedonController@barshikay')->name('barshikay');
-Route::get('barshik_ay_show/{id}', 'OthersSonodAbedonController@barshik_ay_show');
-Route::get('barshik_ay_edit/{id}', 'OthersSonodAbedonController@barshik_ay_edit');
+Route::get('barshik_ay', 'others_controller\BarshikIncomeSonodController@barshikay')->name('barshikay');
+Route::get('barshik_ay_show/{id}', 'others_controller\BarshikIncomeSonodController@barshik_ay_show');
+Route::get('barshik_ay_edit/{id}', 'others_controller\BarshikIncomeSonodController@barshik_ay_edit');
 
-Route::get('aki_namer_talika', 'OthersSonodAbedonController@akinamertalika')->name('akinamertalika');
-Route::get('aki_namer_show/{id}', 'OthersSonodAbedonController@aki_namer_show');
-Route::get('aki_namer_edit/{id}', 'OthersSonodAbedonController@aki_namer_edit');
+Route::get('aki_namer_talika', 'others_controller\EkiNamerSonodController@akinamertalika')->name('akinamertalika');
+Route::get('aki_namer_show/{id}', 'others_controller\EkiNamerSonodController@aki_namer_show');
+Route::get('aki_namer_edit/{id}', 'others_controller\EkiNamerSonodController@aki_namer_edit');
 
-Route::get('bak_srobon_protibondhi_dash', 'OthersSonodAbedonController@baksrobonprotibondhi')->name('baksrobonprotibondhi');
-Route::get('bak_srobon_show/{id}', 'OthersSonodAbedonController@bak_srobon_show');
-Route::get('bak_srobon_edit/{id}', 'OthersSonodAbedonController@bak_srobon_edit');
+Route::get('bak_srobon_protibondhi_dash', 'others_controller\BakSrobonProtibondhiSonodController@baksrobonprotibondhi')->name('baksrobonprotibondhi');
+Route::get('bak_srobon_show/{id}', 'others_controller\BakSrobonProtibondhiSonodController@bak_srobon_show');
+Route::get('bak_srobon_edit/{id}', 'others_controller\BakSrobonProtibondhiSonodController@bak_srobon_edit');
 
-Route::get('sonaton_dhormo_dash', 'OthersSonodAbedonController@sonatondhormodash')->name('sonatondhormodash');
-Route::get('sonaton_dhormo_show/{id}', 'OthersSonodAbedonController@sonaton_dhormo_show');
-Route::get('sonaton_dhormo_edit/{id}', 'OthersSonodAbedonController@sonaton_dhormo_edit');
+Route::get('sonaton_dhormo_dash', 'others_controller\SonatonDhormoSonodController@sonatondhormodash')->name('sonatondhormodash');
+Route::get('sonaton_dhormo_show/{id}', 'others_controller\SonatonDhormoSonodController@sonaton_dhormo_show');
+Route::get('sonaton_dhormo_edit/{id}', 'others_controller\SonatonDhormoSonodController@sonaton_dhormo_edit');
 
-Route::get('onumoti_porto_dash', 'OthersSonodAbedonController@onumotiportodash')->name('onumotiportodash');
-Route::get('onumoti_potro_show/{id}', 'OthersSonodAbedonController@onumoti_potro_show');
-Route::get('onumoti_potro_edit/{id}', 'OthersSonodAbedonController@onumoti_potro_edit');
+Route::get('onumoti_porto_dash', 'others_controller\OnumotiPotroSonodController@onumotiportodash')->name('onumotiportodash');
+Route::get('onumoti_potro_show/{id}', 'others_controller\OnumotiPotroSonodController@onumoti_potro_show');
+Route::get('onumoti_potro_edit/{id}', 'others_controller\OnumotiPotroSonodController@onumoti_potro_edit');
 
-Route::get('prottyon_potro_dash', 'OthersSonodAbedonController@prottyonpotrodash')->name('prottyonpotrodash');
-Route::get('prottyon_potro_show/{id}', 'OthersSonodAbedonController@prottyon_potro_show');
-Route::get('prottyon_potro_edit/{id}', 'OthersSonodAbedonController@prottyon_potro_edit');
+Route::get('prottyon_potro_dash', 'others_controller\ProttyonPotroSonodController@prottyonpotrodash')->name('prottyonpotrodash');
+Route::get('prottyon_potro_show/{id}', 'others_controller\ProttyonPotroSonodController@prottyon_potro_show');
+Route::get('prottyon_potro_edit/{id}', 'others_controller\ProttyonPotroSonodController@prottyon_potro_edit');
 
-Route::get('muktijoddha_sonod_dash', 'OthersSonodAbedonController@muktijoddhasonoddash')->name('muktijoddhasonoddash');
-Route::get('muktijoddha_show/{id}', 'OthersSonodAbedonController@muktijoddha_show');
-Route::get('muktijoddha_edit/{id}', 'OthersSonodAbedonController@muktijoddha_edit');
+Route::get('muktijoddha_sonod_dash', 'others_controller\MuktijoddhaSonodController@muktijoddhasonoddash')->name('muktijoddhasonoddash');
+Route::get('muktijoddha_show/{id}', 'others_controller\MuktijoddhaSonodController@muktijoddha_show');
+Route::get('muktijoddha_edit/{id}', 'others_controller\MuktijoddhaSonodController@muktijoddha_edit');
 
-Route::get('muktijoddha_possho_sonod_dash', 'OthersSonodAbedonController@muktijoddhaposshosonoddash')->name('muktijoddhaposshosonoddash');
-Route::get('muktijoddha_possho_show/{id}', 'OthersSonodAbedonController@muktijoddha_possho_show');
-Route::get('muktijoddha_possho_edit/{id}', 'OthersSonodAbedonController@muktijoddha_possho_edit');
+Route::get('muktijoddha_possho_sonod_dash', 'others_controller\MuktijoddhaPosshoSonodController@muktijoddhaposshosonoddash')->name('muktijoddhaposshosonoddash');
+Route::get('muktijoddha_possho_show/{id}', 'others_controller\MuktijoddhaPosshoSonodController@muktijoddha_possho_show');
+Route::get('muktijoddha_possho_edit/{id}', 'others_controller\MuktijoddhaPosshoSonodController@muktijoddha_possho_edit');
 
 //ajax nagorik Abedon
 Route::post('admin/nagorikNid','NagorikAbedonController@nagorikNid')->name('nagorikNid');
@@ -154,19 +166,19 @@ Route::post('othersSonodFee/{id}','OthersSonodAbedonController@othersSonodFee')-
 Route::post('othersAbedonIndex','OthersSonodAbedonController@othersAbedonIndex')->name('othersAbedonIndex');
 
 //Others Sonon Ajax
-Route::post('akiNameAbedon','OthersSonodAbedonController@akiNameAbedon')->name('akiNameAbedon');
-Route::post('bak_srobon_Abedon','OthersSonodAbedonController@bak_srobon_Abedon')->name('bak_srobon_Abedon');
-Route::post('barshikAyAbedon','OthersSonodAbedonController@barshikAyAbedon')->name('barshikAyAbedon');
-Route::post('charitrikAbedon','OthersSonodAbedonController@charitrikAbedon')->name('charitrikAbedon');
-Route::post('mrittuAbedon','OthersSonodAbedonController@mrittuAbedon')->name('mrittuAbedon');
-Route::post('muktijoddhaPosshoAbedon','OthersSonodAbedonController@muktijoddhaPosshoAbedon')->name('muktijoddhaPosshoAbedon');
-Route::post('muktijoddhaAbedon','OthersSonodAbedonController@muktijoddhaAbedon')->name('muktijoddhaAbedon');
-Route::post('obibahitoAbedon','OthersSonodAbedonController@obibahitoAbedon')->name('obibahitoAbedon');
-Route::post('onumotiAbedon','OthersSonodAbedonController@onumotiAbedon')->name('onumotiAbedon');
-Route::post('prottyonAbedon','OthersSonodAbedonController@prottyonAbedon')->name('prottyonAbedon');
-Route::post('punBibahAbedon','OthersSonodAbedonController@punBibahAbedon')->name('punBibahAbedon');
-Route::post('sonatonAbedon','OthersSonodAbedonController@sonatonAbedon')->name('sonatonAbedon');
-Route::post('vumiAbedon','OthersSonodAbedonController@vumiAbedon')->name('vumiAbedon');
+Route::post('akiNameAbedon','others_controller\EkiNamerSonodController@akiNameAbedon')->name('akiNameAbedon');
+Route::post('bak_srobon_Abedon','others_controller\BakSrobonProtibondhiSonodController@bak_srobon_Abedon')->name('bak_srobon_Abedon');
+Route::post('barshikAyAbedon','others_controller\BarshikIncomeSonodController@barshikAyAbedon')->name('barshikAyAbedon');
+Route::post('charitrikAbedon','others_controller\CharitrikSonodController@charitrikAbedon')->name('charitrikAbedon');
+Route::post('mrittuAbedon','others_controller\MrittuSonodController@mrittuAbedon')->name('mrittuAbedon');
+Route::post('muktijoddhaPosshoAbedon','others_controller\MuktijoddhaPosshoSonodController@muktijoddhaPosshoAbedon')->name('muktijoddhaPosshoAbedon');
+Route::post('muktijoddhaAbedon','others_controller\MuktijoddhaSonodController@muktijoddhaAbedon')->name('muktijoddhaAbedon');
+Route::post('obibahitoAbedon','others_controller\ObibahitoSonodController@obibahitoAbedon')->name('obibahitoAbedon');
+Route::post('onumotiAbedon','others_controller\OnumotiPotroSonodController@onumotiAbedon')->name('onumotiAbedon');
+Route::post('prottyonAbedon','others_controller\ProttyonPotroSonodController@prottyonAbedon')->name('prottyonAbedon');
+Route::post('punBibahAbedon','others_controller\PunBibahNaHowaSonodController@punBibahAbedon')->name('punBibahAbedon');
+Route::post('sonatonAbedon','others_controller\SonatonDhormoSonodController@sonatonAbedon')->name('sonatonAbedon');
+Route::post('vumiAbedon','others_controller\VumihinSonodController@vumiAbedon')->name('vumiAbedon');
 
 //nagorik Mobile Ajax
 Route::post('nagorikMob','NagorikAbedonController@nagorikMob')->name('nagorikMob');
@@ -186,4 +198,7 @@ Route::get('nagorikFormDash','NagorikAbedonController@nagorikFormDash')->name('n
 Route::get('aaa','NagorikAbedonController@aaa')->name('aaa');
 
 Route::post('mamlaShow','MamlaController@mamlaShow')->name('mamlaShow');
+
+//bosot_kor_aday_table_ajax
+Route::post('bosot_kor_aday','TaxController@bosot_kor_aday')->name('bosot_kor_aday');
 
