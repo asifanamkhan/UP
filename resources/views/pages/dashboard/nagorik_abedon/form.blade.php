@@ -4,7 +4,8 @@
 @endsection
 @section('content')
     <div class="panel-body all-input-form" >
-        <div class="panel-heading" style=" color:white; font-size: 16px;background:#40A291;text-align:center;">  নাগরিক  সনদ  আবেদন </div>
+        <div class="card-header" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;">নাগরিক  সনদ  আবেদন</div>
+
         <form action="{{route('nagorik_abedon.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="defaultForm">
             @csrf
             <div class="row" style="margin-top: 50px;">
@@ -16,7 +17,7 @@
                             <small name="help-block" class="help-block" style="color: red"></small>
                         </div>
                         <div class="col-sm-3" style="margin-top:3px;">
-                            <button name='upload' id="upload" class="btn btn-primary">আপলোড</button>
+                            <button name='upload' id="upload" class="btn btn-primary" >আপলোড</button>
 
                         </div>
                         <div class="clearfix"></div>
@@ -675,7 +676,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-offset-6 col-sm-6 button-style">
-                    <button type="submit" id="submit_button" class="btn btn-primary">দাখিল করুন</button>
+                    <button type="submit" id="submit_button" class="btn btn-primary" style="background-color: green">দাখিল করুন</button>
                     <input type="hidden" name="token" value="{{$number =time().str_random(5) }}">
                     <input type="hidden" name="status" value="0">
                 </div>
@@ -694,8 +695,15 @@
         $('#upload').on('click',function (e) {
             e.preventDefault();
             var up = $('#image').val();
-            $('#image').parent().find('small').show().text('Image Uploded Successfully');
-            console.log(up);
+            if($('#image').val() !=''){
+                $('#image').parent().find('small').show().text('Image Uploded Successfully');
+                console.log(up);
+            }
+            else{
+                $('#image').parent().find('small').show().text('please select a Image First');
+                console.log(up);
+            }
+
         });
 
 
@@ -732,7 +740,7 @@
                         $('#nid').parent().addClass('has-error');
                         $('#nid').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#nid').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#nid').parent().find('small').show().text('National id number more than 15 and less then 17 character');
+                        $('#nid').parent().find('small').show().text('National id number is already exists');
 
                         $('#submit_button').prop("disabled",true);
                     }
@@ -782,7 +790,7 @@
                         $('#bcno').parent().addClass('has-error');
                         $('#bcno').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#bcno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#bcno').parent().find('small').show().text('Birth certficate number more than 15 and less then 17 character');
+                        $('#bcno').parent().find('small').show().text('Birth certficate number is already exist');
 
                         $('#submit_button').prop("disabled",true);
                     }
@@ -830,7 +838,7 @@
                         $('#pno').parent().addClass('has-error');
                         $('#pno').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#pno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#pno').parent().find('small').show().text('Passport number more than 13 and less then 17 character');
+                        $('#pno').parent().find('small').show().text('Passport number is already exists');
 
                         $('#submit_button').prop("disabled",true);
                     }
@@ -1054,6 +1062,24 @@
                 $('#bHname').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
                 $('#bHname').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
                 $('#bHname').parent().find('small').hide();
+
+            }
+        });
+        $(document).on('keyup','#efname',function () {
+            if($('#efname').val() == ''){
+                $('#efname').parent().addClass('has-error');
+                $('#efname').parent().parent().addClass('has-error');
+                $('#efname').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#efname').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#efname').parent().find('small').show().text('The father name is required');
+            }
+            else{
+                $('#efname').parent().removeClass('has-error');
+                $('#efname').parent().parent().removeClass('has-error');
+                $('#efname').parent().addClass('has-success');
+                $('#efname').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#efname').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#efname').parent().find('small').hide();
 
             }
         });

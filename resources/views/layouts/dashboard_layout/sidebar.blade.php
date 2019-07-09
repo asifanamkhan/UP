@@ -13,7 +13,7 @@
                     <li><a href="{{route('nagorikFormDash')}}" aria-expanded="false" >নাগরিক আবেদন</a>
 
                     </li>
-                    <li><a href="#" aria-expanded="false" >ট্রেড লাইসেন্স আবেদন</a>
+                    <li><a href="{{route('trade_license_form_dash')}}" aria-expanded="false" >ট্রেড লাইসেন্স আবেদন</a>
 
                     </li>
                     <li><a href="#" aria-expanded="false" >ওয়ারিশ সনদের আবেদন</a>
@@ -77,42 +77,51 @@
                 <a class="has-arrow" href="{{route('mamla.create')}}" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">মামলার নোটিশ তৈরি </span></a>
 
             </li>
-
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">কর</span></a>
-
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-kettle"></i><span class="hide-menu">কর
+									</span></a>
                 <ul aria-expanded="false" class="collapse">
-                    <li><a href="{{route('tax.create')}}" aria-expanded="false">কর আদায় </a></li>
-                    <li><a href="#" aria-expanded="false">ট্যাক্স এ্যাসেসমেন্ট ফরম</a></li>
+                    <li><a href="#" aria-expanded="false" class="has-arrow">কর আদায়</a>
+                        <ul aria-expanded="false" class="collapse">
+                            <li><a href="{{route('tax.create')}}">হোল্ডিং টেক্স</a></li>
+                            <li><a href="#">ট্রেড লাইসেন্স কর</a></li>
+                            <li><a href="#">বাণিজ্যিক কর</a></li>
+                            <li><a href="#">ব্যবসায়ী কর</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{route('tax_assesment_form')}}" aria-expanded="false">ট্যাক্স এ্যাসেসমেন্ট ফরম</a></li>
 
                     <li><a href="#" aria-expanded="false" class="has-arrow">টেক্সধারীদের তালিকা</a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="{{route('New_TradeLicense_abedon')}}">হোল্ডিং টেক্সধারীদের তালিকা</a></li>
-                            <li><a href="{{route('trade_license_abedon.index')}}">বাণিজ্যিক টেক্সধারীদের তালিকা</a></li>
-                            <li><a href="{{route('nagorik_abedon.index')}}">ব্যবসায়ী টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="#">হোল্ডিং টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="#">বাণিজ্যিক টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="#">ব্যবসায়ী টেক্সধারীদের তালিকা</a></li>
                         </ul>
                     </li>
                     <li><a href="#" aria-expanded="false" class="has-arrow">কর অনাদায়ী তালিকা</a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="{{route('New_TradeLicense_abedon')}}">হোল্ডিং টেক্স অনাদায়ী তালিকা</a></li>
-                            <li><a href="{{route('trade_license_abedon.index')}}">বাণিজ্যিক টেক্স অনাদায়ী তালিকা</a></li>
-                            <li><a href="{{route('nagorik_abedon.index')}}">ব্যবসায়ী টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="#">হোল্ডিং টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="#">বাণিজ্যিক টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="#">ব্যবসায়ী টেক্স অনাদায়ী তালিকা</a></li>
                         </ul>
                     </li>
 
                 </ul>
             </li>
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Tables</span></a>
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">সেটআপ মেনু</span></a>
                 <ul aria-expanded="false" class="collapse">
-                    <li><a href="table-basic.html">Basic Tables</a></li>
-                    <li><a href="table-layout.html">Table Layouts</a></li>
-                    <li><a href="table-data-table.html">Data Tables</a></li>
-                    <li><a href="table-footable.html">Footable</a></li>
-                    <li><a href="table-jsgrid.html">Js Grid Table</a></li>
-                    <li><a href="table-responsive.html">Responsive Table</a></li>
-                    <li><a href="table-bootstrap.html">Bootstrap Tables</a></li>
-                    <li><a href="table-editable-table.html">Editable Table</a></li>
+                    <li><a href="table-basic.html">একাউন্টিং সেটআপ</a></li>
+                    <li><a href="table-layout.html">ট্রেডলাইসেন্সের ফি নির্ধারণ</a></li>
+                    <li><a href="table-data-table.html">বসতভিটার ফি নির্ধারণ  </a></li>
+                    <li><a href="table-footable.html">আয়ের মূল খাত </a></li>
+                    <li><a href="table-jsgrid.html">আয়ের আনুসাঙ্গিক খাত</a></li>
+                    <li><a href="table-responsive.html">খরচের মূল খাত</a></li>
+                    <li><a href="table-bootstrap.html">খরচের আনুসাঙ্গিক খাত</a></li>
+                    <li><a href="table-editable-table.html">ওয়ার্ড মেম্বার যোগ করুন</a></li>
+                    <li><a href="{{route('bosotVitarDhoron.create')}}">বসতভিটার ধরন</a></li>
+                    <li><a href="table-editable-table.html">পেশা</a></li>
+                    <li><a href="{{route('taxClass.create')}}">শ্রেণী</a></li>
                 </ul>
             </li>
             <li class="nav-devider"></li>

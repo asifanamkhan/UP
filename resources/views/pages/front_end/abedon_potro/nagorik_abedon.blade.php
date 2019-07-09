@@ -1056,6 +1056,24 @@
 
             }
         });
+        $(document).on('keyup','#efname',function () {
+            if($('#efname').val() == ''){
+                $('#efname').parent().addClass('has-error');
+                $('#efname').parent().parent().addClass('has-error');
+                $('#efname').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#efname').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#efname').parent().find('small').show().text('The father name is required');
+            }
+            else{
+                $('#efname').parent().removeClass('has-error');
+                $('#efname').parent().parent().removeClass('has-error');
+                $('#efname').parent().addClass('has-success');
+                $('#efname').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#efname').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#efname').parent().find('small').hide();
+
+            }
+        });
         $(document).on('keyup','#bfname',function () {
             if($('#bfname').val() == ''){
                 $('#bfname').parent().addClass('has-error');

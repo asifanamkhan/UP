@@ -12,16 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('pages.front_end.home');
 });
 
 Auth::routes();
 
 
 Route::group(['middleware' => ['auth']], function() {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::resource('front/home', 'FrontEndController');
-
+    Route::get('/admin', 'HomeController@index')->name('home');
 
 });
     Route::resource('nagorik_abedon', 'NagorikAbedonController');
@@ -30,6 +28,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('others_sonod_abedon', 'OthersSonodAbedonController');
     Route::resource('mamla', 'MamlaController');
     Route::resource('tax', 'TaxController');
+    Route::resource('front/home', 'FrontEndController');
+    Route::resource('bosotVitarDhoron', 'BosotVitarDhoronController');
+    Route::resource('taxClass', 'TaxClassController');
 
 
 Route::get('mrittu_sonod', 'others_controller\MrittuSonodController@mrittusonod')->name('mrittu_sonod');
@@ -192,9 +193,9 @@ Route::post('nagorikPno','NagorikAbedonController@nagorikPno')->name('nagorikPno
 //nagorikFormDash
 Route::get('nagorikFormDash','NagorikAbedonController@nagorikFormDash')->name('nagorikFormDash');
 
-//Route::get('asif',function (){
-//    view('pages.aaaa');
-//});
+Route::get('asif',function (){
+    return view('pages.aaaa');
+});
 Route::get('aaa','NagorikAbedonController@aaa')->name('aaa');
 
 Route::post('mamlaShow','MamlaController@mamlaShow')->name('mamlaShow');
@@ -202,3 +203,21 @@ Route::post('mamlaShow','MamlaController@mamlaShow')->name('mamlaShow');
 //bosot_kor_aday_table_ajax
 Route::post('bosot_kor_aday','TaxController@bosot_kor_aday')->name('bosot_kor_aday');
 
+//bosot_member_no
+Route::post('bosot_member_no','TaxController@bosot_member_no')->name('bosot_member_no');
+
+//trade_license_tax
+Route::get('trade_license_tax','TaxController@trade_license_tax')->name('trade_license_tax');
+
+Route::get('tax/holding_tax_pay/{holding}/{word}/{member}','TaxController@holding_tax_pay');
+
+//trade_license_form_dash
+Route::get('tradelicense/form/dash','TradeLicenseAbedonController@trade_license_form_dash')->name('trade_license_form_dash');
+
+//tax_assesment_form
+Route::get('tax/assesment/form','TaxController@tax_assesment_form')->name('tax_assesment_form');
+
+//bosotVitarDhoronShow
+Route::post('bosotVitarDhoronShow','BosotVitarDhoronController@bosotVitarDhoronShow')->name('bosotVitarDhoronShow');
+//bosot_vitar_name ajax
+Route::post('bosot_vitar_name','BosotVitarDhoronController@bosot_vitar_name')->name('bosot_vitar_name');

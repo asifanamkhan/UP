@@ -10,20 +10,11 @@
 <link href="{{asset('css/front_end/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 <!-- all script file -->
 <script src="{{asset('js/front_end/jquery.min.js')}}"></script>
-<script src="{{asset('js/front_end/bootstrap.js')}}"></script>
-{{--<script src="{{asset('js/front_end/jquery-1.10.2.js')}}"></script>--}}
+
 <script src="{{asset('js/front_end/bootstrap-hover-dropdown.js')}}"></script>
-<script src="{{asset('js/front_end/bootstrap.min.js')}}"></script>
 
 
 
-<!--- form validation js and css---->
-<!---<link rel="stylesheet" href="validation/css/bootstrap.css"/>-->
-{{--<link rel="stylesheet" href="{{asset('css/front_end/formValidation.css')}}"/>--}}
-
-<!---<script type="text/javascript" src="validation/js/jquery.min.js"></script>---->
-<!---<script type="text/javascript" src="validation/js/bootstrap.min.js"></script>-->
-{{--<script type="text/javascript" src="{{asset('js/front_end/formValidation.js')}}"></script>--}}
 <script type="text/javascript" src="{{asset('js/front_end/bootstrap1.js')}}"></script>
 
 <!--- for datepicker ----------->

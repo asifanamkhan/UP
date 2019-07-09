@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-primary">
-                        <div class="panel-heading" style=" color:white; font-size: 16px;background:green;text-align:center;">  নাগরিক  সনদ  গ্রহনকারীগণের তালিকা </div>
+                        <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>নাগরিক সনদ গ্রহনকারীগণের তালিকা</b></div>
                         <div class="panel-body"  style="min-height:310px;">
                             <div class="row">
 
@@ -75,14 +75,6 @@
                 "processing": true,
                 "serverSide": true,
                 "bInfo": false,
-                dom: 'Bfrtip',
-                buttons: [
-                    {
-                        extend: 'pdfHtml5',
-                        orientation: 'landscape',
-                        pageSize: 'LEGAL'
-                    }
-                ],
                 "language": {
                     processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> '},
 

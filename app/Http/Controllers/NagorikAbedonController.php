@@ -123,27 +123,14 @@ class NagorikAbedonController extends Controller
 
     public function nagorikNid(Request $request){
 
-        //$nid = $request->nationid;
-
         $nid = NagorikAbedon::where('nationid','=',$request->nationid)->first();
-
 
        if(empty($nid)){
             return 'one';
-           //return response()->json(['statusClass' => 'has-success', 'statusMark' => 'glyphicon-ok','statusText'=>'']);
        }
        else
            return 'two';
-           //return response()->json(['statusClass' => 'has-error', 'statusMark' => 'glyphicon-remove','statusText'=>'please fix error']);
 
-        /*$nationalIdColumn = array(
-            '12039349494', '13233493223', '34343434333'
-        );
-        $this->validate($request,[
-            'name'  => 'required'
-        ]);
-
-        $key = in_array($request->nationid, $nationalIdColumn);*/
     }
 
     public function agorikAbedonIndex(Request $request){

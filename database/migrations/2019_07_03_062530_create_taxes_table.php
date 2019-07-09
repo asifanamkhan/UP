@@ -16,6 +16,8 @@ class CreateTaxesTable extends Migration
         Schema::create('taxes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
+            $table->string('member_no')->nullable();
+            $table->string('token')->nullable();
             $table->string('bname')->nullable();
             $table->string('efname')->nullable();
             $table->string('bfname')->nullable();

@@ -440,5 +440,9 @@ class TradeLicenseAbedonController extends Controller
             return 'two';
     }
 
+    public function trade_license_form_dash(){
+        return view('pages.dashboard.trade_license_abedon.form');
+    }
+
 
 }

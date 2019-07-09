@@ -121,7 +121,7 @@ class MamlaController extends Controller
                 $nestedData['mamlar_date'] = $value->mamlar_date ;
                 $nestedData['sunanir_date'] = $value->sunanir_date ;
                 if($value->condition == 0){
-                    $nestedData['condition'] = '<a href="" id="condition" class="btn btn-primary btn-sm">
+                    $nestedData['condition'] = '<a href="" id="condition" class="btn-sm btn-primary " style="background-color: #d61313">
                                     চলমান
                                 </a>';
                 }
@@ -132,7 +132,7 @@ class MamlaController extends Controller
                     $nestedData['condition'] = 'বাতিল';
                 }
                 $nestedData['action'] = ' <div class="btn-group">
-                                <a href="'.route('NewNagorikSonodFeeDash',$value->id) .'" class="btn btn-primary btn-sm" title="Print">
+                                <a href="'.route('NewNagorikSonodFeeDash',$value->id) .'" class="btn-sm btn-primary" style="background-color: #022241" title="Print">
                                     Print
                                 </a>
                             </div>';

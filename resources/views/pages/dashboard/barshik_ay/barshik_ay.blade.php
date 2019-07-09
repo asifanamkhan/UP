@@ -1,21 +1,10 @@
 @extends('layouts.dashboard_layout.master')
 @section('content')
-    <div class="row page-titles">
-        <div class="col-md-6 col-8 align-self-center">
-            <h3 class="text-themecolor mb-0 mt-0">বার্ষিক আয়ের প্রত্যয়ন</h3>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
-                <li class="breadcrumb-item">অন্যান্য সেবাসমূহ</li>
-                <li class="breadcrumb-item active">বার্ষিক আয়ের প্রত্যয়নন</li>
-            </ol>
-        </div>
-    </div>
-
     <!-- left Content Start-->
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading" style=" color:black; font-size: 20px;background:#40A291;text-align:center;">বার্ষিক আয়ের প্রত্যয়নন</div>
+                <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>বার্ষিক আয়ের প্রত্যয়নন</b></div>
                 <div class="panel-body"  style="min-height:310px;">
                     <div class="row">
                         <div class="col-md-3 mt-4 mb-4">

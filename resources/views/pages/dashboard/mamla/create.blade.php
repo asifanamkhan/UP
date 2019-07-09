@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading" style=" color:white; font-size: 14px;background:#40A291;text-align:center;"><b>মামলার নোটিশ</b></div>
+                <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>মামলার নোটিশ</b></div>
                 <div class="panel-body"  style="min-height:310px;">
                     <div class="row">
 
@@ -90,7 +90,7 @@
                                                         </div>
                                                         <div class="col-sm-2 mt-5">
 
-                                                            <a href="" id="badi_add" class="btn-sm btn-primary ">যোগ করুন</a>
+                                                            <a href="" id="badi_add" class="btn-sm btn-primary " style="background-color: #055e05">যোগ করুন</a>
                                                         </div>
 
                                                     </div>
@@ -149,7 +149,7 @@
                                                         </div>
                                                         <div class="col-sm-2 mt-5">
 
-                                                            <a href="" id="bibadi_add" class="btn-sm btn-primary ">যোগ করুন</a>
+                                                            <a href="" id="bibadi_add" class="btn-sm btn-primary " style="background-color: #055e05">যোগ করুন</a>
                                                         </div>
 
                                                     </div>
@@ -176,7 +176,7 @@
                                             </div>
                                         </div>
                                         <input type="hidden" name="condition" value="0">
-                                        <button id="Generate" class="col-sm-offset-5 btn btn-info"> Generate</button>
+                                        <button id="Generate" class="col-sm-offset-5 btn btn-info" style="background-color: #022241"> Generate</button>
                                 </form>
                             </div>
 
@@ -328,7 +328,7 @@
                        '                                                        </div>\n' +
                        '                                                        <div class="col-sm-2 mt-5">\n' +
                        '\n' +
-                       '                                                            <a href="" id="badi_remove" class="btn-sm btn-danger ">Remove</a>\n' +
+                       '                                                            <a href="" id="badi_remove" class="btn-sm btn-danger " style="background-color: #d61313">Remove</a>\n' +
                        '                                                        </div>\n' +
                        '\n' +
                        '                                                    </div>');

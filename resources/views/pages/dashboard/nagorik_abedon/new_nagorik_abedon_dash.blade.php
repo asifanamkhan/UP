@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
-                <div class="panel-heading" style=" color:white; font-size: 14px;background:#40A291;text-align:center;"> <b>নাগরিক আবেদনকারীগণের তালিকা</b>  </div>
+                <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>নাগরিক সনদ আবেদনকারীগণের তালিকা</b></div>
                 <div class="panel-body"  style="min-height:310px;">
                     <div class="row">
                         <div class="col-md-12">
