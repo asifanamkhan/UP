@@ -1804,7 +1804,7 @@ File: scss
 }
 
 .container-fluid {
-  padding: 25px 0px;
+  padding: 0px 0px;
   max-width: 1280px; }
 
 .sidebartoggler {
@@ -5333,7 +5333,7 @@ sidebar navigation
       list-style: none; }
       .sidebar-nav ul li a {
         color: #54667a;
-        padding: 15px;
+        padding: 9px;
         display: block;
         font-size: 15px; }
         .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {

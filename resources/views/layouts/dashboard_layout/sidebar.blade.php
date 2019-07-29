@@ -53,7 +53,7 @@
                 </ul>
             </li>
             <li class="three-column">
-                <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">অন্যান্য সেবাসমূহ</span></a>
+                <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">অন্যান্য সেবাসমূহ</span></a>
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="{{route('others_sonod_abedon.index')}}">নতুন আবেদনকারীগন</a></li>
                     <li></li>
@@ -74,17 +74,17 @@
                 </ul>
             </li>
             <li class="three-column">
-                <a class="has-arrow" href="{{route('mamla.create')}}" aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">মামলার নোটিশ তৈরি </span></a>
+                <a class="has-arrow" href="{{route('mamla.create')}}" aria-expanded="false"><i class="glyphicon glyphicon-tags"></i><span class="hide-menu">মামলার নোটিশ তৈরি </span></a>
 
             </li>
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-kettle"></i><span class="hide-menu">কর
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-tags"></i><span class="hide-menu">কর
 									</span></a>
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="#" aria-expanded="false" class="has-arrow">কর আদায়</a>
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('tax.create')}}">হোল্ডিং টেক্স</a></li>
-                            <li><a href="#">ট্রেড লাইসেন্স কর</a></li>
+                            <li><a href="{{route('trade_license_tax.create')}}">ট্রেড লাইসেন্স কর</a></li>
                             <li><a href="#">বাণিজ্যিক কর</a></li>
                             <li><a href="#">ব্যবসায়ী কর</a></li>
                         </ul>
@@ -109,19 +109,29 @@
                 </ul>
             </li>
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">সেটআপ মেনু</span></a>
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">দৈনিক জমা</span></a>
+
+            </li>
+            <li>
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">দৈনিক খরচ</span></a>
+
+            </li>
+            <li>
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-edit"></i><span class="hide-menu">সেটআপ মেনু</span></a>
                 <ul aria-expanded="false" class="collapse">
                     <li><a href="table-basic.html">একাউন্টিং সেটআপ</a></li>
                     <li><a href="table-layout.html">ট্রেডলাইসেন্সের ফি নির্ধারণ</a></li>
-                    <li><a href="table-data-table.html">বসতভিটার ফি নির্ধারণ  </a></li>
+                    <li><a href="{{route('holdingTaxFee.create')}}">বসতভিটার ফি নির্ধারণ</a></li>
                     <li><a href="table-footable.html">আয়ের মূল খাত </a></li>
                     <li><a href="table-jsgrid.html">আয়ের আনুসাঙ্গিক খাত</a></li>
                     <li><a href="table-responsive.html">খরচের মূল খাত</a></li>
                     <li><a href="table-bootstrap.html">খরচের আনুসাঙ্গিক খাত</a></li>
                     <li><a href="table-editable-table.html">ওয়ার্ড মেম্বার যোগ করুন</a></li>
                     <li><a href="{{route('bosotVitarDhoron.create')}}">বসতভিটার ধরন</a></li>
-                    <li><a href="table-editable-table.html">পেশা</a></li>
-                    <li><a href="{{route('taxClass.create')}}">শ্রেণী</a></li>
+                    <li><a href="{{route('occupation.create')}}">পেশা</a></li>
+                    <li><a href="{{route('taxClass.create')}}">করের শ্রেণী</a></li>
+                    <li><a href="{{route('education.create')}}">শিক্ষাগত যোগ্যতা</a></li>
+                    <li><a href="{{route('familyClass.create')}}">পরিবারের শ্রেণী</a></li>
                 </ul>
             </li>
             <li class="nav-devider"></li>

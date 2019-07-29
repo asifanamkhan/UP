@@ -24,7 +24,7 @@ class TaxClassController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.dashboard.setup_menu.tax_class.create');
     }
 
     /**
@@ -35,7 +35,100 @@ class TaxClassController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'tax_class'      => 'required|string',
+
+        ]);
+        $tax_class =  new TaxClass();
+        $tax_class->tax_class = $request->tax_class;
+        $tax_class->status = 1;
+        $tax_class->save();
+    }
+
+    public function taxClassShow(Request $request){
+        $columns = array(
+            0 =>'id',
+            1 =>'tax_class',
+            2 => 'updated_at',
+            3 => 'status',
+            4 => 'action',
+
+        );
+
+        $totalData = TaxClass::count();
+
+        $totalFiltered = $totalData;
+
+        $limit = $request->input('length');
+        $start = $request->input('start');
+        $order = $columns[$request->input('order.0.column')];
+        $dir = $request->input('order.0.dir');
+
+        if(empty($request->input('search.value')))
+        {
+            $TaxClass = TaxClass::offset($start)
+                ->limit($limit)
+                ->orderBy($order,$dir)
+                ->get();
+        }
+        else {
+            $search = $request->input('search.value');
+
+            $TaxClass =  TaxClass::where('tax_class','LIKE',"%{$search}%")
+                ->orWhere('id', 'LIKE',"%{$search}%")
+                ->offset($start)
+                ->limit($limit)
+                ->orderBy($order,$dir)
+                ->get();
+
+            $totalFiltered = TaxClass::where('tax_class','LIKE',"%{$search}%")
+                ->orWhere('id', 'LIKE',"%{$search}%")
+                ->count();
+        }
+
+        $data = array();
+
+        if(!empty($TaxClass))
+        {
+            foreach ($TaxClass as $key => $value)
+            {
+                $nestedData['id'] =$key+1;
+                $nestedData['tax_class'] = $value->tax_class;
+                $nestedData['updated_at'] = $value->updated_at->toDateString() ;
+                if($value->status==1){
+                    $nestedData['status'] = '<p style="color: green">Enable</p>' ;
+                }else{
+                    $nestedData['status'] =  '<p style="color: red">Disable</p>';
+                }
+                $nestedData['action'] = ' <div class="btn-group">
+                                <a href="#" class="btn btn-primary btn-sm" id="edit" title="edit">
+                                   <i class="fa fa-edit"></i> Edit
+                                </a>
+                            </div>';
+                $data[] = $nestedData;
+
+            }
+        }
+
+        $json_data = array(
+            "draw"            => intval($request->input('draw')),
+            "recordsTotal"    => intval($totalData),
+            "recordsFiltered" => intval($totalFiltered),
+            "data"            => $data
+        );
+
+        echo json_encode($json_data);
+    }
+
+    public function taxClass_name(Request $request){
+        $tax_class = TaxClass::where('tax_class',$request->tax_class)->first();
+
+        if(empty($tax_class)){
+            return 'one';
+        }
+        else
+            return 'two';
     }
 
     /**

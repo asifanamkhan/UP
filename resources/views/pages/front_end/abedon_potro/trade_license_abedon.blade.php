@@ -241,7 +241,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="Tax-id" class="col-sm-6 control-label">ট্যাক্স আইডি (যদি থাকে)</label>
+                    <label for="Tax-id" class="col-sm-6 control-label">মালিকের বাণিজ্যিক হোল্ডিং ট্যাক্স আইডি</label>
                     <div class="col-sm-6 has-feedback">
                         <input type="text" name="taxid" id="taxid" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  />
                         <span class=""></span>
@@ -493,7 +493,6 @@
             <div class="col-sm-offset-6 col-sm-6 button-style">
                 <button type="submit" id="submit_button" class="btn btn-primary">দাখিল করুন</button>
                 <input type="hidden" name="token" value="{{$number =time().str_random(5) }}">
-                <input type="hidden" name="status" value="0">
             </div>
         </div>
     </form>

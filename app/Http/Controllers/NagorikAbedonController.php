@@ -228,7 +228,6 @@ class NagorikAbedonController extends Controller
                 ->count();
         }
 
-
         $data = array();
 
         if(!empty($NagorikAbedon))
@@ -377,9 +376,6 @@ class NagorikAbedonController extends Controller
 
     public function nagorikSonodFee(Request $request,$id){
         $nagorikFee = NagorikAbedon::find($id);
-//        $nagorikFee->fee = $request->fee;
-//        $nagorikFee->acno = $request->acno;
-
         $nagorikFee->update([
             'status'=>$request->status,
             'fee'=>$request->fee,

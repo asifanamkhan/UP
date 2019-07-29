@@ -64,7 +64,7 @@
 
                 "columns": [
                     { "data": "id" },
-                    { "data": "bname" },
+                    { "data": "bwname" },
                     { "data": "token" },
                     { "data": "delivery_type" },
                     { "data": "mob" },

@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <label for="Owner-type" class="col-sm-3 control-label">প্রতিষ্ঠানের মালিকানার ধরণ <span style="color: red">*</span></label>
+                    <label for="Owner-type" class="col-sm-3 control-label">প্রতিষ্ঠানের মালিকানার ধরণ<span style="color: red">*</span></label>
                     <div class="col-sm-9 has-feedback">
                         <select name="ownertype" id="type_val" class="form-control">
                             <option value="">চিহ্নিত করুন</option>
@@ -88,6 +88,53 @@
                 </div>
 
             </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="Tax-id" class="col-sm-6 control-label">মালিকের বাণিজ্যিক হোল্ডিং নং <span style="color: red">*</span></label>
+                    <div class="col-sm-6 has-feedback">
+                        <input type="text" name="taxid" id="taxid" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  />
+                        <span class=""></span>
+                        <small name="help-block" class="help-block"></small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="dokanNo" class="col-sm-6 control-label">দোকান নং <span style="color: red">*</span></label>
+                    <div class="col-sm-6 has-feedback">
+                        <input type="text" name="dokanNo" id="dokanNo" class="form-control" maxlength='17' placeholder="ইংরেজিতে"   />
+                        <span class=""></span>
+                        <small name="help-block" class="help-block"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="btalikaNo" class="col-sm-6 control-label">ব্যবসায়ী তালিকা নং<span style="color: red">*</span></label>
+                    <div class="col-sm-6 has-feedback">
+                        <input type="text" name="btalikaNo" id="btalikaNo" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  />
+                        <span class=""></span>
+                        <small name="help-block" class="help-block"></small>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="bazarName" class="col-sm-6 control-label">বাজারের নাম <span style="color: red">*</span> </label>
+                    <div class="col-sm-6 has-feedback">
+                        <input type="text" name="bazarName" id="bazarName" class="form-control" maxlength='17' placeholder="ইংরেজিতে"   />
+                        <span class=""></span>
+                        <small name="help-block" class="help-block"></small>
+                    </div>
+                </div>
+            </div>
+
         </div>
         <div id="clearall">
             <div class="row">
@@ -230,6 +277,62 @@
         <div id="itemRows">
 
         </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <div>
+                        <label for="" class="col-sm-3 text-right">কর নির্ধারণের শুরুর অর্থবছর <span style="color: red">*</span></label>
+                        <div class="col-sm-3 has-feedback">
+
+                            <select name="tax_start_date" id="tax_start_date" class="form-control ">
+                                <option value="0">চিহ্নিত করুন</option>
+                                <option value="2025-2026" > 2025-2026 </option>
+                                <option value="2024-2025" > 2024-2025 </option>
+                                <option value="2023-2024" > 2023-2024 </option>
+                                <option value="2022-2023" > 2022-2023 </option>
+                                <option value="2021-2022" > 2021-2022 </option>
+                                <option value="2020-2021" > 2020-2021 </option>
+                                <option value="2019-2020" > 2019-2020 </option>
+                                <option value="2018-2019" > 2018-2019 </option>
+                                <option value="2017-2018" > 2017-2018 </option>
+                                <option value="2016-2017" > 2016-2017 </option>
+                                <option value="2015-2016" > 2015-2016 </option>
+                                <option value="2014-2015" > 2014-2015 </option>
+                                <option value="2013-2014" > 2013-2014 </option>
+                                <option value="2012-2013" > 2012-2013 </option>
+                            </select>
+                            <span class=""></span>
+                            <small name="help-block" class="help-block"></small>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="" class="col-sm-3 text-right">সর্বশেষ কর পরিষদের অর্থবছর <span style="color: red">*</span></label>
+                        <div class="col-sm-3 has-feedback">
+
+                            <select name="last_tax_pay_date" id="last_tax_pay_date" class="form-control ">
+                                <option value="0">চিহ্নিত করুন</option>
+                                <option value="2025-2026" > 2025-2026 </option>
+                                <option value="2024-2025" > 2024-2025 </option>
+                                <option value="2023-2024" > 2023-2024 </option>
+                                <option value="2022-2023" > 2022-2023 </option>
+                                <option value="2021-2022" > 2021-2022 </option>
+                                <option value="2020-2021" > 2020-2021 </option>
+                                <option value="2019-2020" > 2019-2020 </option>
+                                <option value="2018-2019" > 2018-2019 </option>
+                                <option value="2017-2018" > 2017-2018 </option>
+                                <option value="2016-2017" > 2016-2017 </option>
+                                <option value="2015-2016" > 2015-2016 </option>
+                                <option value="2014-2015" > 2014-2015 </option>
+                                <option value="2013-2014" > 2013-2014 </option>
+                                <option value="2012-2013" > 2012-2013 </option>
+                            </select>
+                            <span class=""></span>
+                            <small name="help-block" class="help-block"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-sm-6">
@@ -243,31 +346,27 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="Tax-id" class="col-sm-6 control-label">ট্যাক্স আইডি (যদি থাকে)</label>
+                    <label for="Vat-id" class="col-sm-6 control-label">ব্যবসার ধরন (বাংলায়) <span style="color: red">*</span> </label>
                     <div class="col-sm-6 has-feedback">
-                        <input type="text" name="taxid" id="taxid" class="form-control" maxlength='17' placeholder="ইংরেজিতে"  />
+                        <select name="business_type" id="btypes" class="form-control ">
+                            <option value="0">চিহ্নিত করুন</option>
+                            <option value="2025-2026" > 2025-2026 </option>
+                            <option value="2024-2025" > 2024-2025 </option>
+                            <option value="2023-2024" > 2023-2024 </option>
+                        </select>
                         <span class=""></span>
+                        <small name="help-block" class="help-block"></small>
                     </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group text-right">
+
                 </div>
 
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="form-group">
-                    <div>
-                        <label for="Business-type-bangla" class="col-sm-3 control-label">ব্যবসার ধরন (বাংলায়)  <span style="color: red">*</span></label>
-                        <div class="col-sm-9 has-feedback">
-                            <input type="text" name="business_type" id="btypes" class="form-control" placeholder=""/>
-                            <span class=""></span>
-                            <small name="help-block" class="help-block"></small>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         <div class="row" id="inpucompany">
             <div class="col-sm-12">
@@ -764,46 +863,81 @@
 
                 }
             });
+        });
 
-
-
+        $('#taxid').on('keyup',function () {
+            if ($('#taxid').val() != '') {
+                $('#taxid').parent().parent().removeClass('has-error');
+                $('#taxid').parent().parent().addClass('has-success');
+                $('#taxid').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#taxid').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#taxid').parent().find('small').hide();
+            }
+            else {
+                $('#taxid').parent().parent().removeClass('has-success');
+                $('#taxid').parent().parent().addClass('has-error');
+                $('#taxid').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#taxid').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#taxid').parent().find('small').show().text('The Tax Id Name is required')
+            }
+        });
+        $('#dokanNo').on('keyup',function () {
+            if ($('#dokanNo').val() != '') {
+                $('#dokanNo').parent().parent().removeClass('has-error');
+                $('#dokanNo').parent().parent().addClass('has-success');
+                $('#dokanNo').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#dokanNo').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#dokanNo').parent().find('small').hide();
+            }
+            else {
+                $('#dokanNo').parent().parent().removeClass('has-success');
+                $('#dokanNo').parent().parent().addClass('has-error');
+                $('#dokanNo').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#dokanNo').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#dokanNo').parent().find('small').show().text('The Shop No  Name is required')
+            }
+        });
+        $('#btalikaNo').on('keyup',function () {
+            if ($('#btalikaNo').val() != '') {
+                $('#btalikaNo').parent().parent().removeClass('has-error');
+                $('#btalikaNo').parent().parent().addClass('has-success');
+                $('#btalikaNo').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#btalikaNo').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#btalikaNo').parent().find('small').hide();
+            }
+            else {
+                $('#btalikaNo').parent().parent().removeClass('has-success');
+                $('#btalikaNo').parent().parent().addClass('has-error');
+                $('#btalikaNo').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#btalikaNo').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#btalikaNo').parent().find('small').show().text('This Field is required')
+            }
+        });
+        $('#bazarName').on('keyup',function () {
+            if ($('#bazarName').val() != '') {
+                $('#bazarName').parent().parent().removeClass('has-error');
+                $('#bazarName').parent().parent().addClass('has-success');
+                $('#bazarName').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#bazarName').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#bazarName').parent().find('small').hide();
+            }
+            else {
+                $('#bazarName').parent().parent().removeClass('has-success');
+                $('#bazarName').parent().parent().addClass('has-error');
+                $('#bazarName').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                $('#bazarName').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                $('#bazarName').parent().find('small').show().text('This Field is required')
+            }
         });
 
 
-        // $('#ecomname').on('keyup',function () {
-        //     if($('#ecomname').val()!=''){
-        //         $('#ecomname').parent().parent().removeClass('has-error');
-        //         $('#ecomname').parent().parent().addClass('has-success');
-        //         $('#ecomname').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
-        //         $('#ecomname').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-        //         $('#ecomname').parent().find('small').hide();
-        //     }
-        //     else{
-        //         $('#ecomname').parent().parent().removeClass('has-success');
-        //         $('#ecomname').parent().parent().addClass('has-error');
-        //         $('#ecomname').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
-        //         $('#ecomname').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-        //         $('#ecomname').parent().find('small').show().text('The Institution name is required.');
-        //     }
-        // });
 
 
-        // $('#bcomname').on('keyup',function () {
-        //     if($('#bcomname').val()!=''){
-        //         $('#bcomname').parent().parent().removeClass('has-error');
-        //         $('#bcomname').parent().parent().addClass('has-success');
-        //         $('#bcomname').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
-        //         $('#bcomname').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-        //         $('#bcomname').parent().find('small').hide();
-        //     }
-        //     else{
-        //         $('#bcomname').parent().parent().removeClass('has-success');
-        //         $('#bcomname').parent().parent().addClass('has-error');
-        //         $('#bcomname').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
-        //         $('#bcomname').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-        //         $('#bcomname').parent().find('small').show().text('The Institution name is required.');
-        //     }
-        // });
+
+
+
+
+
 
         $('#ewname').on('keyup',function () {
             if($('#ewname').val()!=''){
@@ -971,6 +1105,8 @@
                 $('#bmname').parent().find('small').show().text('The Mother Name is required')
             }
         });
+
+
         $('#vatid').on('keyup',function () {
             if ($('#vatid').val() != '') {
                 $('#vatid').parent().parent().addClass('has-success');
@@ -978,15 +1114,8 @@
             }
 
         });
-        $('#taxid').on('keyup',function () {
-            if ($('#taxid').val() != '') {
-                $('#taxid').parent().parent().addClass('has-success');
-                $('#taxid').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-            }
-
-        });
-        $('#btypes').on('keyup',function () {
-            if ($('#btypes').val() != '') {
+        $('#btypes').on('change',function () {
+            if ($('#btypes').val() != 0) {
                 $('#btypes').parent().parent().removeClass('has-error');
                 $('#btypes').parent().parent().addClass('has-success');
                 $('#btypes').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');

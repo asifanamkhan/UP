@@ -49,22 +49,32 @@ class TradeLicenseAbedonController extends Controller
             $attached = "";
         }
 
+        $year = Carbon::now()->year;
+        $sonod_no = $year . time().mt_rand(100, 999);
+
         TradeLicenseAbedon::create([
 
+            'sonod_no'=>$sonod_no,
             'mob'=>$request->mob,
             'phone'=>$request->phone,
             'email'=>$request->email,
             'pay_amount'=>$request->pay_amount,
             'token'=>$request->token,
+            'status'=>0,
 
             'image'=>$attached,
             'delivery_type'=>$request->delivery_type,
             'ownertype'=>$request->ownertype,
             'ecomname'=>$request->ecomname,
             'bcomname'=>$request->bcomname,
+            'dokanNo'=>$request->dokanNo,
+            'btalikaNo'=>$request->btalikaNo,
+            'bazarName'=>$request->bazarName,
 
             'vatid'=>$request->vatid,
             'taxid'=>$request->taxid,
+            'tax_start_date'=>$request->tax_start_date,
+            'last_tax_pay_date'=>$request->last_tax_pay_date,
             'business_type'=>$request->business_type,
 
             'be_gram'=>$request->be_gram,
@@ -153,7 +163,7 @@ class TradeLicenseAbedonController extends Controller
 
         $columns = array(
             0 =>'id',
-            1 =>'bname',
+            1 =>'bwname',
             2 => 'token',
             3 => 'id',
             4 => 'delivery_type',
@@ -226,23 +236,25 @@ class TradeLicenseAbedonController extends Controller
         else {
             $search = $request->input('search.value');
 
-            $TradeLicense =  TradeLicenseAbedon::where('bname','LIKE',"%{$search}%")
+            $TradeLicense =  TradeLicenseAbedon::where('bwname','LIKE',"%{$search}%")
                 ->orWhere('token', 'LIKE',"%{$search}%")
                 ->orWhere('id', 'LIKE',"%{$search}%")
                 ->orWhere('delivery_type', 'LIKE',"%{$search}%")
                 ->orWhere('mob', 'LIKE',"%{$search}%")
                 ->orWhere('ecomname', 'LIKE',"%{$search}%")
+                ->orWhere('sonod_no', 'LIKE',"%{$search}%")
                 ->offset($start)
                 ->limit($limit)
                 ->orderBy($order,$dir)
                 ->get();
 
-            $totalFiltered = TradeLicenseAbedon::where('bname','LIKE',"%{$search}%")
+            $totalFiltered = TradeLicenseAbedon::where('bwname','LIKE',"%{$search}%")
                 ->orWhere('token', 'LIKE',"%{$search}%")
                 ->orWhere('id', 'LIKE',"%{$search}%")
                 ->orWhere('delivery_type', 'LIKE',"%{$search}%")
                 ->orWhere('ecomname', 'LIKE',"%{$search}%")
                 ->orWhere('mob', 'LIKE',"%{$search}%")
+                ->orWhere('sonod_no', 'LIKE',"%{$search}%")
                 ->count();
         }
 
@@ -255,9 +267,9 @@ class TradeLicenseAbedonController extends Controller
             {
                 if($value->status == 1){
                     $nestedData['id'] = $key + 1;
-                    $nestedData['bname'] = $value->bname;
+                    $nestedData['bwname'] = $value->bwname;
                     $nestedData['token'] = $value->token;
-                    $nestedData['id'] = $key + 1;
+                    $nestedData['sonod_no'] = $value->sonod_no;
                     if($value->delivery_type == 1){
                         $nestedData['delivery_type'] = 'জরুরী';
                     }
@@ -299,7 +311,7 @@ class TradeLicenseAbedonController extends Controller
 
         $columns = array(
             0 => 'id',
-            1 => 'bname',
+            1 => 'bwname',
             2 => 'token',
             3 => 'delivery_type',
             4 => 'mob',
@@ -326,7 +338,7 @@ class TradeLicenseAbedonController extends Controller
         } else {
             $search = $request->input('search.value');
 
-            $TradeLicenseAbedon = TradeLicenseAbedon::where('bname', 'LIKE', "%{$search}%")
+            $TradeLicenseAbedon = TradeLicenseAbedon::where('bwname', 'LIKE', "%{$search}%")
                 ->orWhere('token', 'LIKE', "%{$search}%")
                 ->orWhere('delivery_type', 'LIKE', "%{$search}%")
                 ->orWhere('ecomname', 'LIKE', "%{$search}%")
@@ -336,7 +348,7 @@ class TradeLicenseAbedonController extends Controller
                 ->orderBy($order, $dir)
                 ->get();
 
-            $totalFiltered = TradeLicenseAbedon::where('bname', 'LIKE', "%{$search}%")
+            $totalFiltered = TradeLicenseAbedon::where('bwname', 'LIKE', "%{$search}%")
                 ->orWhere('token', 'LIKE', "%{$search}%")
                 ->orWhere('delivery_type', 'LIKE', "%{$search}%")
                 ->orWhere('ecomname', 'LIKE', "%{$search}%")
@@ -350,10 +362,10 @@ class TradeLicenseAbedonController extends Controller
         if (!empty($TradeLicenseAbedon)) {
             foreach ($TradeLicenseAbedon as $key => $value) {
                 if ($value->status == 0) {
-                    $nestedData['id'] = $value->iteration;
-                    $nestedData['bname'] = $value->bname;
+                    $nestedData['id'] = $key+1;
+                    $nestedData['bwname'] = $value->bwname;
                     $nestedData['token'] = $value->token;
-                    $nestedData['id'] = $key + 1;
+
                     if ($value->delivery_type == 1) {
                         $nestedData['delivery_type'] = 'জরুরী';
                     } elseif ($value->delivery_type == 2) {
@@ -442,6 +454,23 @@ class TradeLicenseAbedonController extends Controller
 
     public function trade_license_form_dash(){
         return view('pages.dashboard.trade_license_abedon.form');
+    }
+
+    public function trade_license_sonod_search(Request $request){
+        $sonod = TradeLicenseAbedon::where('status','=',1)
+        ->where('sonod_no','=',$request->sonod_no)->first();
+
+        return $sonod;
+    }
+
+    public function trade_license_kor_aday(Request $request){
+        $tax= TradeLicenseAbedon::where('bb_wordno',$request->word_no)
+            ->where('taxid',$request->taxid)
+            ->where('dokanNo',$request->dokanNo)
+            ->where('btalikaNo',$request->btalikaNo)
+            ->get();
+
+        return $tax;
     }
 
 

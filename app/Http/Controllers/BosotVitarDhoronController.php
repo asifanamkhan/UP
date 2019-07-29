@@ -24,7 +24,7 @@ class BosotVitarDhoronController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard.bosot_vitar_dhoron.create');
+        return view('pages.dashboard.setup_menu.bosot_vitar_dhoron.create');
     }
 
     /**
@@ -36,20 +36,23 @@ class BosotVitarDhoronController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'      => 'required|string',
+            'bosot_vitar_dhoron'      => 'required|string',
 
         ]);
-        BosotVitarDhoron::create($request->all());
-        return redirect()->back();
+        $bosot_vitar_dhoron =  new BosotVitarDhoron();
+        $bosot_vitar_dhoron->bosot_vitar_dhoron = $request->bosot_vitar_dhoron;
+        $bosot_vitar_dhoron->status = 1;
+        $bosot_vitar_dhoron->save();
 
     }
     public function bosotVitarDhoronShow(Request $request){
 
         $columns = array(
             0 =>'id',
-            1 =>'name',
+            1 =>'bosot_vitar_dhoron',
             2 => 'updated_at',
-            3 => 'action',
+            3 => 'status',
+            4 => 'action',
 
         );
 
@@ -72,14 +75,14 @@ class BosotVitarDhoronController extends Controller
         else {
             $search = $request->input('search.value');
 
-            $BosotVitarDhoron =  BosotVitarDhoron::where('name','LIKE',"%{$search}%")
+            $BosotVitarDhoron =  BosotVitarDhoron::where('bosot_vitar_dhoron','LIKE',"%{$search}%")
                 ->orWhere('id', 'LIKE',"%{$search}%")
                 ->offset($start)
                 ->limit($limit)
                 ->orderBy($order,$dir)
                 ->get();
 
-            $totalFiltered = BosotVitarDhoron::where('name','LIKE',"%{$search}%")
+            $totalFiltered = BosotVitarDhoron::where('bosot_vitar_dhoron','LIKE',"%{$search}%")
                 ->orWhere('id', 'LIKE',"%{$search}%")
                 ->count();
         }
@@ -90,9 +93,14 @@ class BosotVitarDhoronController extends Controller
         {
             foreach ($BosotVitarDhoron as $key => $value)
             {
-                $nestedData['id'] = $value->id;
-                $nestedData['name'] = $value->name;
+                $nestedData['id'] = $key+1;
+                $nestedData['bosot_vitar_dhoron'] = $value->bosot_vitar_dhoron;
                 $nestedData['updated_at'] = $value->updated_at->toDateString() ;
+                if($value->status==1){
+                    $nestedData['status'] = '<p style="color: green">Enable</p>' ;
+                }else{
+                    $nestedData['status'] =  '<p style="color: red">Disable</p>';
+                }
                 $nestedData['action'] = ' <div class="btn-group">
                                 <a href="#" class="btn btn-primary btn-sm" id="edit" title="edit">
                                    <i class="fa fa-edit"></i> Edit
@@ -114,9 +122,9 @@ class BosotVitarDhoronController extends Controller
     }
 
     public function bosot_vitar_name(Request $request){
-        $name = BosotVitarDhoron::where('name',$request->name)->first();
+        $bosot_vitar_dhoron = BosotVitarDhoron::where('bosot_vitar_dhoron',$request->name)->first();
 
-        if(empty($name)){
+        if(empty($bosot_vitar_dhoron)){
             return 'one';
         }
         else

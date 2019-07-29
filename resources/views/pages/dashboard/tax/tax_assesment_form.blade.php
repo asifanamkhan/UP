@@ -15,6 +15,7 @@
                             <th>ওয়ার্ড নং</th>
                             <th>হোল্ডিং নম্বর</th>
                             <th>বসতভিটার ধরন</th>
+                            <th>রুম সংখ্যা</th>
                             <th>পেশা</th>
                             <th>করের শ্রেনী</th>
                             <th>কর নির্ধারণের শুরুর সন</th>
@@ -38,10 +39,37 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script>
-        $('#example'). DataTable( {
-            "lengthMenu": [[ 25, 50,100, -1], [ 25, 50,100, "All"]],
+        $(document).ready(function() {
+            $('#example'). DataTable( {
+                "lengthMenu": [[ 25, 50,100,200,300, -1], [ 25, 50,100,200,300, "All"]],
 
-        });
+                "processing": true,
+                "serverSide": true,
+                "language": {
+                    processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> '},
+
+                "ajax":{
+                    "url": "{{ route('taxAssesmentForm') }}",
+                    "dataType": "json",
+                    "type": "POST",
+                    "data":{ _token: "{{ csrf_token() }}"}
+                },
+
+                "columns": [
+                    { "data": "id" },
+                    { "data": "bname" },
+                    { "data": "word_no" },
+                    { "data": "holding_no" },
+                    { "data": "bosot_vitar_dhoron" },
+                    { "data": "room_no" },
+                    { "data": "occupation" },
+                    { "data": "tax_class" },
+                    { "data": "tax_start_date" },
+                    { "data": "tax_amount" },
+                    { "data": "action" },
+                ],
+            });
+        } );
     </script>
 
     @endsection

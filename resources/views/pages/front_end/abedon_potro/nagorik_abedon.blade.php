@@ -906,29 +906,29 @@
         $('#husband').hide();
         $('.help-block').hide();
 
-        $(document).on('change','#gender',function () {
-            $('#gender').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
-            $('#gender').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                       $(document).on('change','#gender',function () {
+                    $('#gender').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
+                    $('#gender').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
 
-            if($('#gender').val()=='male' && $('#mstatus').val() == 1){
-                $('#wife').show();
-                 $('#gender').parent().parent().removeClass('has-error');
-                 $('#gender').parent().parent().addClass('has-success');
+                    if($('#gender').val()=='male' && $('#mstatus').val() == 1){
+                        $('#wife').show();
+                        $('#gender').parent().parent().removeClass('has-error');
+                        $('#gender').parent().parent().addClass('has-success');
 
-                $('#gender').parent().find('small').hide();
-                $('#gender').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-            }
-            else{
-                if($('#gender').val() == ''){
-                    $('#gender').parent().parent().addClass('has-error');
-                    $('#gender').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
-                    $('#gender').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                    $('#gender').parent().find('small').show().text('gender is required');
+                        $('#gender').parent().find('small').hide();
+                        $('#gender').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                    }
+                    else{
+                        if($('#gender').val() == ''){
+                            $('#gender').parent().parent().addClass('has-error');
+                            $('#gender').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
+                            $('#gender').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
+                            $('#gender').parent().find('small').show().text('gender is required');
 
-                }
-                else{
-                    $('#gender').parent().find('small').hide();
-                }
+                        }
+                        else{
+                            $('#gender').parent().find('small').hide();
+                        }
 
                 $('#wife').hide();
 

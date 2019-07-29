@@ -15,7 +15,7 @@ class CreateBosotVitarDhoronsTable extends Migration
     {
         Schema::create('bosot_vitar_dhorons', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->nullable();
+            $table->string('bosot_vitar_dhoron')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

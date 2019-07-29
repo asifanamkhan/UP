@@ -91,9 +91,9 @@
                     },
                     "columns": [
                         { "data": "id" },
-                        { "data": "bname" },
+                        { "data": "bwname" },
                         { "data": "token" },
-                        { "data": "id" },
+                        { "data": "sonod_no" },
                         { "data": "delivery_type" },
                         { "data": "mob" },
                         { "data": "ecomname" },

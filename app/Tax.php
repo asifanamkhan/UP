@@ -22,4 +22,20 @@ class Tax extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    public function bosot_vitar_dhorons(){
+        return $this->belongsTo(BosotVitarDhoron::class, 'bosot_vitar_dhoron')->withTrashed();
+    }
+    public function occupations(){
+        return $this->belongsTo(Occupation::class, 'occupation')->withTrashed();
+    }
+    public function tax_classs(){
+        return $this->belongsTo(TaxClass::class, 'tax_class')->withTrashed();
+    }
+    public function family_classs(){
+        return $this->belongsTo(FamilyClass::class, 'poribar_class')->withTrashed();
+    }
+    public function educations(){
+        return $this->belongsTo(Education::class, 'education')->withTrashed();
+    }
 }

@@ -31,6 +31,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('front/home', 'FrontEndController');
     Route::resource('bosotVitarDhoron', 'BosotVitarDhoronController');
     Route::resource('taxClass', 'TaxClassController');
+    Route::resource('occupation', 'OccupationController');
+    Route::resource('holdingTaxFee', 'HoldingTaxFeeController');
+    Route::resource('education', 'EducationController');
+    Route::resource('familyClass', 'FamilyClassController');
+    Route::resource('trade_license_tax', 'TradeLicenseTaxController');
+
 
 
 Route::get('mrittu_sonod', 'others_controller\MrittuSonodController@mrittusonod')->name('mrittu_sonod');
@@ -209,7 +215,7 @@ Route::post('bosot_member_no','TaxController@bosot_member_no')->name('bosot_memb
 //trade_license_tax
 Route::get('trade_license_tax','TaxController@trade_license_tax')->name('trade_license_tax');
 
-Route::get('tax/holding_tax_pay/{holding}/{word}/{member}','TaxController@holding_tax_pay');
+Route::get('tax/holding_tax_pay/{holding}/{word}/{member}/{tax_amount}','TaxController@holding_tax_pay')->name('holding_tax_pay');
 
 //trade_license_form_dash
 Route::get('tradelicense/form/dash','TradeLicenseAbedonController@trade_license_form_dash')->name('trade_license_form_dash');
@@ -221,3 +227,35 @@ Route::get('tax/assesment/form','TaxController@tax_assesment_form')->name('tax_a
 Route::post('bosotVitarDhoronShow','BosotVitarDhoronController@bosotVitarDhoronShow')->name('bosotVitarDhoronShow');
 //bosot_vitar_name ajax
 Route::post('bosot_vitar_name','BosotVitarDhoronController@bosot_vitar_name')->name('bosot_vitar_name');
+//occupationShow show
+Route::post('occupationShow','OccupationController@occupationShow')->name('occupationShow');
+//peshar_name ajax
+Route::post('peshar_name','OccupationController@peshar_name')->name('peshar_name');
+//taxClassShow
+Route::post('taxClassShow','TaxClassController@taxClassShow')->name('taxClassShow');
+//taxClass_name ajax
+Route::post('taxClass_name','TaxClassController@taxClass_name')->name('taxClass_name');
+//holdingTaxFeeShow
+Route::post('holdingTaxFeeShow','HoldingTaxFeeController@holdingTaxFeeShow')->name('holdingTaxFeeShow');
+//bosot_vitar_fee ajax
+Route::post('bosot_vitar_fee','HoldingTaxFeeController@bosot_vitar_fee')->name('bosot_vitar_fee');
+//holding_tax_poriman ajax
+Route::post('holding_tax_poriman','TaxController@holding_tax_poriman')->name('holding_tax_poriman');
+//educationShow ajax
+Route::post('educationShow','EducationController@educationShow')->name('educationShow');
+//education_name ajax
+Route::post('education_name','EducationController@education_name')->name('education_name');
+//poribarClassShow ajax
+Route::post('poribarClassShow','FamilyClassController@poribarClassShow')->name('poribarClassShow');
+//poribar_class_name ajax
+Route::post('poribar_class_name','FamilyClassController@poribar_class_name')->name('poribar_class_name');
+//holding_tax_payment
+Route::post('holding_tax_payment','TaxController@holding_tax_payment')->name('holding_tax_payment');
+//taxAssesmentForm
+Route::post('taxAssesmentForm','TaxController@taxAssesmentForm')->name('taxAssesmentForm');
+//holding_tax_pay_list
+Route::post('holding_tax_pay_list','TaxController@holding_tax_pay_list')->name('holding_tax_pay_list');
+//trade_license_sonod_search ajax
+Route::post('trade_license_sonod_search','TradeLicenseAbedonController@trade_license_sonod_search')->name('trade_license_sonod_search');
+//trade_license_kor_aday
+Route::post('trade_license_kor_aday','TradeLicenseAbedonController@trade_license_kor_aday')->name('trade_license_kor_aday');
