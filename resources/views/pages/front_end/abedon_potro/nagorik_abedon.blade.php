@@ -4,9 +4,74 @@
 @endsection
 @section('content')
     <div class="panel-body all-input-form">
+
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <form action="{{route('nagorikSonodPrint')}}" method="post">
+                    @csrf
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group has-feedback">
+                                <label for="word_no-no" class="col-sm-4 control-label">ওয়ার্ড </label>
+                                <div class="col-sm-8">
+                                    <select name="word_no" id="word_no" class="form-control col-sm-8 ">
+                                        <option value="">চিহ্নিত করুন</option>
+                                        <option value="1">1 ওয়ার্ড</option>
+                                        <option value="2">2 ওয়ার্ড</option>
+                                        <option value="3">3 ওয়ার্ড</option>
+                                        <option value="4">4 ওয়ার্ড</option>
+                                        <option value="5">5 ওয়ার্ড</option>
+                                        <option value="6">6 ওয়ার্ড</option>
+                                        <option value="7">7 ওয়ার্ড</option>
+                                        <option value="8">8 ওয়ার্ড</option>
+                                        <option value="9">9 ওয়ার্ড</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group has-feedback">
+                                <label for="Birth-date" class="col-sm-5 control-label">হোল্ডিং নং </label>
+                                <div class="col-sm-7">
+                                    <div class="" id="">
+                                        <input type="text" class="form-control" name="holding_no" id="holding_no"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group has-feedback">
+                                <label for="Birth-date" class="col-sm-5 control-label">সদস্য নং </label>
+                                <div class="col-sm-7 date">
+                                    <div class="" id="">
+                                        <input type="text" class="form-control" name="member_no" id="member_no"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row " style="margin-top: 8px;">
+                        <div class="col-sm-12 text-center">
+                            <button class="btn btn-info " id="searchBtn">খোঁজ করুন</button>
+                        </div>
+                    </div>
+
+                    <div class="row " id="print" style="margin-top: 8px;">
+                        <div class="col-sm-12 text-center">
+                            <button class="btn btn-info "  >প্রিন্ট</button>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
         <form action="{{route('nagorik_abedon.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="defaultForm">
             @csrf
-            <div class="row" style="margin-top: 10px;">
+
+            <div class="row" style="margin-top: 20px;">
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="Picture" class="col-sm-3 control-label">ছবি</label>
@@ -29,10 +94,8 @@
                         <label for="Delivery-type" class="col-sm-3 control-label">সরবরাহের ধরণ <span style="color: red">*</span></label>
                         <div class="col-sm-9 has-feedback" id="">
                             <label class="radio-inline delivery_type"><input class="delivery_type" type="radio" name="delivery_type" value="1">জরুরী</label>
-                            <label class="radio-inline delivery_type"><input class="delivery_type" type="radio" name="delivery_type" value="2">অতি জরুরী
-                            </label>
-                            <label class="radio-inline delivery_type"><input class="delivery_type" type="radio" name="delivery_type" value="3"
-                                                               checked="checked"> সাধারন</label>
+                            <label class="radio-inline delivery_type"><input class="delivery_type" type="radio" name="delivery_type" value="2">অতি জরুরী</label>
+                            <label class="radio-inline delivery_type"><input class="delivery_type" type="radio" name="delivery_type" value="3" checked="checked"> সাধারন</label>
                         </div>
                     </div>
                 </div>
@@ -41,7 +104,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label for="National-id-english" class="col-sm-6 control-label">ন্যাশনাল আইডি (ইংরেজিতে) </label>
+                        <label for="National-id-english" class="col-sm-6 control-label">ন্যাশনাল আইডি (ইংরেজিতে)</label>
                         <div class="col-sm-6">
                             <input type="text" name="nationid" id="nid" class="form-control" value="" minlength="15" maxlength='17' placeholder=""/>
                             <span class=""></span>
@@ -52,7 +115,7 @@
 
                 <div class="col-sm-6">
                     <div class="form-group has-feedback">
-                        <label for="Birth-no" class="col-sm-6 control-label">জন্ম নিবন্ধন নং ( ইংরেজিতে ) </label>
+                        <label for="Birth-no" class="col-sm-6 control-label">জন্ম নিবন্ধন নং (ইংরেজিতে) </label>
                         <div class="col-sm-6">
                             <input type="text" name="bcno" id="bcno" class="form-control" maxlength="17" placeholder=""/>
                             <span class=""></span>
@@ -67,8 +130,7 @@
                     <div class="form-group has-feedback">
                         <label for="Passport-no" class="col-sm-6 control-label">পাসপোর্ট নং ( ইংরেজিতে ) </label>
                         <div class="col-sm-6">
-                            <input type="text" name="pno" id="pno" class="form-control" maxlength='17'
-                                   placeholder=""/>
+                            <input type="text" name="pno" id="pno" class="form-control" maxlength='17' placeholder=""/>
                             <span ></span>
                             <small name="help-block" class="help-block" style="color: red"></small>
                         </div>
@@ -724,7 +786,7 @@
                         $('#nid').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#nid').parent().find('small').show().text('National id number more than 15 and less then 17 character');
 
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else if(result == 'two'){
                         $('#nid').parent().removeClass('has-success');
@@ -733,7 +795,7 @@
                         $('#nid').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#nid').parent().find('small').show().text('National id number is already exist');
 
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else{
                         $('#nid').parent().removeClass('has-error');
@@ -741,7 +803,7 @@
                         $('#nid').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#nid').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#nid').parent().find('small').hide();
-                        $('#submit_button').prop("disabled",false);
+
                     }
                 },
             });
@@ -774,7 +836,7 @@
                         $('#bcno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#bcno').parent().find('small').show().text('Birth certficate number more than 15 and less then 17 character');
 
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else if(result == 'two'){
                         $('#bcno').parent().removeClass('has-success');
@@ -783,7 +845,7 @@
                         $('#bcno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#bcno').parent().find('small').show().text('Birth certficate number is already exist');
 
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else{
                         $('#bcno').parent().removeClass('has-error');
@@ -791,7 +853,7 @@
                         $('#bcno').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#bcno').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#bcno').parent().find('small').hide();
-                        $('#submit_button').prop("disabled",false);
+
                     }
                 },
             });
@@ -822,7 +884,7 @@
                         $('#pno').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#pno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#pno').parent().find('small').show().text('Passport number more than 13 and less then 17 character');
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else if(result == 'two'){
                         $('#pno').parent().removeClass('has-success');
@@ -831,7 +893,7 @@
                         $('#pno').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#pno').parent().find('small').show().text('Passport number is already exist');
 
-                        $('#submit_button').prop("disabled",true);
+
                     }
                     else{
                         $('#pno').parent().removeClass('has-error');
@@ -839,7 +901,7 @@
                         $('#pno').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#pno').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#pno').parent().find('small').hide();
-                        $('#submit_button').prop("disabled",false);
+
                     }
                 },
             });
@@ -875,7 +937,7 @@
                         $('#mob').parent().parent().addClass('has-success');
                         $('#mob').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
                         $('#mob').parent().find('small').hide();
-                        $('#submit_button').prop("disabled",false);
+
 
                         if(result == 'two'){
                             $('#mob').parent().parent().removeClass('has-error');
@@ -887,7 +949,6 @@
                             $('#mob').parent().find('small').show().text('The Moblie number is already exist');
                         }
                     }
-
                     else {
                         $('#mob').parent().parent().removeClass('has-success');
                         $('#mob').parent().parent().removeClass('has-warning');
@@ -895,7 +956,6 @@
                         $('#mob').parent().parent().addClass('has-error');
                         $('#mob').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
                         $('#mob').parent().find('small').show().text('Invalid mobile number');
-                        $('#submit_button').prop("disabled",true);
                     }
                 }
             });
@@ -1213,14 +1273,20 @@
                 $('#qualification').parent().parent().addClass('has-success');
             }
         });
+
+
         //Present Address
         $(document).on('keyup','#p_gram',function () {
-            if($('#p_gram').val() != ''){
-                $('#p_gram').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-                $('#p_gram').parent().parent().addClass('has-success');
+
+                console.log($('#'+this.id).val());
+                if($('#'+this.id).val() != ''){
+                    $(this.id).parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+                    $(this.id).parent().parent().addClass('has-success');
+
             }
         });
         $(document).on('keyup','#p_rbs',function () {
+            //console.log($('#'+this.id).val());
             if($('#p_rbs').val() != ''){
                 $('#p_rbs').parent().parent().addClass('has-success');
                 $('#p_rbs').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
@@ -1233,9 +1299,9 @@
             }
         });
         $(document).on('keyup','#p_dis',function () {
-            if($('#p_dis').val() != ''){
-                $('#p_dis').parent().parent().addClass('has-success');
-                $('#p_dis').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
+            if($(this).val() != ''){
+                $(this).parent().parent().addClass('has-success');
+                $(this).parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
             }
         });
 
@@ -1398,7 +1464,7 @@
         //value chacking
 
         $('#submit_button').on('click',function (e) {
-            if($('#dof').val() !='' && $('#name').val() !='' && $('#bname').val() !='' && $('#mob').val() !=''&& $('#gender').val() !=''&& $('#mstatus').val() !=''&& $('#efname').val() !=''&& $('#bfname').val() !=''&& $('#mname').val() !=''&& $('#emane').val() !=''&& $('#religion').val() !=''&& $('#bs').val() !=''){
+            if($('#dof').val() !=''  && $('#bname').val() !='' && $('#mob').val() !=''&& $('#gender').val() !=''&& $('#mstatus').val() !=''&& $('#bfname').val() !=''&& $('#mname').val() !=''){
                 if($('#nid').val() == ''){
                     $('#nid').val(0);
                 }
@@ -1478,9 +1544,59 @@
                 }
             }
 
-        })
+        });
+
+
+        $('#print').hide();
+
+        $(document).on('click','#searchBtn',function (e) {
+            e.preventDefault();
+            //$('#defaultForm').reset();
+            $("#defaultForm").trigger("reset");
+            var token = "{{csrf_token()}}";
+            $.ajax({
+                type:"POST",
+                url:"{{route('nagorikValueRegfrom')}}",
+                data:{
+                    'word_no':$('#word_no').val(),
+                     'holding_no':$('#holding_no').val(),
+                    'member_no':$('#member_no').val(),
+                    '_token':token
+                },
+                success:function (result) {
+                    console.log(result);
+                    if(result[0]!=null){
+                        $('#print').show();
+                        $('#dof').val(result[0].dob);
+                        $('#nid').val(result[0].nid);
+                        $('#bcno').val(result[0].birth_cer_no);
+                        $('#name').val(result[0].name);
+                        $('#bname').val(result[0].bname);
+                        $('#gender').val(result[0].gender);
+                        $('#efname').val(result[0].efname);
+                        $('#bfname').val(result[0].bfname);
+                        $('#mname').val(result[0].emname);
+                        $('#emane').val(result[0].bmname);
+                        $('#occupation').val(result[1].occupation);
+                        if(result[2] != null){
+                            $('#qualification').val(result[2].education);
+                        }
+                        //$('p_gram').val(result[0].e_gram);
+                        $('#pb_gram').val(result[0].b_gram);
+                        $('#p_wordno').val(result[0].word_no);
+                        $('#pb_wordno').val(result[0].word_no);
+                        $('#mob').val(result[0].mob);
+                        $('#email').val(result[0].email);
+                    }
+                    else {
+                        $('#print').hide();
+                        alert('কোন তথ্য পাওয়া যায় নাই');
+                    }
+                },
+            });
+
+        });
 
     </script>
 
 @endsection
-

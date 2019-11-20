@@ -15,7 +15,12 @@ class CreateTradeLicenseTaxFeesTable extends Migration
     {
         Schema::create('trade_license_tax_fees', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('business_type')->nullable();
+            $table->double('amount')->nullable();
+            $table->double('muldhon')->nullable();
+            $table->integer('status');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

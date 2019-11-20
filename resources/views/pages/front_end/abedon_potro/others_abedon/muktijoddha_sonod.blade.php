@@ -3,6 +3,70 @@
     মুক্তিযোদ্ধা সনদ
 @endsection
 @section('content')
+
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <form action="{{route('nagorikSonodPrint')}}" method="post">
+                @csrf
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group has-feedback">
+                            <label for="word_no-no" class="col-sm-4 control-label">ওয়ার্ড </label>
+                            <div class="col-sm-8">
+                                <select name="word_no" id="word_no" class="form-control col-sm-8 ">
+                                    <option value="">চিহ্নিত করুন</option>
+                                    <option value="1">1 ওয়ার্ড</option>
+                                    <option value="2">2 ওয়ার্ড</option>
+                                    <option value="3">3 ওয়ার্ড</option>
+                                    <option value="4">4 ওয়ার্ড</option>
+                                    <option value="5">5 ওয়ার্ড</option>
+                                    <option value="6">6 ওয়ার্ড</option>
+                                    <option value="7">7 ওয়ার্ড</option>
+                                    <option value="8">8 ওয়ার্ড</option>
+                                    <option value="9">9 ওয়ার্ড</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group has-feedback">
+                            <label for="Birth-date" class="col-sm-5 control-label">হোল্ডিং নং </label>
+                            <div class="col-sm-7">
+                                <div class="" id="">
+                                    <input type="text" class="form-control" name="holding_no" id="holding_no"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group has-feedback">
+                            <label for="Birth-date" class="col-sm-5 control-label">সদস্য নং </label>
+                            <div class="col-sm-7 date">
+                                <div class="" id="">
+                                    <input type="text" class="form-control" name="member_no" id="member_no"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row " style="margin-top: 8px;">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-info " id="searchBtn">খোঁজ করুন</button>
+                    </div>
+                </div>
+
+                <div class="row " id="print" style="margin-top: 8px;">
+                    <div class="col-sm-12 text-center">
+                        <button class="btn btn-info "  >প্রিন্ট</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
     <form action="{{route('others_sonod_abedon.store')}}" method="post" enctype="multipart/form-data" class="form-horizontal" name="upform" id="upform">
         @csrf
         <div class="row"  style="margin-top: 10px;">
@@ -13,7 +77,7 @@
                         <input type="file" name="file" class="form-control input-file-sm" />
                     </div>
                     <div class="col-sm-3" style="margin-top:3px;">
-                        <button  onclick="return ajaxUpload(this.form,'index.php/home/profile_upload', '&lt;br&gt;Uploading image please wait.....&lt;br&gt;'); return false;" name='upload' class="btn btn-primary">আপলোড</button>
+                        <button  class="btn btn-primary">আপলোড</button>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
@@ -30,7 +94,7 @@
                     <label for="Service List" class="col-sm-3 control-label"> সেবা সমহু  <span>*</span></label>
                     <div class="col-sm-3">
                         <select name="" id="" class="form-control" required disabled >
-                            <option value="" >মুক্তিযোদ্ধা সনদ</option>
+                            <option value="12" >মুক্তিযোদ্ধা সনদ</option>
                         </select>
                         <input type="hidden" value="12" name="serviceList">
                     </div>
@@ -48,60 +112,13 @@
             </div>
         </div>
 
-        <div id="" style="display: none;">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Income Measured" class="col-sm-6 control-label">আয়ের পরিমান( ইংরেজিতে ) </label>
-                        <div class="col-sm-6">
-                            <input type="text" name="incomeAmount" id="incomeAmount" class="form-control"  onkeypress="return checkaccnumber(event);"  placeholder="" />
-                            <span class="sub-hints">বি.দ্র. : বার্ষিক আয়ের প্রত্যয়ন পত্র এর জন্য!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Publish Name" class="col-sm-6 control-label">প্রকাশে নাম</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="publishName" id="publishName" class="form-control"  placeholder="" />
-                            <span class="sub-hints">বি.দ্র. : একই নামের প্রত্যয়ন পত্র এর জন্য!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Work Placed" class="col-sm-6 control-label">কর্ম ক্ষেত্রের নাম</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="workPlace" id="workPlace" class="form-control"  placeholder="" />
-                            <span class="sub-hints">বি.দ্র. : অনুমতি পত্র এর জন্য! যেমন: পুলিশ.</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Death-date" class="col-sm-6 control-label">মৃত্যু তারিখ </label>
-                        <div class="col-sm-6 date">
-                            <div class="input-group input-append date" id="deathPicker">
-                                <input type="date" class="form-control" name="ddfb" />
-                                <span class="sub-hints">বি.দ্র. : মৃত্যুর সনদ পত্রের জন্য</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="" style="display: none;">
+        <div id="" style="display: block;">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="mukti name" class="col-sm-6 control-label">মুক্তিযোদ্ধার নাম</label>
                         <div class="col-sm-6">
                             <input type="text" name="mukti_name" id="mukti_name" class="form-control"  placeholder="" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য!</span>
                         </div>
                     </div>
                 </div>
@@ -110,7 +127,6 @@
                         <label for="gejet no" class="col-sm-6 control-label">গেজেট নং</label>
                         <div class="col-sm-6">
                             <input type="text" name="gejet_no" id="gejet_no" class="form-control"  placeholder="ইংরেজিতে প্রদান করুন" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য! </span>
                         </div>
                     </div>
                 </div>
@@ -122,7 +138,6 @@
                         <label for="mukti sonshod sonod no" class="col-sm-3 control-label">মুক্তিযোদ্ধা সংসদের সনদ নং</label>
                         <div class="col-sm-9">
                             <input type="text" name="m_sonshod_sonod" id="m_sonshod_sonod" class="form-control"  placeholder="" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য!</span>
                         </div>
                     </div>
                 </div>
@@ -134,7 +149,6 @@
                         <label for="Sector No" class="col-sm-6 control-label">সেক্টর নং </label>
                         <div class="col-sm-6">
                             <input type="text" name="sector" id="sector" class="form-control"  placeholder="ইংরেজিতে প্রদান করুন" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য!</span>
                         </div>
                     </div>
                 </div>
@@ -143,51 +157,6 @@
                         <label for="Mukti sonod" class="col-sm-6 control-label">মুক্তিবার্তা নং </label>
                         <div class="col-sm-6">
                             <input type="text" name="mukti_sonod" id="mukti_sonod" class="form-control"  placeholder="ইংরেজিতে প্রদান করুন" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য! </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="relation" class="col-sm-6 control-label">মুক্তিযোদ্ধার সাথে সম্পর্ক</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="relation" id="relation" class="form-control"  placeholder="যেমন: কন্যার পুত্র(নাতিন)" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Short Relation" class="col-sm-6 control-label">সংক্ষেপে</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="short_rel" id="short_rel" class="form-control"  placeholder="যেমন: দাদা/ নানা/" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য! </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="" style="display: block;">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Sector No" class="col-sm-6 control-label">সেক্টর নং </label>
-                        <div class="col-sm-6">
-                            <input type="text" name="sector2" id="sector2" class="form-control"  placeholder="ইংরেজিতে প্রদান করুন" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য!</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="form-group">
-                        <label for="Mukti sonod" class="col-sm-6 control-label">মুক্তিবার্তা নং </label>
-                        <div class="col-sm-6">
-                            <input type="text" name="mukti_sonod2" id="mukti_sonod2" class="form-control"  placeholder="ইংরেজিতে প্রদান করুন" />
-                            <span class="sub-hints">বি.দ্র. : মুক্তিযোদ্ধা সনদ পত্র এর জন্য! </span>
                         </div>
                     </div>
                 </div>
@@ -223,7 +192,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="Birth-date" class="col-sm-6 control-label">জম্ম তারিখ  <span>*</span></label>
+                    <label for="Birth-date" class="col-sm-6 control-label">জম্ম তারিখ </label>
                     <div class="col-sm-6 date">
                         <div class="input-group input-append date" id="datePicker">
                             <input type="text" class="form-control" name="dofb" />
@@ -237,11 +206,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <label for="Name-english" class="col-sm-3 control-label">নাম ( ইংরেজিতে )   <span>*</span></label>
+                    <label for="Name-english" class="col-sm-3 control-label">নাম ( ইংরেজিতে )  </label>
                     <div class="col-sm-3">
                         <input type="text" name="ename" id="name" class="form-control" placeholder="" required />
                     </div>
-                    <label for="Name-bangla" class="col-sm-3 control-label">নাম ( বাংলায় )  <span>*</span></label>
+                    <label for="Name-bangla" class="col-sm-3 control-label">নাম ( বাংলায় )  <span style="color: red">*</span></label>
                     <div class="col-sm-3">
                         <input type="text" name="bname" id="bname" class="form-control" placeholder="" required />
                     </div>
@@ -252,16 +221,16 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <label for="Gender" class="col-sm-3 control-label">লিঙ্গ   <span>*</span></label>
+                    <label for="Gender" class="col-sm-3 control-label">লিঙ্গ   <span style="color: red">*</span></label>
                     <div class="col-sm-3">
-                        <select name="gender" id="gender" class="form-control" required onchange="testshowHide(this.value);" >
+                        <select name="gender" id="gender" class="form-control" required  >
                             <option value="">চিহ্নিত করুন</option>
                             <option value="male">পুরুষ</option>
                             <option value="female">মহিলা</option>
                             <option value="others">অন্যান্য</option>
                         </select>
                     </div>
-                    <label for="Marital-status" class="col-sm-3 control-label">বৈবাহিক সম্পর্ক  <span>*</span></label>
+                    <label for="Marital-status" class="col-sm-3 control-label">বৈবাহিক সম্পর্ক </label>
                     <div class="col-sm-3">
                         <select name="mstatus" id="mstatus" class="form-control" required  >
                             <option value="">চিহ্নিত করুন</option>
@@ -276,44 +245,44 @@
             </div>
         </div>
 
-        <div class="row" id="wife" style="display: none;" data-topic="1" >
-            <div class="col-sm-12">
-                <div class="form-group">
-                    <label for="Wife-name-english" class="col-sm-3 control-label">স্ত্রীর  নাম (ইংরেজিতে)  <span>*</span></label>
-                    <div class="col-sm-3">
-                        <input type="text" name="eWname" id="eWname" class="form-control" placeholder="" />
-                    </div>
-                    <label for="Wife-name-bangla" class="col-sm-3 control-label">স্ত্রীর নাম (বাংলায়) <span>*</span></label>
-                    <div class="col-sm-3">
-                        <input type="text" name="bWname" id="bWname" class="form-control" placeholder="" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class="row" id="wife" style="display: none;" data-topic="1" >--}}
+            {{--<div class="col-sm-12">--}}
+                {{--<div class="form-group">--}}
+                    {{--<label for="Wife-name-english" class="col-sm-3 control-label">স্ত্রীর  নাম (ইংরেজিতে)  <span>*</span></label>--}}
+                    {{--<div class="col-sm-3">--}}
+                        {{--<input type="text" name="eWname" id="eWname" class="form-control" placeholder="" />--}}
+                    {{--</div>--}}
+                    {{--<label for="Wife-name-bangla" class="col-sm-3 control-label">স্ত্রীর নাম (বাংলায়) <span>*</span></label>--}}
+                    {{--<div class="col-sm-3">--}}
+                        {{--<input type="text" name="bWname" id="bWname" class="form-control" placeholder="" />--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
-        <div class="row" id="husband" style="display: none;" data-topic="2" >
-            <div class="col-sm-12">
-                <div class="form-group">
-                    <label for="Husband-name-english" class="col-sm-3 control-label">স্বামীর নাম (ইংরেজিতে) <span>*</span></label>
-                    <div class="col-sm-3">
-                        <input type="text" name="eHname" id="eHname" class="form-control" placeholder="" />
-                    </div>
-                    <label for="Husband-name-bangla" class="col-sm-3 control-label"> স্বামী নাম (বাংলায়) <span>*</span></label>
-                    <div class="col-sm-3">
-                        <input type="text" name="bHname" id="bHname" class="form-control" placeholder="" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class="row" id="husband" style="display: none;" data-topic="2" >--}}
+            {{--<div class="col-sm-12">--}}
+                {{--<div class="form-group">--}}
+                    {{--<label for="Husband-name-english" class="col-sm-3 control-label">স্বামীর নাম (ইংরেজিতে) <span>*</span></label>--}}
+                    {{--<div class="col-sm-3">--}}
+                        {{--<input type="text" name="eHname" id="eHname" class="form-control" placeholder="" />--}}
+                    {{--</div>--}}
+                    {{--<label for="Husband-name-bangla" class="col-sm-3 control-label"> স্বামী নাম (বাংলায়) <span>*</span></label>--}}
+                    {{--<div class="col-sm-3">--}}
+                        {{--<input type="text" name="bHname" id="bHname" class="form-control" placeholder="" />--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে)  <span>*</span></label>
+                    <label for="Father-name-english" class="col-sm-3 control-label">পিতার নাম (ইংরেজিতে) </label>
                     <div class="col-sm-3">
                         <input type="text" name="efname" id="efname" class="form-control" placeholder="" required />
                     </div>
-                    <label for="Father-name-bangla" class="col-sm-3 control-label">পিতার নাম (বাংলায়)  <span>*</span></label>
+                    <label for="Father-name-bangla" class="col-sm-3 control-label">পিতার নাম (বাংলায়)  <span style="color: red">*</span></label>
                     <div class="col-sm-3">
                         <input type="text" name="bfname" id="bfname" class="form-control" placeholder="" required />
                     </div>
@@ -324,11 +293,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
-                    <label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে)  <span>*</span></label>
+                    <label for="Mother-name-english" class="col-sm-3 control-label">মাতার নাম (ইংরেজিতে) </label>
                     <div class="col-sm-3">
                         <input type="text" name="emname" id="mname" class="form-control" placeholder="" required />
                     </div>
-                    <label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  <span>*</span></label>
+                    <label for="Mother-name-bangla" class="col-sm-3 control-label">মাতার নাম (বাংলায়)  <span style="color: red">*</span></label>
                     <div class="col-sm-3">
                         <input type="text" name="bmane" id="emane" class="form-control" placeholder="" required />
                     </div>
@@ -358,7 +327,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="Religion" class="col-sm-6 control-label">ধর্ম    <span>*</span></label>
+                    <label for="Religion" class="col-sm-6 control-label">ধর্ম </label>
                     <div class="col-sm-6">
                         <select name="religion" class="form-control" required >
                             <option value=''>চিহ্নিত করুন</option>
@@ -373,9 +342,9 @@
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                    <label for="Resident" class="col-sm-6 control-label">বাসিন্দা    <span>*</span></label>
+                    <label for="Resident" class="col-sm-6 control-label">বাসিন্দা   </label>
                     <div class="col-sm-6">
-                        <select name="bashinda" id='bs' class="form-control" onchange="basinda_show_hide(this.value);" required >
+                        <select name="bashinda" id='bs' class="form-control" >
                             <option value=''>চিহ্নিত করুন</option>
                             <option value='1'>অস্থায়ী</option>
                             <option value='2'>স্থায়ী</option>
@@ -385,10 +354,10 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
+        <div class="row" id="permaHeading">
+            <div class="col-sm-12" style="text-align:center;">
                 <div class="app-heading">
-                    বর্তমান ঠিকানা
+                    <b><u>বর্তমান ঠিকানা</u></b>
                 </div>
             </div>
         </div>
@@ -397,7 +366,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( ইংরেজিতে )
+                        <b>( ইংরেজিতে )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -469,7 +438,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( বাংলায় )
+                        <b>( বাংলায় )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -543,7 +512,7 @@
         <div class="row" id="permaHeading">
             <div class="col-sm-12" style="text-align:center;">
                 <div class="app-heading">
-                    স্থায়ী  ঠিকানা
+                    <b><u>স্থায়ী  ঠিকানা</u></b>
                 </div>
             </div>
         </div>
@@ -552,7 +521,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( ইংরেজিতে )
+                        <b>( ইংরেজিতে )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -624,7 +593,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( বাংলায় )
+                        <b>( বাংলায় )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -699,7 +668,7 @@
         <div class="row">
             <div class="col-sm-12" style="text-align:center;">
                 <div class="app-heading">
-                    যোগাযোগের ঠিকানা
+                    <b><u>যোগাযোগের ঠিকানা</u></b>
                 </div>
             </div>
         </div>

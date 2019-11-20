@@ -350,18 +350,19 @@
                     <div class="col-sm-6 has-feedback">
                         <select name="business_type" id="btypes" class="form-control ">
                             <option value="0">চিহ্নিত করুন</option>
-                            <option value="2025-2026" > 2025-2026 </option>
-                            <option value="2024-2025" > 2024-2025 </option>
-                            <option value="2023-2024" > 2023-2024 </option>
+                            @foreach($business_type as $business_types)
+                                <option value="{{$business_types->id}}">{{$business_types->business_type}}</option>
+                                @endforeach
                         </select>
                         <span class=""></span>
                         <small name="help-block" class="help-block"></small>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="form-group text-right">
-
+            <div class=" col-sm-9 text-right">
+                <label for="Vat-id" class="col-sm-6 control-label" style="color: blue">করের পরিমান(টাকায়)/বাৎসরিক </label>
+                <div class="form-group text-right" >
+                    <input type="text" name="tax_amount" style="color: red" id="tax_amount" class="form-control col-sm-6" readonly>
                 </div>
 
             </div>
@@ -1229,6 +1230,31 @@
             }
 
         });
+
+        $('#btypes').on('change',function () {
+            var token = "{{csrf_token()}}";
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type:"POST",
+                url:"{{route('tradeTax_amount')}}",
+                data:{
+                    'tax_amount':$('#btypes').val(),
+                },
+                success:function (result) {
+                    if(result !=""){
+                        $('#tax_amount').val(result.amount);
+                    }
+                    else {
+                        $('#tax_amount').val(0);
+                    }
+
+                }
+            });
+        })
 
 
 

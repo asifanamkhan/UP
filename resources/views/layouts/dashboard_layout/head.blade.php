@@ -5,8 +5,8 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon.png')}}">
-<title>Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+<link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/logo.png')}}">
+<title>ইউন‌িয়ন পর‌িষদ</title>
 <!-- Bootstrap Core CSS -->
 <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{asset('css/fontawesome-all.css')}}">
@@ -21,27 +21,10 @@
 <link href="{{asset('css/style.css')}}" rel="stylesheet">
 <!-- You can change the theme colors from here -->
 <link href="{{asset('css/colors/green.css')}}" id="theme" rel="stylesheet">
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
-<![endif]-->
-<script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '../../../../../www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-85622565-1', 'auto');
-    ga('send', 'pageview');
-</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
@@ -56,20 +39,12 @@
 <!-- all script file -->
 <script src="{{asset('js/front_end/jquery.min.js')}}"></script>
 
-{{--<script src="{{asset('js/front_end/jquery-1.10.2.js')}}"></script>--}}
 <script src="{{asset('js/front_end/bootstrap-hover-dropdown.js')}}"></script>
 <script src="{{asset('js/front_end/bootstrap.min.js')}}"></script>
 
-
-
-<!--- form validation js and css---->
-<!---<link rel="stylesheet" href="validation/css/bootstrap.css"/>-->
 <link rel="stylesheet" href="{{asset('css/front_end/formValidation.css')}}"/>
 
-<!---<script type="text/javascript" src="validation/js/jquery.min.js"></script>---->
-<!---<script type="text/javascript" src="validation/js/bootstrap.min.js"></script>-->
 <script type="text/javascript" src="{{asset('js/front_end/formValidation.js')}}"></script>
-
 
 <!--- for datepicker ----------->
 <link href="{{asset('css/front_end/jquery-ui.css')}}" rel="stylesheet" media="screen,projection" type="text/css" />
@@ -80,26 +55,6 @@
 <link href="{{asset('css/front_end/datepicker.min.css')}}" rel="stylesheet" media="screen,projection" type="text/css" />
 <link href="{{asset('css/front_end/datepicker3.min.css')}}" rel="stylesheet" media="screen,projection" type="text/css" />
 <script src="{{asset('js/front_end/bootstrap-datepicker.min.js')}}"></script>
-
-<script>
-    $(function() {
-        var pickerOpts = {
-            dateFormat: $.datepicker.ATOM
-        };
-        $("#dofb").datepicker(pickerOpts);
-    });
-</script>
-<!-- end all script -->
-
-<!-- Owl Carousel Assets -->
-<link href="{{asset('css/front_end/owl.carousel.css')}}" rel="stylesheet">
-<link href="{{asset('css/front_end/owl.theme.css')}}" rel="stylesheet">
-
-<!--- picture uplaod js ---->
-<script src="{{asset('js/front_end/ajaxupload.js')}}" type="text/javascript"></script>
-
-<!--- ajax request function for data serching----->
-<script src="{{asset('js/front_end/ajax_req.js')}}" type="text/javascript"></script>
 
 
 <style>

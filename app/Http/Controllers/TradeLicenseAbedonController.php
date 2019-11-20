@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\TradeLicenseAbedon;
+use App\TradeLicenseTaxFee;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 Use DB;
@@ -76,6 +77,7 @@ class TradeLicenseAbedonController extends Controller
             'tax_start_date'=>$request->tax_start_date,
             'last_tax_pay_date'=>$request->last_tax_pay_date,
             'business_type'=>$request->business_type,
+            'tax_amount'=>$request->tax_amount,
 
             'be_gram'=>$request->be_gram,
             'be_rbs'=>$request->be_rbs,
@@ -453,7 +455,9 @@ class TradeLicenseAbedonController extends Controller
     }
 
     public function trade_license_form_dash(){
-        return view('pages.dashboard.trade_license_abedon.form');
+        $business_type = TradeLicenseTaxFee::get();
+        //dd($license_type);
+        return view('pages.dashboard.trade_license_abedon.form',compact('business_type'));
     }
 
     public function trade_license_sonod_search(Request $request){
@@ -463,15 +467,14 @@ class TradeLicenseAbedonController extends Controller
         return $sonod;
     }
 
-    public function trade_license_kor_aday(Request $request){
-        $tax= TradeLicenseAbedon::where('bb_wordno',$request->word_no)
-            ->where('taxid',$request->taxid)
-            ->where('dokanNo',$request->dokanNo)
-            ->where('btalikaNo',$request->btalikaNo)
-            ->get();
+    public function tradeTax_amount(Request $request){
 
-        return $tax;
+        $tax_amount = TradeLicenseTaxFee::where('id',$request->tax_amount)->first();
+        return $tax_amount;
     }
+
+
+
 
 
 }

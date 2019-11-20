@@ -1,18 +1,27 @@
 @extends('layouts.dashboard_layout.master')
 @section('content')
     <!-- left Content Start-->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>এ্যাসেসমেন্ট ফরম</b></div>
-                <div class="panel-body"  style="min-height:310px;">
 
-                    <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="color: #000102;font-weight:bolder;">
+        <div class="panel panel-default">
+            <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>এ্যাসেসমেন্ট ফরম</b></div>
+            <div class="panel-body"  style="min-height:310px;">
+
+                <div class="row mb-5">
+                    <label for=""class="col-sm-4 text-right">ওয়ার্ড নং <span style="color: red">*</span></label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="word_no">
+                    </div>
+                    <div class="col-sm-2">
+                        <button class="btn btn-info" id="search" style="background-color: #022241">Search</button>
+                    </div>
+                </div>
+
+                <div id="table">
+                    <table id="example" class=" table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="color: #000102;font-weight:bolder;">
                         <thead>
                         <tr>
-                            <th width="">ক্র.নং</th>
+                            <th width="2%">ক্র.নং</th>
                             <th>মালিকের নাম</th>
-                            <th>ওয়ার্ড নং</th>
                             <th>হোল্ডিং নম্বর</th>
                             <th>বসতভিটার ধরন</th>
                             <th>রুম সংখ্যা</th>
@@ -27,7 +36,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
     @endsection
 @section('script')
 
@@ -39,10 +48,18 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $('#example'). DataTable( {
-                "lengthMenu": [[ 25, 50,100,200,300, -1], [ 25, 50,100,200,300, "All"]],
 
+
+        $(document).ready(function() {
+            $('#table'). hide();
+        } );
+
+        $('#search').on('click',function () {
+            $('#table'). show();
+            $('#example').DataTable().destroy();
+            $('#example'). DataTable( {
+                "lengthMenu": [[ 25, 50,100,200,300], [ 25, 50,100,200,300]],
+                //"bInfo": false,
                 "processing": true,
                 "serverSide": true,
                 "language": {
@@ -52,13 +69,14 @@
                     "url": "{{ route('taxAssesmentForm') }}",
                     "dataType": "json",
                     "type": "POST",
-                    "data":{ _token: "{{ csrf_token() }}"}
+                    "data":{ _token: "{{ csrf_token() }}",
+                            word_no:$('#word_no').val(),
+                    }
                 },
 
                 "columns": [
                     { "data": "id" },
                     { "data": "bname" },
-                    { "data": "word_no" },
                     { "data": "holding_no" },
                     { "data": "bosot_vitar_dhoron" },
                     { "data": "room_no" },
@@ -69,7 +87,30 @@
                     { "data": "action" },
                 ],
             });
-        } );
+        });
+        $('#example').on('click', '.btn-delete[data-remote]', function (e) {
+            e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            var url = $(this).data('remote');
+            // confirm then
+            if (confirm('are you sure you want to delete this?')) {
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {_method: 'DELETE', submit: true}
+                }).always(function (data) {
+                    console.log(data);
+                    $('#example').DataTable().draw(false);
+                });
+            }
+        });
+
+
     </script>
 
     @endsection

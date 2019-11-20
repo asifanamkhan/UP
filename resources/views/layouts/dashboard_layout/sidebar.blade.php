@@ -4,7 +4,7 @@
         <ul id="sidebarnav">
             <li class="nav-small-cap">PERSONAL</li>
             <li>
-                <a class="has-arrow" href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">ড্যাশবোর্ড </span></a>
+                <a class="has-arrow" href="{{route('admin')}}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">ড্যাশবোর্ড </span></a>
             </li>
             <li>
                 <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">আবেদন ফরম
@@ -78,6 +78,10 @@
 
             </li>
             <li>
+                <a class="has-arrow " href="{{route('registrationForm')}}" aria-expanded="false"><i class="fa fa-paper-plane"></i><span class="hide-menu">রেজিস্ট্রেশন ফরম</span></a>
+
+            </li>
+            <li>
                 <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-tags"></i><span class="hide-menu">কর
 									</span></a>
                 <ul aria-expanded="false" class="collapse">
@@ -85,158 +89,65 @@
                         <ul aria-expanded="false" class="collapse">
                             <li><a href="{{route('tax.create')}}">হোল্ডিং টেক্স</a></li>
                             <li><a href="{{route('trade_license_tax.create')}}">ট্রেড লাইসেন্স কর</a></li>
-                            <li><a href="#">বাণিজ্যিক কর</a></li>
-                            <li><a href="#">ব্যবসায়ী কর</a></li>
+                            <li><a href="{{route('banijjik_tax.create')}}">বাণিজ্যিক কর</a></li>
+                            <li><a href="{{route('business_tax.create')}}">ব্যবসায়ী কর</a></li>
                         </ul>
                     </li>
                     <li><a href="{{route('tax_assesment_form')}}" aria-expanded="false">ট্যাক্স এ্যাসেসমেন্ট ফরম</a></li>
 
                     <li><a href="#" aria-expanded="false" class="has-arrow">টেক্সধারীদের তালিকা</a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="#">হোল্ডিং টেক্সধারীদের তালিকা</a></li>
-                            <li><a href="#">বাণিজ্যিক টেক্সধারীদের তালিকা</a></li>
-                            <li><a href="#">ব্যবসায়ী টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="{{route('holding_tax_dhariTalika')}}">হোল্ডিং টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="{{route('banijjik_tax_dhari_talika')}}">বাণিজ্যিক টেক্সধারীদের তালিকা</a></li>
+                            <li><a href="{{route('business_tax_dhari_talika')}}">ব্যবসায়ী টেক্সধারীদের তালিকা</a></li>
                         </ul>
                     </li>
                     <li><a href="#" aria-expanded="false" class="has-arrow">কর অনাদায়ী তালিকা</a>
                         <ul aria-expanded="false" class="collapse">
-                            <li><a href="#">হোল্ডিং টেক্স অনাদায়ী তালিকা</a></li>
-                            <li><a href="#">বাণিজ্যিক টেক্স অনাদায়ী তালিকা</a></li>
-                            <li><a href="#">ব্যবসায়ী টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="{{route('holding_tax_onadayeTalika')}}">হোল্ডিং টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="{{route('banijjik_tax_onadayeTalika')}}">বাণিজ্যিক টেক্স অনাদায়ী তালিকা</a></li>
+                            <li><a href="{{route('business_tax_onadayeTalika')}}">ব্যবসায়ী টেক্স অনাদায়ী তালিকা</a></li>
                         </ul>
                     </li>
-
                 </ul>
             </li>
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">দৈনিক জমা</span></a>
-
-            </li>
-            <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">দৈনিক খরচ</span></a>
-
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-edit"></i><span class="hide-menu">দৈনিক হিসাব</span></a>
+                <ul aria-expanded="false" class="collapse">
+                    <li><a href="#">দৈনিক জমা</a></li>
+                    <li><a href="#">দৈনিক খরচ</a></li>
+                </ul>
             </li>
             <li>
                 <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-edit"></i><span class="hide-menu">সেটআপ মেনু</span></a>
                 <ul aria-expanded="false" class="collapse">
-                    <li><a href="table-basic.html">একাউন্টিং সেটআপ</a></li>
-                    <li><a href="table-layout.html">ট্রেডলাইসেন্সের ফি নির্ধারণ</a></li>
+                    <li><a href="{{route('trade_license_tax_fee')}}">ব্যবসায়ী কর নির্ধারণ</a></li>
                     <li><a href="{{route('holdingTaxFee.create')}}">বসতভিটার ফি নির্ধারণ</a></li>
-                    <li><a href="table-footable.html">আয়ের মূল খাত </a></li>
-                    <li><a href="table-jsgrid.html">আয়ের আনুসাঙ্গিক খাত</a></li>
-                    <li><a href="table-responsive.html">খরচের মূল খাত</a></li>
-                    <li><a href="table-bootstrap.html">খরচের আনুসাঙ্গিক খাত</a></li>
-                    <li><a href="table-editable-table.html">ওয়ার্ড মেম্বার যোগ করুন</a></li>
+                    {{--<li><a href="table-footable.html">আয়ের মূল খাত </a></li>--}}
+                    {{--<li><a href="table-jsgrid.html">আয়ের আনুসাঙ্গিক খাত</a></li>--}}
+                    {{--<li><a href="table-responsive.html">খরচের মূল খাত</a></li>--}}
+                    {{--<li><a href="table-bootstrap.html">খরচের আনুসাঙ্গিক খাত</a></li>--}}
+                    <li><a href="{{route('upmember.create')}}">ইউনিয়ন পরিষদ সদস্য যোগ করুন</a></li>
                     <li><a href="{{route('bosotVitarDhoron.create')}}">বসতভিটার ধরন</a></li>
                     <li><a href="{{route('occupation.create')}}">পেশা</a></li>
                     <li><a href="{{route('taxClass.create')}}">করের শ্রেণী</a></li>
                     <li><a href="{{route('education.create')}}">শিক্ষাগত যোগ্যতা</a></li>
                     <li><a href="{{route('familyClass.create')}}">পরিবারের শ্রেণী</a></li>
+                    <li><a href="{{route('doridro.create')}}">দরিদ্র/হতদরিদ্র শ্রেণী</a></li>
+                    <li><a href="{{route('sanitationDhoron.create')}}">স্যানিটেশনের ধরন</a></li>
                 </ul>
             </li>
             <li class="nav-devider"></li>
-            <li class="nav-small-cap">EXTRA COMPONENTS</li>
-            <li class="two-column">
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Pages</span></a>
+            <li class="one-column">
+                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">রেজিস্ট্রেশন</span></a>
                 <ul aria-expanded="false" class="collapse">
-                    <li><a href="starter-kit.html">Starter Kit</a></li>
-                    <li><a href="pages-profile.html">Profile page</a></li>
-                    <li><a href="pages-animation.html">Animation</a></li>
-                    <li><a href="pages-fix-innersidebar.html">Sticky Left sidebar</a></li>
-                    <li><a href="pages-fix-inner-right-sidebar.html">Sticky Right sidebar</a></li>
-                    <li><a href="pages-invoice.html">Invoice</a></li>
-                    <li><a href="pages-treeview.html">Treeview</a></li>
-                    <li><a href="pages-utility-classes.html">Helper Classes</a></li>
-                    <li><a href="pages-search-result.html">Search result</a></li>
-                    <li><a href="pages-scroll.html">Scrollbar</a></li>
-                    <li><a href="pages-pricing.html">Pricing</a></li>
-                    <li><a href="pages-lightbox-popup.html">Lighbox popup</a></li>
-                    <li><a href="pages-gallery.html">Gallery</a></li>
-                    <li><a href="pages-faq.html">Faqs</a></li>
-                    <li><a href="#" class="has-arrow">Error Pages</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="pages-error-400.html">400</a></li>
-                            <li><a href="pages-error-403.html">403</a></li>
-                            <li><a href="pages-error-404.html">404</a></li>
-                            <li><a href="pages-error-500.html">500</a></li>
-                            <li><a href="pages-error-503.html">503</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="has-arrow">Authentication <span class="label label-rounded label-success">6</span></a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="pages-login.html">Login 1</a></li>
-                            <li><a href="pages-login-2.html">Login 2</a></li>
-                            <li><a href="pages-register.html">Register</a></li>
-                            <li><a href="pages-register2.html">Register 2</a></li>
-                            <li><a href="pages-lockscreen.html">Lockscreen</a></li>
-                            <li><a href="pages-recover-password.html">Recover password</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('roleCreate')}}">রোল তৈরি করুন</a></li>
+                    <li><a href="{{route('userCreate')}}">অ্যাডমিন তৈরি করুন</a></li>
+                    <li><a href="{{route('userList')}}">অ্যাডমিনের তালিকা</a></li>
+                    <li><a href="{{route('publicCreate')}}">পাবলিক ইউজার তৈরি করুন</a></li>
                 </ul>
-            </li>
             <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-widgets"></i><span class="hide-menu">Extra</span></a>
-                <ul aria-expanded="false" class="collapse">
-                    <li>
-                        <a class="has-arrow " href="#" aria-expanded="false">Widgets</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="widget-apps.html">Widget Apps</a></li>
-                            <li><a href="widget-data.html">Widget Data</a></li>
-                            <li><a href="widget-charts.html">Widget Charts</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow " href="#" aria-expanded="false">Maps</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="map-google.html">Google Maps</a></li>
-                            <li><a href="map-vector.html">Vector Maps</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow " href="#" aria-expanded="false">Icons</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="icon-material.html">Material Icons</a></li>
-                            <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
-                            <li><a href="icon-themify.html">Themify Icons</a></li>
-                            <li><a href="icon-linea.html">Linea Icons</a></li>
-                            <li><a href="icon-weather.html">Weather Icons</a></li>
-                            <li><a href="icon-simple-lineicon.html">Simple Lineicons</a></li>
-                            <li><a href="icon-flag.html">Flag Icons</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="has-arrow " href="#" aria-expanded="false">Charts</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="chart-morris.html">Morris Chart</a></li>
-                            <li><a href="chart-chartist.html">Chartis Chart</a></li>
-                            <li><a href="chart-echart.html">Echarts</a></li>
-                            <li><a href="chart-flot.html">Flot Chart</a></li>
-                            <li><a href="chart-knob.html">Knob Chart</a></li>
-                            <li><a href="chart-chart-js.html">Chartjs</a></li>
-                            <li><a href="chart-sparkline.html">Sparkline Chart</a></li>
-                            <li><a href="chart-extra-chart.html">Extra chart</a></li>
-                            <li><a href="chart-peity.html">Peity Charts</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-arrange-send-backward"></i><span class="hide-menu">Multi level dd</span></a>
-                <ul aria-expanded="false" class="collapse">
-                    <li><a href="#">item 1.1</a></li>
-                    <li><a href="#">item 1.2</a></li>
-                    <li>
-                        <a class="has-arrow" href="#" aria-expanded="false">Menu 1.3</a>
-                        <ul aria-expanded="false" class="collapse">
-                            <li><a href="#">item 1.3.1</a></li>
-                            <li><a href="#">item 1.3.2</a></li>
-                            <li><a href="#">item 1.3.3</a></li>
-                            <li><a href="#">item 1.3.4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">item 1.4</a></li>
-                </ul>
-            </li>
+
         </ul>
     </nav>
     <!-- End Sidebar navigation -->

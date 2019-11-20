@@ -15,8 +15,8 @@ class CreateNagorikAbedonsTable extends Migration
     {
         Schema::create('nagorik_abedons', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image')->nullable();
             $table->string('sonod_no')->nullable();
+            $table->string('image')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('nationid')->nullable();
             $table->string('bcno')->nullable();
@@ -67,10 +67,10 @@ class CreateNagorikAbedonsTable extends Migration
             $table->string('attachment')->nullable();
             $table->string('token')->nullable();
             $table->string('status')->nullable();
-            $table->string('fee')->nullable();
             $table->string('acno')->nullable();
-            $table->date('daterange')->nullable();
+            $table->string('fee')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

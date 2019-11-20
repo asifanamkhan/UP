@@ -15,7 +15,8 @@ class CreateOccupationsTable extends Migration
     {
         Schema::create('occupations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('occupation');
+            $table->string('occupation')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

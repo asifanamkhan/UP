@@ -122,7 +122,7 @@ class HoldingTaxFeeController extends Controller
                 $nestedData['occupation'] = $value->occupations->occupation;
                 $nestedData['tax_class'] = $value->tax_classs->tax_class;
                 $nestedData['tax_fee'] = $value->tax_fee;
-                $nestedData['updated_at'] = $value->updated_at->toDateString() ;
+                $nestedData['updated_at'] = date("d M Y",strtotime($value->updated_at));
                 if($value->status==1){
                     $nestedData['status'] = '<p style="color: green">Enable</p>' ;
                 }else{

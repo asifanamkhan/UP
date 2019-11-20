@@ -1,3 +1,4 @@
+
 @extends('layouts.dashboard_layout.master')
 
 @section('content')
@@ -36,7 +37,6 @@
             </div>
         </div>
         <!-- Column -->
-        <!-- Column -->
         <div class="col-lg-3 col-md-6">
             <div class="card">
                 <div class="card-body">
@@ -52,7 +52,6 @@
                 </div>
             </div>
         </div>
-        <!-- Column -->
         <!-- Column -->
         <div class="col-lg-3 col-md-6">
             <div class="card">
@@ -70,7 +69,6 @@
             </div>
         </div>
         <!-- Column -->
-        <!-- Column -->
         <div class="col-lg-3 col-md-6">
             <div class="card">
                 <div class="card-body">
@@ -86,6 +84,6 @@
                 </div>
             </div>
         </div>
-        <!-- Column -->
     </div>
 @endsection
+

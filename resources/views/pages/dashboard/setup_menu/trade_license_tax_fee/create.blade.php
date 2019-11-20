@@ -2,21 +2,50 @@
 @section('content')
     <div class="panel panel-default mb-5">
         <div class="btn btn-info w-100" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;"><b>ট্রেড লাইসেন্স ট্যাক্স ফি নির্ধারণ </b></div>
-        <div class="panel-body" >
-            <div class="col-sm-9">
-                <div class="form-group has-feedback">
-                    <label for="" class="col-sm-4 control-label text-right">নতুন করের শ্রেণী যোগ করুন<span style="color: red">*</span> </label>
-                    <div class="col-sm-8">
-                        <input type="text" name="tax_class" id="name" class="form-control" placeholder="Ex: A"/>
-                        <span class="text-left"></span>
-                        <small name="help-block" class="help-block" style="color: red"></small>
+            <div class="panel-body" >
+                <form action="{{route('tradeLicenseFeestore')}}" method="post">
+                    @csrf
+                    <div class="col-sm-9">
+                        <div class="form-group row">
+                            <label for="" class="col-sm-4 control-label text-right">প্রতিষ্ঠানের শ্রেণী<span style="color: red">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="business_type" id="business_type" class="form-control {{ $errors->has('business_type') ? ' is-invalid' : '' }}" placeholder="Ex: ঔষধের দোকান "/>
+                                @if ($errors->has('business_type'))
+                                    <span class="invalid-feedback" >
+                                    <strong>{{ $errors->first('business_type') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-4 control-label text-right">মূলধন<span style="color: red">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="text" name="muldhon" id="muldhon" class="form-control {{ $errors->has('muldhon') ? ' is-invalid' : '' }}" placeholder="Ex: ১০০০০ "/>
+                                @if ($errors->has('muldhon'))
+                                    <span class="invalid-feedback" >
+                                    <strong>{{ $errors->first('muldhon') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-4 control-label text-right">টাকার পরিমাণ<span style="color: red">*</span> </label>
+                            <div class="col-sm-8">
+                                <input type="number" name="amount" id="amount" class="form-control {{ $errors->has('amount') ? ' is-invalid' : '' }}" min="0" placeholder="ইংরেজীতে টাকার পরিমান প্রদান করুন "/>
+                                    @if ($errors->has('amount'))
+                                        <span class="invalid-feedback" >
+                                        <strong>{{ $errors->first('amount') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <button class="btn btn-success col-sm-offset-5 mt-4" id="submit_button" style="background-color: green">যোগ করুন</button>
+                </form>
             </div>
-            <input type="hidden" name="status" value="1">
-            <button class="btn btn-success col-sm-offset-5 mt-4" id="submit_button" style="background-color: green">যোগ করুন</button>
         </div>
-    </div>
 
     {{--বসতভিটার ধরন এর তালিকা--}}
     <div class="card mt-5">
@@ -24,14 +53,15 @@
         <div class="card-body" >
             <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="color: #000102;font-weight:bolder;">
                 <thead>
-                <tr>
-                    <th width="">ক্র.নং</th>
-                    <th>করের শ্রেণী</th>
-                    <th>সর্বশেষ আপডেট</th>
-                    <th>অবস্থা</th>
-                    <th>Action</th>
-                </tr>
-                </thead>
+                    <tr>
+                        <th width="">ক্র.নং</th>
+                        <th>লাইন্সেসের ধরন</th>
+                        <th>টাকার পরিমাণ</th>
+                        <th>সর্বশেষ আপডেট</th>
+                        <th>অবস্থা</th>
+                        <th>Action</th>
+                    </tr>
+                </thead> <f5>                                               F5F55                    5 f</f5>
             </table>
         </div>
     </div>
@@ -45,17 +75,6 @@
     <script type="text/javascript" src="{{asset('datatables/js/dataTables.responsive.min.js')}}"></script>
 
     <script>
-        $('#submit_button').on('click',function () {
-            $.ajax({
-                type:"POST",
-                url:"{{route('taxClass.store')}}",
-                data:{
-                    'tax_class':$('#name').val(),
-                }
-            });
-            $('#example').DataTable().draw();
-
-        });
         $('#example'). DataTable( {
             "lengthMenu": [[ 25, 50,100, -1], [ 25, 50,100, "All"]],
 
@@ -65,7 +84,7 @@
                 processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> '},
 
             "ajax":{
-                "url": "{{ route('taxClassShow') }}",
+                "url": "{{ route('tradeLicenseFeeShow') }}",
                 "dataType": "json",
                 "type": "POST",
                 "data":{ _token: "{{ csrf_token() }}"},
@@ -73,59 +92,12 @@
             },
             "columns": [
                 { "data": "id" },
-                { "data": "tax_class" },
+                { "data": "business_type" },
+                { "data": "amount" },
                 { "data": "updated_at" },
                 { "data": "status" },
                 { "data": "action" },
-
             ]
-        });
-
-        //name validation
-        $('#name').on('keyup',function () {
-
-            var token = "{{csrf_token()}}";
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-                type: "POST",
-                url: "{{route('taxClass_name')}}",
-                data: {
-                    'tax_class': $('#name').val()
-                },
-                success: function (result) {
-                    console.log(result);
-                    if ($('#name').val() == '') {
-                        $('#name').parent().removeClass('has-success');
-                        $('#name').parent().addClass('has-error');
-                        $('#name').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
-                        $('#name').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#name').parent().find('small').show().text('Tax Class is required');
-                        $('#submit_button').prop("disabled", true);
-                    }
-                    else if (result == 'two') {
-                        $('#name').parent().removeClass('has-success');
-                        $('#name').parent().addClass('has-error');
-                        $('#name').parent().find('span').removeClass('glyphicon glyphicon-ok form-control-feedback');
-                        $('#name').parent().find('span').addClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#name').parent().find('small').show().text('Tax Class is already exist');
-
-                        $('#submit_button').prop("disabled", true);
-                    }
-                    else {
-                        $('#name').parent().removeClass('has-error');
-                        $('#name').parent().addClass('has-success');
-                        $('#name').parent().find('span').removeClass('glyphicon glyphicon-remove form-control-feedback');
-                        $('#name').parent().find('span').addClass('glyphicon glyphicon-ok form-control-feedback');
-                        $('#name').parent().find('small').hide();
-                        $('#submit_button').prop("disabled", false);
-                    }
-                }
-
-            });
         });
 
     </script>

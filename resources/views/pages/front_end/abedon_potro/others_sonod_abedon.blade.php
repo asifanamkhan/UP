@@ -1,4 +1,4 @@
-@extends('layouts.front_end_layout.master')
+ @extends('layouts.front_end_layout.master')
 @section('head_content')
     অন্যান্য সেবা এর জন্য আবেদন ফরম
 @endsection

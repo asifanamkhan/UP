@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTradeLicenseTaxesTable extends Migration
+class CreateSanitationDhoronsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateTradeLicenseTaxesTable extends Migration
      */
     public function up()
     {
-        Schema::create('trade_license_taxes', function (Blueprint $table) {
+        Schema::create('sanitation_dhorons', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('sanitation')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +29,6 @@ class CreateTradeLicenseTaxesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trade_license_taxes');
+        Schema::dropIfExists('sanitation_dhorons');
     }
 }

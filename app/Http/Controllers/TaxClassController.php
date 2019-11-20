@@ -95,7 +95,7 @@ class TaxClassController extends Controller
             {
                 $nestedData['id'] =$key+1;
                 $nestedData['tax_class'] = $value->tax_class;
-                $nestedData['updated_at'] = $value->updated_at->toDateString() ;
+                $nestedData['updated_at'] = date("d M Y",strtotime($value->updated_at));
                 if($value->status==1){
                     $nestedData['status'] = '<p style="color: green">Enable</p>' ;
                 }else{

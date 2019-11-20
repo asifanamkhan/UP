@@ -79,7 +79,8 @@
                 <div class="panel-heading" style="background-color:#004884"><!---<i class="fa fa-map-marker"></i> -->&nbsp; Find Us With Google Map</div>
                 <div class="panel-body" style="min-height:185px;">
                     <div id="googleMap" class="col-lg-12">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.1857267317523!2d91.57962288830868!3d24.09496322626219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753df188fc799df%3A0xc9d0fa821d175cf4!2sGazipur+Union+Parishad!5e0!3m2!1sen!2sbd!4v1530174653246" width="500" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>								</div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3676.478528822044!2d89.36869696475243!3d22.858774778166573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x733ebeae8568051a!2z4Kep4Kao4KaCIOCmsOCngeCmpuCmvuCmmOCmsOCmviDgpofgpongpqjgpr_gp5_gpqgg4Kaq4Kaw4Ka_4Ka34Kam!5e0!3m2!1sen!2sbd!4v1565157392402!5m2!1sen!2sbd" width="530" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,10 +95,9 @@
                             <h3></h3>
                             <p></p>
                             <p>
-                                Mobile :০১৭১৬৩৯৪৮২৭<br/>
-                                Phone : ০১৭১২৬৮৩৯৯৭<br />
-                                E-mail :sharminbhuaiyan904@gmail.com<br/>
-                                Web site : www.gazipurup.com
+                                মোবাইল: ০১৭১১২৪৫৬৮৮</br>
+                                ফোনঃ০১৭৯২১৫৬৪৯৪</br>
+                                ওয়েবসাইট:unionparishadbd.com</br>
                             </p>
                         </address>
                     </div>
@@ -105,10 +105,10 @@
             </div>
         </div>
     </div>
-    <div class="footer" style="background-color:#004884;color: #fff;width:100%;margin:0px auto; "><!--Footer Start -->
+    <div class="footer" style="background-color:#683091;color: #fff;width:100%;margin:0px auto; "><!--Footer Start -->
         <div class="row content">
             <div class="col-md-8">
-                <p>&copy; copyright 2015. <a href="#" style="color:#fff;">No 1 Gazipur Union Parishad</a> </p>
+                <p>&copy; copyright {{$now = \Carbon\Carbon::now()->format('Y')}}. <a href="#" style="color:#fff;">No 3 Rudhaghara Union Parishad</a> </p>
             </div>
             <div class="col-md-4">
                 <div>

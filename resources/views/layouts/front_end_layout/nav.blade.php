@@ -10,12 +10,12 @@
                 </button>
             </div>
 
-            <div class="navbar-collapse collapse" id="menubar">
+            <div class="navbar-collapse collapse" id="menubar" >
                 <ul class="nav navbar-nav nav" >
-                    <li><a href="show.html"><i class="fa fa-home fa-lg" style="font-size:15px;vertical-align: 0px;"> &nbsp;প্রথম পাতা</i> &nbsp; </a></li>
+                    <li><a href="{{url('/')}}"><i class="fa fa-home fa-lg" style="font-size:15px;vertical-align: 0px;color: white"> &nbsp;প্রথম পাতা</i> &nbsp; </a></li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">আবেদন পত্র &nbsp;
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white">আবেদন পত্র &nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
@@ -27,79 +27,46 @@
                             <li class="divider"></li>
                             <li><a href="{{route('others_sonod_abedon.create')}}">অন্যান্য সনদের আবেদন ফরম  </a></li>
                             <li class="divider"></li>
+                            <li class="dropdown" >
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white">অন্যান্য সেবাসমূহ &nbsp;
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu" style="overflow-y: scroll;height: 400px">
+                                    <li><a href="{{url('mrittu_sonod')}}">মৃত্যু সনদ</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('charitrik_sonod')}}">চারিত্রিক সনদ</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('obobahito_sonod')}}">অবিবাহিত সনদ</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('vumihin_sonod')}}">ভূমিহীন সনদ</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('pun_bibah_na_howa_sonod')}}">পুনঃ বিবাহ না হওয়া সনদ </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('barshik_income')}}">বার্ষিক আয়ের প্রত্যয়ন</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('eki_name')}}">একই নামের প্রত্যয়ন</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('bak_srobon_protibondhi')}}">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('sonaton_dhormo')}}">সনাতন ধর্ম  অবলম্বী</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('onumoti_potro')}}">অনুমতি পত্র</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('prottyon_potro')}}">প্রত্যয়ন পত্র</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('muktijoddha_sonod')}}">মুক্তিযোদ্ধা সনদ</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="{{url('muktijoddha_possho_sonod')}}">মুক্তিযোদ্ধা পোষ্য সনদ</a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">অন্যান্য সেবাসমূহ &nbsp;
-                            <b class="caret"></b>
-                        </a>
 
-                        <ul class="dropdown-menu">
-                            <li><a href="{{url('mrittu_sonod')}}">মৃত্যু সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('charitrik_sonod')}}">চারিত্রিক সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('obobahito_sonod')}}">অবিবাহিত সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('vumihin_sonod')}}">ভূমিহীন সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('pun_bibah_na_howa_sonod')}}">পুনঃ বিবাহ না হওয়া সনদ </a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('barshik_income')}}">বার্ষিক আয়ের প্রত্যয়ন</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('eki_name')}}">একই নামের প্রত্যয়ন</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('bak_srobon_protibondhi')}}">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('sonaton_dhormo')}}">সনাতন ধর্ম  অবলম্বী</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('onumoti_potro')}}">অনুমতি পত্র</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('prottyon_potro')}}">প্রত্যয়ন পত্র</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('muktijoddha_sonod')}}">মুক্তিযোদ্ধা সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="{{url('muktijoddha_possho_sonod')}}">মুক্তিযোদ্ধা পোষ্য সনদ</a></li>
-                            <li class="divider"></li>
-
-                        </ul>
-                    </li>
-                    <!---
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">অন্যান্য সেবাসমূহ &nbsp;
-                            <b class="caret"></b>
-                        </a>
-
-                        <ul class="dropdown-menu">
-
-                            <li><a href="home/otherService?service=1">মৃত্যু সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=2">চারিত্রিক সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=3">অবিবাহিত সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=4">ভূমিহীন সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=5">পুনঃ বিবাহ না হওয়া সনদ</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=6">বার্ষিক আয়ের প্রত্যয়ন</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=7">একই নামের প্রত্যয়ন</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=8">প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=9">সনাতন ধর্ম  অবলম্বী</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=10">অনুমতি পত্র</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/otherService?service=11">প্রত্যয়ন পত্র</a></li>
-                            <li class="divider"></li>
-                        </ul>
-                    </li>-->
 
                     <li class="dropdown ">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">আবেদন যাচাই করুন &nbsp;
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white">আবেদন যাচাই &nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
@@ -114,8 +81,19 @@
                         </ul>
                     </li>
 
+                    <li class="dropdown" >
+                        <a href="{{route('sdgDesignFrontEnd')}}"  data-delay="100" data-close-others="false" style="color: white;">এসডিজি
+                        </a>
+                    </li>
+
+
+                    {{--<li class="dropdown ">--}}
+                        {{--<a href="{{route('frontendRegistration')}}"  data-delay="100" data-close-others="false" style="color: white"> &nbsp;রেজিস্ট্রেশন ফরম--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+
                     <li class="dropdown ">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">সনদপত্র যাচাই করুন &nbsp;
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white">সনদপত্র যাচাই &nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
@@ -129,27 +107,19 @@
                             <li class="divider"></li>
                             <li><a href="home/jacaiMamlaNotice.html">মামলার নোটিশ যাচাই</a></li>
                             <li class="divider"></li>
-                            <li><a href="home/verify_holding_tax.html">হোল্ডিং ট্যাক্স যাচাই</a></li>
+                            <li><a href="{{route('sonodHoldingTaxVerify')}}">হোল্ডিং ট্যাক্স যাচাই</a></li>
                             <li class="divider"></li>
                         </ul>
                     </li>
 
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">ইউনিয়ন পরিষদ &nbsp;
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white;">ইউনিয়ন পরিষদ &nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="home/voterList.html">ভোটার তালিকা</a></li>
                             <li class="divider"></li>
                             <li><a href="home/fighters.html">মুক্তিযোদ্ধা তালিকা</a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/poorman.html">দুস্থদের তালিকা </a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/widow.html">বিধবাদের তালিকা </a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/foreignMan.html">প্রবাসীদের তালিকা </a></li>
-                            <li class="divider"></li>
-                            <li><a href="home/oldmanStipend.html">বয়স্কভাতা</a></li>
                             <li class="divider"></li>
                             <li><a href="home/motherVata.html">মাতৃত্বকালীন ভাতা </a></li>
                             <li class="divider"></li>
@@ -159,53 +129,82 @@
                             <li class="divider"></li>
                         </ul>
                     </li>
+
+                    <li class="" style="padding-top: 10px">
+                        <select name="" id="division" class="form-control">
+                            <option value="#">সিলেক্ট করুন</option>
+                            <option value="https://facebook.com">ঢাকা</option>
+                            <option value="https://youtube.com">রাজশাহী</option>
+                            <option value="https://google.com">খুলনা</option>
+                            <option value="https://daraz.com">রংপুর</option>
+                            <option value="https://facebook.com">সিলেট</option>
+                            <option value="w">ময়মনসিংহ</option>
+                            <option value="s">বরিশাল</option>
+                            <option value="y">চট্টগ্রাম</option>
+                        </select>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false" style="color: white;">প্রোফাইল&nbsp;
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @if(Auth::check())
+                                <li class="dropdown">
+                                    <a class="" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"></i>লআউট</a></a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        {{ csrf_field() }}
+                                    </form>
+                                </li>
+
+                            @else
+                                <li class="dropdown">
+                                    <a href="{{route('login')}}" style="color: white;">লগইন&nbsp;</a>
+                                </li>
+                            @endif
+                        </ul>
+
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    function isNumber(evt){
-        evt = (evt) ? evt : window.event;
-        var charCode = (evt.which) ? evt.which : evt.keyCode;
-        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-            return false;
-        }
-        return true;
-    }
-</script>
+
+{{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">--}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <!--this is header content End -->
 <div class="slid_show"><!-- Slide Show Start-->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="{{asset('images/front_end/m_mosqe.jpg')}}"  style="width:100%;" class="img-responsive" />
+                <img src="{{asset('images/front_end/Banner-2.jpg')}}"  style="width:100%;" class="img-responsive" />
                 <div class="carousel-caption"></div>
             </div>
             <div class="item">
-                <img src="{{asset('images/front_end/m_shool.jpg')}}" alt="Union Parishad" style="width:100%;" class="img-responsive">
+                <img src="{{asset('images/front_end/Final Banner.jpg')}}" alt="Union Parishad" style="width:100%;" class="img-responsive">
                 <div class="carousel-caption"></div>
             </div>
-
         </div>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
         </a>
         <div class="main-div hidden-xs hidden-sm visible-md visible-lg">
             <div class="main-div-inner">
                 <div class="logo">
-                    <a href=" "><img src="all/logo/logo.html" alt="logo" height="68px" width="70px" /></a>
+                    <a href=" "><img src="{{asset('images/front_end/logo.png')}}" alt="logo" height="68px" width="70px" /></a>
                 </div>
                 <div class="site-name-wrapper">
-						<span id="sitename">
-							<a href="#">১নং গাজীপুর ইউন‌িয়ন পর‌িষদ</a>
-						</span>
+                    <span id="sitename">
+                        <a href="#">৩ নং রুদাঘরা ইউন‌িয়ন পর‌িষদ</a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -244,28 +243,32 @@
         font-size:120%;
         font-weight:400;
     }
-
 </style>
 
 <div class="scroll_news"><!-- Scrool News Start-->
     <div class="row">
         <div class="col-md-2">
-            <p class="text-center">
-                <a href="home/all_news.html" style="text-decoration:none;"><i class="fa fa-newspaper-o"></i>&nbsp; সকল খবর  &nbsp; <i class="fa fa-chevron-right"></i></a>
+            <p class="text-center" >
+                <a style="color: blue" href="home/all_news.html" style="text-decoration:none;"><i class="fa fa-newspaper-o"></i>&nbsp; সকল খবর  &nbsp; <i class="fa fa-chevron-right"></i></a>
             </p>
-
         </div>
         <div class="col-md-10">
             <table width="100%" border="0">
                 <tr>
-                    <td width="100%">
+                    <td width="100%" >
                         <marquee behavior="scroll" align="middle" direction="left" scrollamount="6" onmouseover="this.stop()" onmouseout="this.start()">
-
+                            <p style="color: #ff0202"><b><i>*** ওয়েব সাইট খোলা  ***</i></b></p>
                         </marquee>
                     </td>
-
                 </tr>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    $('#division').on('change',function () {
+        var url=($(this).val());
+        window.open(url,'_blank')
+    })
+</script>

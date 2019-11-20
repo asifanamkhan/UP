@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FrontEnd;
 use App\NagorikAbedon;
+use App\UPmember;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -15,7 +16,13 @@ class FrontEndController extends Controller
      */
     public function index()
     {
-        return view('pages.front_end.home');
+        $members=UPmember::all();
+        //dd($members);
+       return view('pages.front_end.home',compact('members'));
+    }
+
+    public function sdgDesignFrontEnd(){
+        return view('pages.front_end.sdc.sdgDesignFrontEnd');
     }
 
     /**

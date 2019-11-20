@@ -7,7 +7,7 @@
                 <div class="panel-body"  style="min-height:310px;">
                    <div class="card">
                        <div class="card-header" style=" color:white; background-color: #022241; font-size: 14px;text-align:center;">
-                           <b>বসত ভিটার ফি পরিশোধ ফরম</b>
+                           <b>বসত ভিটার কর পরিশোধ ফরম</b>
                        </div>
                        <div class="card-body">
                            <div class="row font-weight-bold">
@@ -144,13 +144,7 @@
                                </div>
                                <div class="border border-danger"></div>
                                    <div class="col-sm-5 text-right">
-                                       <div class="row">
-                                           <label for="" class="col-sm-5">পরিশোধের তারিখ <span style="color: red">*</span></label>
-                                           @php
-                                               $presentDays = \Carbon\Carbon::parse(\Carbon\Carbon::today());
-                                           @endphp
-                                           <input type="date" class="form-control col-sm-7" name="tax_pay_date" value="">
-                                       </div>
+
                                        <div class="row mt-4">
                                            <label for="" class="col-sm-5">মানি রসিদ নম্বর <span style="color: red">*</span></label>
                                            <input type="text" class="form-control col-sm-7" name="money_recieve_no" value="">

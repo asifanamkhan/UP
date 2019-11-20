@@ -22,4 +22,9 @@ class TradeLicenseAbedon extends Model
      * @var array
      */
     protected $dates = ['deleted_at'];
+
+    public function business()
+    {
+        return $this->belongsTo(TradeLicenseTaxFee::class, 'business_type')->withTrashed();
+    }
 }

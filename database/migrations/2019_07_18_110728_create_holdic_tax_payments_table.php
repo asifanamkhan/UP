@@ -15,13 +15,16 @@ class CreateHoldicTaxPaymentsTable extends Migration
     {
         Schema::create('holdic_tax_payments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('ortho_year_payable')->nullable();
+            $table->string('holding_no')->nullable();
+            $table->integer('word_no')->nullable();
+            $table->integer('ortho_year_payable')->nullable();
             $table->string('ortho_year_diff_count')->nullable();
+            $table->string('last_tax_pay_date')->nullable();
             $table->string('money_recieve_no')->nullable();
-            $table->string('total_money')->nullable();
-            $table->string('moukuf')->nullable();
-            $table->string('total_payable_amount')->nullable();
-            $table->string('previous_tax_amount')->nullable();
+            $table->double('total_money')->nullable();
+            $table->double('moukuf')->nullable();
+            $table->double('total_payable_amount')->nullable();
+            $table->double('previous_tax_amount')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

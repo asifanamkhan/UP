@@ -41,50 +41,60 @@
                             </div>
                         </div>
 
-                            {{--trade license info show--}}
+                        {{--trade license info show--}}
+                        <div class="card mt-5" id="trade_license_table">
+                            <div class="card-header font-14 font-weight-bold" id="thottho"></div>
+                            <div class="card-body">
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered table-hover " id="thottho1">
+                                        <tbody style="color: blue" >
 
-                            <div class="card mt-5" id="trade_license_table">
-                                <div class="card-header font-14 font-weight-bold" id="thottho"></div>
-                                <div class="card-body">
-                                    <div class="">
-                                        <table class="table table-bordered table-hover " id="thottho1">
-                                            <tbody >
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-
-                                    <button style="background-color: #022241;"class="w-100 btn btn-info mt-4">
-                                        Trade License TAX Payment History
-                                    </button>
-
-                                    <table  id="example" class="table table-striped table-bordered dt-responsive nowrap mt-4" cellspacing="0" width="100%" style="color: #000102;font-weight:bolder;">
-
-                                        <thead>
-                                        <tr>
-                                            <th width="">ক্র.নং</th>
-                                            <th>পরিশোধের তারিখ</th>
-                                            <th>মানি রসিদ নম্বর</th>
-                                            <th>টাকার পরিমান</th>
-                                            <th>মওকুফ</th>
-                                            <th>পরিশোধিত টাকার পরিমান</th>
-                                            <th>Action</th>
-                                        </tr>
-                                        </thead>
+                                        </tbody>
                                     </table>
                                 </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered table-hover " id="thottho2">
+                                        <tbody >
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <button style="background-color: #022241;"class="w-100 btn btn-info mt-4">
+                                    Trade License TAX Payment History
+                                </button>
+
+                                <table  id="example" class="table table-striped table-bordered dt-responsive nowrap mt-4" cellspacing="0" width="100%" style="color: #000102;font-weight:bolder;">
+                                    <thead>
+                                    <tr>
+                                        <th width="">ক্র.নং</th>
+                                        <th>পরিশোধের তারিখ</th>
+                                        <th>মানি রসিদ নম্বর</th>
+                                        <th>টাকার পরিমান</th>
+                                        <th>মওকুফ</th>
+                                        <th>পরিশোধিত টাকার পরিমান</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 @endsection
 
 @section('script')
+    <link rel="stylesheet" href="{{asset('datatables/css/dataTables.bootstrap4.css')}}" />
+    <link rel="stylesheet" href="{{asset('datatables/css/responsive.bootstrap.min.css')}}" />
+    <script type="text/javascript" src="{{asset('datatables/js/jquery.dataTables.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('datatables/js/dataTables.bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('datatables/js/dataTables.responsive.min.js')}}"></script>
+
     <script>
+
         $(document).ready(function(){
             $('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
                 localStorage.setItem('activeTab', $(e.target).attr('href'));
@@ -94,29 +104,6 @@
                 $('#myTab a[href="' + activeTab + '"]').tab('show');
                 $('#myTab a[href="' + activeTab + '"]').trigger('click');
             }
-        });
-
-        $('#sonod_no').on('keyup' ,function () {
-            var token = "{{csrf_token()}}";
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-                type:"POST",
-                url:"{{route('trade_license_sonod_search')}}",
-                data:{
-                    'sonod_no':$('#sonod_no').val(),
-                },
-                success:function (result) {
-                    $('#bcomname').val(result.bcomname);
-                    $('#ownertype').val(result.ownertype);
-                    $('#bb_gram').val(result.bb_gram);
-                    $('#bb_wordno').val(result.bb_wordno);
-                    $('#mob').val(result.mob);
-                },
-            });
         });
 
         $('#trade_license_table').hide();
@@ -130,7 +117,6 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-
             $.ajax({
                 type:"POST",
                 url:"{{route('trade_license_kor_aday')}}",
@@ -144,9 +130,8 @@
                     $("#loaderDiv").show();
                 },
                 success:function (result) {
-                    console.log(result)
                     $("#loaderDiv").hide();
-                    if(result == ''){
+                    if(result[0] == ''){
                         $('#thottho').empty();
                         $('#thottho1 > tbody:last-child').empty();
                         $('#trade_license_table').hide();
@@ -156,35 +141,40 @@
                         $('#trade_license_table').show();
                         $('#thottho').empty();
                         $('#thottho1 > tbody:last-child').empty();
+                        $('#thottho2 > tbody:last-child').empty();
 
-                        result.forEach(function (data) {
+                        result[0].forEach(function (data) {
 
                             $('#thottho').append( data.bwname+'  '+'এর তথ্য');
-                            var holding_no = data.taxid;
-                            var word_no = data.bb_wordno;
+                            var taxid = data.taxid;
+                            var word_no = data.be_wordno;
+                            var dokan = data.dokanNo;
+                            var btalikaNo = data.btalikaNo;
+                            var tax_amount = result[1];
 
-
-                            //var hold = 'holding_tax_pay/' + holding_no +'/'+ word_no +'/'+ member_no+'/'+tax_amount;
+                            var trade = 'tradeLicense_tax_pay/' + taxid +'/'+ word_no +'/'+ dokan+'/'+tax_amount+'/'+btalikaNo;
 
 
                             var newTr = "<tr>";
                             if (data.ownertype==1){
-                                newTr += "<tr class='tr'> <th width='30%'><b>ব্যবসার ধরন</b></th>";
+                                newTr += "<tr class='tr'> <th width=''><b>প্রতিষ্ঠানের মালিকানার ধরণ</b></th>";
                                 newTr += "<td class='font-weight-bold'>" + "ব্যক্তি মালিকানাধীন" + "</td>";
                                 newTr += "</tr>";
                             }
                             else if(data.ownertype==2){
-                                newTr += "<tr class='tr'> <th width='30%'><b>ব্যবসার ধরন</b></th>";
+                                newTr += "<tr class='tr'> <th width=''><b>প্রতিষ্ঠানের মালিকানার ধরণ</b></th>";
                                 newTr += "<td class='font-weight-bold'>" + "যৌথ মালিকানা" + "</td>";
                                 newTr += "</tr>";
                             }
                             else{
-                                newTr += "<tr class='tr'> <th width='30%'><b>ব্যবসার ধরন</b></th>";
+                                newTr += "<tr class='tr'> <th width=''><b>প্রতিষ্ঠানের মালিকানার ধরণ</b></th>";
                                 newTr += "<td class='font-weight-bold'>" + "কোম্পানী" + "</td>";
                                 newTr += "</tr>";
                             }
-
-                            newTr += "<tr class='tr'> <th><b>মালিকের নাম</b></th>";
+                            newTr += "<tr class='tr'> <th><b>ব্যবসার ধরন</b></th>";
+                            newTr += "<td class='font-weight-bold'>" + data.business.business_type + "</td>";
+                            newTr += "</tr>";
+                            newTr += "<tr class='tr'> <th><b>মূল মালিকের নাম</b></th>";
                             newTr += "<td class='font-weight-bold'>" + data.bwname + "</td>";
                             newTr += "</tr>";
                             newTr += "<tr> <th><b>পিতার নাম</b></th>";
@@ -193,23 +183,33 @@
                             newTr += "<tr> <th><b>মাতার নাম</b></th>";
                             newTr += "<td class='font-weight-bold'>" + data.bmname + "</td>";
                             newTr += "</tr>";
-                            newTr += "<tr> <th><b>ওয়ার্ড নং</b></th>";
-                            newTr += "<td class='font-weight-bold'>" + data.bb_wordno + "</td>";
-                            newTr += "</tr>";
                             newTr += "<tr> <th><b>বাজারের নাম</b></th>";
                             newTr += "<td class='font-weight-bold'>" + data.bazarName + "</td>";
                             newTr += "</tr>";
-                            newTr += "<tr style='color: red'> <th><b>মোবাইল </b></th>";
+                            newTr += "<tr > <th><b>মোবাইল </b></th>";
                             newTr += "<td class='font-weight-bold'>" + data.mob + "</td>";
-                            newTr += "</tr>";
-                            newTr += "<tr style='color: red'> <th width='30%'><b>বাৎসরিক ট্যাক্সের পরিমান </b></th>";
-                            newTr += "<td class=''> <div class=''><input type='text' class='form-control col-sm-9'> <button class='btn-sm btn-success col-sm-offset-1' style='background-color: darkgreen'>Payment</button></div>" +"</td>";
-
 
                             $('#thottho1 > tbody:last-child').append(newTr);
 
+                            var newTr = "<tr>";
+                            newTr += "</tr>";
+                            newTr += "<tr style='color: red'> <th width=''><b>বাৎসরিক ট্যাক্সের পরিমান </b></th>";
+                            newTr += "<td class='font-weight-bold'> " +data.tax_amount+ "</td>";
+                            newTr += "<tr style='color: red'> <th><b>কর নির্ধারণের শুরুর অর্থবছর</b></th>";
+                            newTr += "<td class='font-weight-bold'>" + data.tax_start_date + "</td>";
+                            newTr += "</tr>";
+                            newTr += "<tr style='color: red'> <th><b>সর্বশেষ কর পরিষদের অর্থবছর</b></th>";
+                            newTr += "<td class='font-weight-bold'>" + data.last_tax_pay_date + "</td>";
+                            newTr += "</tr>";
+                            newTr += "<tr style='color: red'> <th><b>সর্বমোট বকেয়া</b></th>";
+                            newTr += "<td class='font-weight-bold'>" + result[1] + "</td>";
+                            newTr += "</tr>";
+                            newTr += "<tr> <th><b></b></th>";
+                            newTr += "<td><div><a href='' id='payment' class='btn-sm btn-info' style='background-color: green'>Payment</a></div></td>";
+                            newTr += "</tr>";
+                            $('#thottho2 > tbody:last-child').append(newTr);
 
-                            $('#payment').prop('href', hold);
+                            $('#payment').prop('href', trade);
                         });
                     }
                 },
@@ -220,21 +220,21 @@
             $('#example').DataTable().destroy();
             $('#example'). DataTable( {
                 "lengthMenu": [[ 25, 50,100, -1], [ 25, 50,100, "All"]],
-
                 "processing": true,
                 "serverSide": true,
                 "language": {
                     processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span> '},
 
                 "ajax":{
-                    "url": "{{ route('holding_tax_pay_list') }}",
+                    "url": "{{ route('tradeLcense_tax_pay_list') }}",
                     "dataType": "json",
                     "type": "POST",
                     "data":{ _token: "{{ csrf_token() }}",
-                        holding_no: $('#holding_no_search').val(),
-                        word_no: $('#word_no_search').val(),
+                        taxid: $('#taxid').val(),
+                        word_no: $('#word_no').val(),
+                        dokanNo: $('#dokanNo').val(),
+                        btalikaNo: $('#btalikaNo').val(),
                     },
-
                 },
                 "columns": [
                     { "data": "id"},
@@ -244,11 +244,9 @@
                     { "data": "moukuf" },
                     { "data": "total_payable_amount"},
                     { "data": "action" },
-
                 ],
-
             });
-        })
+        });
 
     </script>
 @endsection

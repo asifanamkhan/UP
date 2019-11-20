@@ -83,6 +83,7 @@ class CreateOthersSonodAbedonsTable extends Migration
             $table->string('fee')->nullable();
             $table->string('acno')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

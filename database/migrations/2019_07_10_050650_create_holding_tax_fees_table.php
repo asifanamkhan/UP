@@ -18,7 +18,8 @@ class CreateHoldingTaxFeesTable extends Migration
             $table->string('bosot_vitar_dhoron')->nullable();
             $table->string('occupation')->nullable();
             $table->string('tax_class')->nullable();
-            $table->string('tax_fee')->nullable();
+            $table->double('tax_fee')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

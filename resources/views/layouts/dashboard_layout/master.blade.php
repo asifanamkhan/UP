@@ -36,48 +36,49 @@
         @include('layouts.dashboard_layout.sidebar')
         <!-- End Sidebar scroll-->
     </aside>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
     <div class="page-wrapper" style="background-color: white">
         <!-- ============================================================== -->
         <!-- Container fluid  -->
         <!-- ============================================================== -->
         <div class="container-fluid">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
+
+            @if(session('success'))
+                <div class="alert alert-success " role="alert">
+                    <strong>{{session('success')}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            @if(session('danger'))
+                <div class="alert alert-danger " role="alert">
+                    <strong>{{session('danger')}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+            @if(session('warning'))
+                <div class="alert alert-warning alert-dismissible fade show session-message" role="alert">
+                    <strong>{{session('warning')}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
             @yield('content')
-            <!-- ============================================================== -->
-            <!-- End Right sidebar -->
-            <!-- ============================================================== -->
+
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
         <footer class="footer">
            @include('layouts.dashboard_layout.footer')
         </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
+
     </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
+
 </div>
-<!-- ============================================================== -->
-<!-- End Wrapper -->
-<!-- ============================================================== -->
-<!-- ============================================================== -->
-<!-- All Jquery -->
-<!-- ============================================================== -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <!-- Bootstrap tether Core JavaScript -->
 <script src="{{asset('js/popper.min.js')}}"></script>
@@ -92,19 +93,6 @@
 <script src="{{asset('js/sticky-kit.min.js')}}"></script>
 <!--Custom JavaScript -->
 <script src="{{asset('js/custom.min.js')}}"></script>
-<!-- ============================================================== -->
-<!-- This page plugins -->
-<!-- ============================================================== -->
-<!-- chartist chart -->
-<script src="{{asset('js/chartquist.min.js')}}"></script>
-<script src="{{asset('js/chartist-plugin-tooltip.min.js')}}}"></script>
-<!-- Chart JS -->
-<script src="{{asset('js/echarts-all.js')}}"></script>
-<script src="{{asset('js/jquery.toast.js')}}"></script>
-<!-- Chart JS -->
-<script src="{{asset('js/dashboard1.js')}}"></script>
-<script src="{{asset('js/toastr.js')}}"></script>
-
 <!-- ============================================================== -->
 <!-- Style switcher -->
 <!-- ============================================================== -->

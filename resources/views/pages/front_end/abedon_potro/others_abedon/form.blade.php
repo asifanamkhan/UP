@@ -1,4 +1,5 @@
 <div class="row"  style="margin-top: 10px;">
+
         <div class="col-sm-12">
             <div class="form-group">
                 <label for="Picture" class="col-sm-3 control-label">ছবি</label>
@@ -21,25 +22,25 @@
     <div class="row">
         <div class="col-sm-12" style="margin-bottom:10px;margin-top:10px;">
             <div class="form-group">
-                {{--<label for="Service List" class="col-sm-3 control-label"> সেবা সমহু  <span>*</span></label>--}}
-                {{--<div class="col-sm-3">--}}
-                    {{--<select name="" id="" class="form-control" required disabled >--}}
-                        {{--<option value="">চিহ্নিত করুন</option>--}}
-                        {{--<option value="1" >মৃত্যু সনদ</option>--}}
-                        {{--<option value="2" >চারিত্রিক সনদ</option>--}}
-                        {{--<option value="3" >অবিবাহিত সনদ</option>--}}
-                        {{--<option value="4" >ভূমিহীন সনদ</option>--}}
-                        {{--<option value="5" >পুনঃ বিবাহ না হওয়া সনদ </option>--}}
-                        {{--<option value="6" >বার্ষিক আয়ের প্রত্যয়ন</option>--}}
-                        {{--<option value="7" >একই নামের প্রত্যয়ন</option>--}}
-                        {{--<option value="8" >প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</option>--}}
-                        {{--<option value="9" >সনাতন ধর্ম  অবলম্বী</option>--}}
-                        {{--<option value="10" >অনুমতি পত্র</option>--}}
-                        {{--<option value="11" >প্রত্যয়ন পত্র</option>--}}
-                        {{--<option value="12" >মুক্তিযোদ্ধা সনদ</option>--}}
-                        {{--<option value="13" >মুক্তিযোদ্ধা পোষ্য সনদ</option>--}}
-                    {{--</select>--}}
-                {{--</div>--}}
+                <label for="Service List" class="col-sm-3 control-label"> সেবা সমহু  <span>*</span></label>
+                <div class="col-sm-3">
+                    <select name="" id="" class="form-control" required disabled >
+                        <option value="">চিহ্নিত করুন</option>
+                        <option value="1" >মৃত্যু সনদ</option>
+                        <option value="2" >চারিত্রিক সনদ</option>
+                        <option value="3" >অবিবাহিত সনদ</option>
+                        <option value="4" >ভূমিহীন সনদ</option>
+                        <option value="5" >পুনঃ বিবাহ না হওয়া সনদ </option>
+                        <option value="6" >বার্ষিক আয়ের প্রত্যয়ন</option>
+                        <option value="7" >একই নামের প্রত্যয়ন</option>
+                        <option value="8" >প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী</option>
+                        <option value="9" >সনাতন ধর্ম  অবলম্বী</option>
+                        <option value="10" >অনুমতি পত্র</option>
+                        <option value="11" >প্রত্যয়ন পত্র</option>
+                        <option value="12" >মুক্তিযোদ্ধা সনদ</option>
+                        <option value="13" >মুক্তিযোদ্ধা পোষ্য সনদ</option>
+                    </select>
+                </div>
                 @yield('form')
                 <label for="Delivery-type" class="col-sm-3 control-label"> সরবরাহের ধরণ  <span>*</span></label>
                 <div class="col-sm-3">
@@ -47,10 +48,8 @@
                         <option value="2">অতি জরুরী </option>
                         <option value="1">জরুরী</option>
                         <option value="3" selected>সাধারন</option>
-
                     </select>
                 </div>
-
             </div>
         </div>
     </div>

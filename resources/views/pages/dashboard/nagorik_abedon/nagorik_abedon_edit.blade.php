@@ -56,7 +56,7 @@
                         <label for="Birth-date" class="col-sm-6 control-label">জম্ম তারিখ  <span>*</span></label>
                         <div class="col-sm-6 date">
                             <div class="input-group input-append date" id="datePicker">
-                                <input type="text" value="{{$nagorikAbedon->dofb}}" class="form-control" name="dofb" id="dofb"/>
+                                <input type="date" value="{{$nagorikAbedon->dofb}}" class="form-control" name="dofb" id="dofb"/>
                             </div>
                         </div>
                     </div>

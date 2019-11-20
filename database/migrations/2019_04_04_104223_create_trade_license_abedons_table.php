@@ -15,9 +15,16 @@ class CreateTradeLicenseAbedonsTable extends Migration
     {
         Schema::create('trade_license_abedons', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('sonod_no')->nullable();
             $table->string('image')->nullable();
             $table->string('delivery_type')->nullable();
             $table->string('ownertype')->nullable();
+            $table->string('dokanNo')->nullable();
+            $table->string('btalikaNo')->nullable();
+            $table->string('bazarName')->nullable();
+            $table->string('business_type')->nullable();
+            $table->string('last_tax_pay_date')->nullable();
+            $table->string('tax_amount')->nullable();
             $table->string('ecomname')->nullable();
             $table->string('bcomname')->nullable();
             $table->string('ewname')->nullable();
@@ -33,7 +40,6 @@ class CreateTradeLicenseAbedonsTable extends Migration
             $table->string('ncompany')->nullable();
             $table->string('vatid')->nullable();
             $table->string('taxid')->nullable();
-            $table->string('business_type')->nullable();
             $table->string('pay_amount')->nullable();
             $table->string('be_gram')->nullable();
             $table->string('be_rbs')->nullable();
@@ -51,9 +57,9 @@ class CreateTradeLicenseAbedonsTable extends Migration
             $table->string('phone')->nullable();
             $table->string('email')->nullable();
             $table->string('token')->nullable();
-            $table->string('app_type')->nullable();
-            $table->string('status')->nullable();
             $table->string('payment_type')->nullable();
+            $table->string('tax_start_date')->nullable();
+            $table->string('status')->nullable();
             $table->string('endDate')->nullable();
             $table->string('tradeFee')->nullable();
             $table->string('signBoardTaxField')->nullable();
@@ -63,6 +69,7 @@ class CreateTradeLicenseAbedonsTable extends Migration
             $table->string('subCharge')->nullable();
             $table->string('total')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

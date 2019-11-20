@@ -122,7 +122,6 @@
                                                 <div class="card-body">
                                                     <div id="bibadir_info">
 
-
                                                     <div class="row">
                                                         <div class="col-sm-9 col-sm-offset-1">
                                                             <div class="col-sm-4 ">
@@ -221,7 +220,6 @@
 
     <link rel="stylesheet" href="{{asset('datatables/css/dataTables.bootstrap4.css')}}" />
     <link rel="stylesheet" href="{{asset('datatables/css/responsive.bootstrap.min.css')}}" />
-    <!--<script type="text/javascript" src="datatables/js/jquery-1.11.3.min.js"></script>--->
     <script type="text/javascript" src="{{asset('datatables/js/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('datatables/js/dataTables.bootstrap.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('datatables/js/dataTables.responsive.min.js')}}"></script>
@@ -288,7 +286,6 @@
            $('.badi_fname').each(function () {
                 if ($(this).val() == '') {
                     fname++;
-                    console.log(fname);
                 }
             });
 
@@ -496,18 +493,8 @@
                 alert('দু:খিত! বিবাদীর পিতার নাম দিতে হবে')
                 e.preventDefault();
             }
-
         });
 
-
-
-
-// Conditin Modal
-
-
-
     </script>
-
-
 
 @endsection

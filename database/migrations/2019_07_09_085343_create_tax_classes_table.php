@@ -15,7 +15,8 @@ class CreateTaxClassesTable extends Migration
     {
         Schema::create('tax_classes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tax_class');
+            $table->string('tax_class')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

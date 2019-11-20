@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Education;
 use App\NagorikAbedon;
+use App\Occupation;
+use App\Tax;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
@@ -39,11 +42,9 @@ class NagorikAbedonController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-        //dd($request->attached);
+
         $year = Carbon::now()->year;
         $sonod_no = $year . time().mt_rand(100, 999);
-        //dd($sonod_no);
         if ($request->hasfile('image')){
             $images = $request->file('image');
                 $attached  = str_random( 2 ) . time() . '.' . $images->getClientOriginalExtension();
@@ -61,8 +62,6 @@ class NagorikAbedonController extends Controller
             'image'=>$img1,
             'sonod_no'=>$sonod_no,
         ]);
-
-
 
         return redirect()->back();
 
@@ -255,7 +254,7 @@ class NagorikAbedonController extends Controller
                                                     <a href="#"><button class="btn-sm btn-primary">ইংরেজী</button></a>
                                                 </div>';
                    $nestedData['money_receipt'] = '<div class="">
-                                                    <a href="#"><button class="btn-sm btn-success">Print</button></a>
+                                                    <a href="'.route('nagorik_abedon.edit',$value->id).'"><button class="btn-sm btn-success">Print</button></a>
                                                 </div>';
 
                    $data[] = $nestedData;
@@ -435,6 +434,34 @@ class NagorikAbedonController extends Controller
 
     public function aaa(){
         return view('pages.aaaa');
+    }
+
+    public function nagorikValueRegfrom(Request $request){
+        $tax = Tax::where('word_no',$request->word_no)
+            ->where('holding_no',$request->holding_no)
+            ->where('member_no',$request->member_no)
+            ->first();
+        if(!empty($tax)){
+            $occupation = Occupation::where('id',$tax->occupation)->first();
+            $edu = Education::where('id',$tax->education)->first();
+        }
+        else{
+            $occupation='';
+            $edu='';
+        }
+
+        return [$tax,$occupation,$edu];
+
+    }
+
+    public function nagorikSonodPrint(Request $request){
+        $tax = Tax::where('word_no',$request->word_no)
+            ->where('holding_no',$request->holding_no)
+            ->where('member_no',$request->member_no)
+            ->first();
+        //dd($tax);
+
+        return view('pages.front_end.print.nagorikSonodPrint',compact('tax'));
     }
 
 
