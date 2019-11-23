@@ -161,8 +161,6 @@ class NagorikAbedonController extends Controller
         {
             if($request->is_days == 2){
 
-
-
                 $date1 = Carbon::today()->toDateString();
                 $date2 = Carbon::today()->subDays(1)->toDateString();
                 $NagorikAbedon = NagorikAbedon::whereBetween(DB::raw('DATE(created_at)'),[$date2, $date1])

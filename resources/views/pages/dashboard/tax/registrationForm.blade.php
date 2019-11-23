@@ -364,9 +364,8 @@
                                         </div>
                                         <div class="row col-sm-7 mt-4 ">
                                             <label for="" class="col-sm-5" style="color: blue">গর্ভকালীন সময়</label>
-                                            <div class="col-sm-3 apgorvokalinSomoy">
-                                                <label class="radio-inline "><input class="gorvokalinSomoy" type="radio" name="gorvokalinSomoy" value="1">হ্যাঁ</label>
-                                                <label class="radio-inline "><input class="gorvokalinSomoy" type="radio" name="gorvokalinSomoy" value="2">না </label>
+                                            <div class="col-sm-7 apgorvokalinSomoy">
+                                                <input class="gorvokalinSomoy form-control" type="text"  name="gorvokalinSomoy" placeholder="মাসের সংখ্যা ইংরেজিতে প্রদান করুন">
                                             </div>
                                         </div>
                                         <div class="row col-sm-4 col-sm-offset-1 mt-4 ">
@@ -404,8 +403,8 @@
                                         <div class="row col-sm-4 col-sm-offset-1  mt-4 ">
                                             <label for="" class="col-sm-6" style="color: blue">প্রতিবন্ধী কি না</label>
                                             <div class="col-sm-4 apProtibondh">
-                                                <label class="radio-inline "><input class="protibondh" type="radio" name="protibondh1" value="1">হ্যাঁ</label>
-                                                <label class="radio-inline "><input class="protibondh" type="radio" name="protibondh1" value="2">না </label>
+                                                <label class="radio-inline "><input class="protibondhi" type="radio" name="protibondhi1" value="1">হ্যাঁ</label>
+                                                <label class="radio-inline "><input class="protibondhi" type="radio" name="protibondhi1" value="2">না </label>
                                             </div>
                                         </div>
                                         <div class="row col-sm-7  mt-4 ">
@@ -668,7 +667,7 @@
 
         //Takar Poriman
         $('#boshot_dhoron,#occa,#tax_class').on('change',function () {
-
+            csrf();
             $.ajax({
                 type: "POST",
                 url: "{{route('holding_tax_poriman')}}",

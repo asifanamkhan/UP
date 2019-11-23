@@ -542,5 +542,9 @@ Route::group(['prefix'=>'admin/registration','middleware' => ['auth']],function 
 });
 
 Route::get('frontendRegistration','TaxController@frontendRegistration')->name('frontendRegistration');
+Route::get('public','AdminRegistrationController@publicShow')->name('public');
+Route::post('publicInfo','AdminRegistrationController@publicInfo')->name('publicInfo');
+Route::get('publicStatus/{id}','AdminRegistrationController@publicStatus')->name('publicStatus');
+Route::post('publicStatusChange/{id}','AdminRegistrationController@publicStatusChange')->name('publicStatusChange');
 
 

@@ -19,6 +19,7 @@ class CreateTaxesTable extends Migration
             $table->double('member_no')->nullable();
             $table->string('holding_no');
             $table->integer('word_no');
+            $table->integer('status');
 
             $table->string('name')->nullable();
             $table->string('bname')->nullable();

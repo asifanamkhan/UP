@@ -82,6 +82,10 @@
 
             </li>
             <li>
+                <a class="has-arrow " href="{{route('public')}}" aria-expanded="false"><i class="fa fa-paper-plane"></i><span class="hide-menu">পাবলিক</span></a>
+
+            </li>
+            <li>
                 <a class="has-arrow " href="#" aria-expanded="false"><i class="glyphicon glyphicon-tags"></i><span class="hide-menu">কর
 									</span></a>
                 <ul aria-expanded="false" class="collapse">

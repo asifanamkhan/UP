@@ -80,51 +80,56 @@
         </div>
 
         <div class="col-md-12 row">
-            <table style="margin-top: 36px;margin-left: 14px;">
+            <table class="col-md-4" style="margin-top: 36px;margin-left: 14px;">
                 <tr>
                     <th style="">নাম </th>
-                    <th style="padding-left: 112px;">: মেসার্স উর্মি ট্রেডার্স</th>
+                    <th style="padding-left: 112px;">: {{$tax->bname}}</th>
                 </tr>
 
-                <tr>
-                    <th style="">স্বামীর নাম </th>
-                    <th style="padding-left: 112px;">: মোঃ ওসমান গনি </th>
-                </tr>
+                {{--<tr>--}}
+                    {{--<th style="">স্বামীর নাম </th>--}}
+                    {{--<th style="padding-left: 112px;">: মোঃ ওসমান গনি </th>--}}
+                {{--</tr>--}}
 
                 <tr>
                     <th style="height: 30px;">পিতা </th>
-                    <th style="height: 30px;padding-left: 112px;">: আব্দুল বাতেন</th>
+                    <th style="height: 30px;padding-left: 112px;">: {{$tax->bfname}}</th>
                 </tr>
 
                 <tr>
                     <th style="height: 30px;">মাতা </th>
-                    <th style="height: 30px;padding-left: 112px;">: মাজেদা খাতুন </th>
+                    <th style="height: 30px;padding-left: 112px;">: {{$tax->bmname}} </th>
                 </tr>
-                <tr>
-                    <th style="height: 30px;">বর্তমান ঠিকানা </th>
-                    <th style="height: 30px;padding-left: 112px;">: নম্বর-৪৮/১৪ (৩য় তলা) ব্লক-এ, সার্ডি রোড চন্দনা, জয়দেবপুর, গাজীপুর</th>
-                </tr>
-                <tr>
-                    <th style="height: 30px;">স্থায়ী ঠিকানা</th>
-                    <th style="height: 30px;padding-left: 112px;">: নম্বর-৪৮/১৪ (৩য় তলা) ব্লক-এ, সার্ডি রোড চন্দনা, জয়দেবপুর, গাজীপুর</th>
-                </tr>
-
-                <tr>
-                    <th style="height: 30px;padding-top: 30px;">ওয়ার্ড নং </th>
-                    <th style="height: 30px;padding-top: 30px;padding-left: 112px;">: ১</th>
-                </tr>
-
                 <tr>
                     <th style="height: 30px;">ন্যাশনাল আইডি নং </th>
-                    <th style="height: 30px;padding-left: 112px;">: ৩৩৪৪৯৮৯৮৭৯৭৭৩</th>
+                    <th style="height: 30px;padding-left: 112px;">:{{$tax->nid}}</th>
                 </tr>
+                <tr>
+                    <th style="height: 30px;">গ্রাম </th>
+                    <th style="height: 30px;padding-left: 112px;">: {{$tax->b_gram}}</th>
+                </tr>
+                {{--<tr>--}}
+                    {{--<th style="height: 30px;">স্থায়ী ঠিকানা</th>--}}
+                    {{--<th style="height: 30px;padding-left: 112px;">: {{$tax->b_gram}}</th>--}}
+                {{--</tr>--}}
+
+                <tr>
+                    <th style="height: 30px;">ওয়ার্ড নং </th>
+                    <th style="height: 30px;padding-left: 112px;">: {{$tax->word_no}}</th>
+                </tr>
+                <tr>
+                    <th style="height: 30px;">হোল্ডিং নং </th>
+                    <th style="height: 30px;padding-left: 112px;">: {{$tax->holding_no}}</th>
+                </tr>
+
+
 
 
             </table>
 
             <table style="margin-top: 56px;margin-left: 14px;">
                 <tr>
-                    <th style="padding-left: 165px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;অত্র ইউনিয়ন একজন  স্থায়ী বাসিন্দা । তিনি জন্মগতভাবে বাংলাদেশী এবং আমার পরিচিত<br> আমি তাহার সর্বাঙ্গীণ মঙ্গল ও উন্নতি কামনা করি ।  </th>
+                    <th style="padding-left: 165px;">অত্র ইউনিয়ন একজন  স্থায়ী বাসিন্দা । তিনি জন্মগতভাবে বাংলাদেশী এবং আমার পরিচিত<br> আমি তাহার সর্বাঙ্গীণ মঙ্গল ও উন্নতি কামনা করি ।  </th>
                 </tr>
             </table>
 
@@ -159,7 +164,8 @@
             </div>
 
             <div class="col-md-2" style="border-top: 2px solid black;padding-top: 20px;">
-                <img src="qr_code.png" alt="">
+                {{--<img src="qr_code.png" alt="">--}}
+                <div id="test"></div>
             </div>
 
         </div>
@@ -207,6 +213,18 @@
     }
 
 
+</script>
+
+<script type=text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script>
+    var qrcode = new QRCode("test", {
+        text: "http://jindo.dev.naver.com/collie",
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
 </script>
 
 </html>

@@ -1,199 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" line="27" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/publicCreate.blade.php" line="52" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/up_member/create.blade.php" line="101" />
     <bookmark url="file://$PROJECT_DIR$/resources/views/layouts/front_end_layout/nav.blade.php" line="84" />
-    <bookmark url="file://$PROJECT_DIR$/app/Http/Controllers/sdc/SdcSanitationController.php" line="570" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a3e637d0-0c23-428d-aaa5-62015f459084" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/BanijjikTax.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Doridro.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/BanijjikTaxController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DoridroController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SanitationDhoronController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/OldVataController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcBekar15To29Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcBiddutController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcBidhobaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcDoridroPoribarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcEducationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcFreelancerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcInternetController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcMashikAyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcNariKormojibiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcNirapodPaniController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcPeshajibiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcProbashiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcSanitationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcVumihinController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sdc/ZeroToFiveAgeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/sonodPortoJachay/SonodHoldingTaxVerifyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/SanitationDhoron.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/UPmember.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_07_31_085916_create_banijjik_taxes_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_06_085821_create_doridros_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_08_18_080902_create_sanitation_dhorons_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2019_09_02_113454_create_u_pmembers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/Shanda Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/front_end/Banner-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/front_end/Final Banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/front_end/icon-man-png-22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/front_end/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/publicCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/roleCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/rolePermissionEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/userCreate.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/adminRegistration/userList.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/doridro/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/sanitationDhoron/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/up_member/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/up_member/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/banijjik_tax/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/banijjik_tax/payment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/business_tax/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/business_tax/payment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationForm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationFormEdit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_Tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/holding_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/holding_tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/banijjik_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/banijjik_tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/holding_tax.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/holding_tax_print.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/registrationForm.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/Bekar15To29/oshikkhito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/Bekar15To29/shikkhito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/ZeroToFiveAge/khorbito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/ZeroToFiveAge/noBirthCer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/biddut/subidhaBonchito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/biddut/subidhaGrohon.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/bidhoba/vataBonchito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/bidhoba/vataGrohonkari.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/blood_group/bloodGroup.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/doridroPoribar/doridro.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/doridroPoribar/hotoDoridroPoribar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/education/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/freelancer/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/internet/ha.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/internet/na.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/mashikAy/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nari14To18/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nariUtpadonshil/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nirapod_pani/panKari.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nirapod_pani/panNaKari.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nirokkhor15To45/nirokkhor15To45.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/old_vata/bonchito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/old_vata/grohonkari.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/old_vata/joggoBonchito.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/peshajibi/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/prithokSanitation/ha.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/prithokSanitation/na.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/probashi/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitation/ha.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitation/na.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitationDhoron/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sdgDesignFrontEnd.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sdc/vumihin/talika.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sonod_potro_verify/holdingTaxVerify/payment.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/sonod_potro_verify/holdingTaxVerify/verify.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/front_end/upMemberInfo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Gazipur.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gazipur.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="a3e637d0-0c23-428d-aaa5-62015f459084" name="Default Changelist" comment="20/11/2019">
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicShow.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicStatus.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BosotVitarDhoronController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BosotVitarDhoronController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EducationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EducationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FamilyClassController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FamilyClassController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HoldingTaxFeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HoldingTaxFeeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MamlaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MamlaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminRegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminRegistrationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OccupationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OccupationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaxClassController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaxClassController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TaxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TaxController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseAbedonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseAbedonController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseTaxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseTaxController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseTaxFeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UPmemberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TradeLicenseTaxPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BusinessTaxController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TradeLicenseAbedon.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TradeLicenseAbedon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TradeLicenseTax.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/BusinessTax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TradeLicenseTaxFee.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TradeLicenseTaxFee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/TradeLicenseTaxPayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/TradeLicenseTaxPayment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_04_071047_create_nagorik_abedons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_04_071047_create_nagorik_abedons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_04_104223_create_trade_license_abedons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_04_104223_create_trade_license_abedons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_044914_create_warish_sonod_abedons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_044914_create_warish_sonod_abedons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_04_08_051706_create_others_sonod_abedons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_04_08_051706_create_others_sonod_abedons_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_03_062530_create_taxes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_03_062530_create_taxes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_09_085040_create_bosot_vitar_dhorons_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_09_085040_create_bosot_vitar_dhorons_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_09_085134_create_occupations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_09_085134_create_occupations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_09_085343_create_tax_classes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_09_085343_create_tax_classes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_10_050650_create_holding_tax_fees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_10_050650_create_holding_tax_fees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_18_054815_create_education_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_18_054815_create_education_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_18_110728_create_holdic_tax_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_18_110728_create_holdic_tax_payments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_22_102855_create_trade_license_taxes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_21_115902_create_business_taxes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_29_084740_create_trade_license_tax_fees_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_29_084740_create_trade_license_tax_fees_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_29_084818_create_trade_license_tax_payments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_29_084818_create_trade_license_tax_payments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/front_end/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/front_end/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/front_end/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/front_end/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/front_end/m_mosqe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/front_end/m_shool.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/nav.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/front_end_layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/mamla/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/mamla/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/nagorik_abedon/nagorik_abedon_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/nagorik_abedon/nagorik_abedon_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/trade_license_tax_fee/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/trade_license_tax_fee/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/holding_tax.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/holding_tax.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/holding_tax_payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/holding_tax_payment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_assesment_form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_assesment_form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/trade_license_tax.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/trade_license_tax/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/trade_license_tax/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/trade_license_tax/payment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/trade_license_tax/payment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/trade_license_abedon/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/trade_license_abedon/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/nagorik_abedon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/nagorik_abedon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/bak_srobon_protibondhi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/bak_srobon_protibondhi.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/barshik_income.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/barshik_income.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/charitrik_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/charitrik_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/eki_name.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/eki_name.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/mrittu_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/mrittu_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_possho_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_possho_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/obobahito_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/obobahito_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/onumoti_potro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/onumoti_potro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/prottyon_potro.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/prottyon_potro.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/pun_bibah_na_hoywa_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/pun_bibah_na_hoywa_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/sonaton_dhormo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/sonaton_dhormo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/vumihin_sonod.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/vumihin_sonod.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_sonod_abedon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_sonod_abedon.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationForm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationForm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationFormEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationFormEdit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -333,7 +163,7 @@
     <session id="1169010496">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="54" />
+          <entry key="project.closed" value="55" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.115" value="1" />
@@ -350,12 +180,12 @@
           <entry key="project.open.time.37" value="4" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
-          <entry key="project.open.time.42" value="3" />
+          <entry key="project.open.time.42" value="4" />
           <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.46" value="2" />
-          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.47" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.51" value="3" />
@@ -374,66 +204,102 @@
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.92" value="1" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="58" />
+          <entry key="project.opened" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="118" />
-          <entry key="php" value="27636" />
+          <entry key="env" value="116" />
+          <entry key="php" value="30919" />
           <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Blade" value="16499" />
+          <entry key=".env file" value="116" />
+          <entry key="Blade" value="18438" />
           <entry key="CSS" value="119" />
           <entry key="HTML" value="7" />
-          <entry key="PHP" value="11129" />
+          <entry key="PHP" value="12473" />
           <entry key="PLAIN_TEXT" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="8" />
+          <entry key="env" value="2" />
           <entry key="html" value="1" />
-          <entry key="php" value="669" />
+          <entry key="php" value="714" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="389" />
+          <entry key=".env file" value="2" />
+          <entry key="Blade" value="410" />
           <entry key="CSS" value="8" />
           <entry key="HTML" value="1" />
-          <entry key="PHP" value="280" />
+          <entry key="PHP" value="304" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/obobahito_sonod.blade.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminRegistrationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="69" column="33" lean-forward="true" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+            <state relative-caret-position="1192">
+              <caret line="450" column="62" selection-start-line="450" selection-start-column="62" selection-end-line="450" selection-end-column="62" />
               <folding>
-                <element signature="e#3411#3436#0#HTML" expanded="true" />
+                <element signature="e#40#71#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="224">
+              <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="118" column="47" lean-forward="true" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/sdc/Bekar15To29/oshikkhito.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="592">
+              <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -442,13 +308,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>occa</find>
-      <find>bosot_vitar_dhoron</find>
-      <find>des</find>
-      <find>bosot_member_no</find>
-      <find>dob</find>
-      <find>taxAss</find>
-      <find>bostoForm_add</find>
       <find>boshot_form</find>
       <find>boshot_dhoron</find>
       <find>20</find>
@@ -472,6 +331,13 @@
       <find>holding_tax_pay_l</find>
       <find>business_tax_pay_list</find>
       <find>business_tax_payment</find>
+      <find>taxAssesmentForm</find>
+      <find>holding_tax_po</find>
+      <find>gorvokalinSomoy</find>
+      <find>proti</find>
+      <find>kari</find>
+      <find>upda</find>
+      <find>protibondhi</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -487,22 +353,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/prithokSanitation/na.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/probashi/talika.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitation/ha.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitation/na.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/vumihin/talika.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/ZeroToFiveAge/noBirthCer.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/ZeroToFiveAge/khorbito.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/old_vata/grohonkari.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/doridroPoribar/hotoDoridroPoribar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/doridroPoribar/doridro.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcNirokkhor15To45Controller.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/nirokkhor15To45/nirokkhor15To45.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/sdc/OldVataController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/biddut/subidhaGrohon.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_10_28_112459_create_sdg_chart_counts_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/sdc/SdcSanitationController.php" />
         <option value="$PROJECT_DIR$/app/Console/Kernel.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitationDhoron/talika.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax.blade.php" />
@@ -514,17 +364,13 @@
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax_print.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_tax.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_Tax_print.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/TaxController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BusinessTaxController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax_print.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_sonod_abedon.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/barshik_income.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_sonod.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/form.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/nagorik_abedon.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/bak_srobon_protibondhi.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/charitrik_sonod.blade.php" />
@@ -536,8 +382,28 @@
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/prottyon_potro.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/mrittu_sonod.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/muktijoddha_possho_sonod.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/obobahito_sonod.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_assesment_form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicShow.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_07_03_062530_create_taxes_table.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicStatus.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Notifications/MailSend.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminRegistrationController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationForm.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationFormEdit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TaxController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -659,6 +525,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -669,124 +536,19 @@
             <path>
               <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
               <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard_layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="setup_menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="setup_menu" type="462c0819:PsiDirectoryNode" />
-              <item name="trade_license_tax_fee" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="front_end" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="front_end" type="462c0819:PsiDirectoryNode" />
-              <item name="abedon_potro" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="union_parishad_bd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="union_parishad_bd" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="front_end" type="462c0819:PsiDirectoryNode" />
-              <item name="print" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SearchEverywhereHistoryKey" value="s&#9;FILE&#9;file://C:/xampp/htdocs/Laravel/Projects/Gazipur/public/scss/icons/flag-icon-css/flags/se.svg" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/epos" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1005,12 +767,29 @@
       <workItem from="1573973883959" duration="11503000" />
       <workItem from="1574052443528" duration="7946000" />
       <workItem from="1574145928375" duration="3739000" />
-      <workItem from="1574225172784" duration="1212000" />
+      <workItem from="1574225172784" duration="10400000" />
+      <workItem from="1574311790133" duration="12161000" />
+      <workItem from="1574485409568" duration="21782000" />
     </task>
+    <task id="LOCAL-00001" summary="20/11/2019">
+      <created>1574229127560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574229127560</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20/11/2019">
+      <created>1574229371468</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574229371468</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1475582000" />
+    <option name="totallyTimeSpent" value="1518713000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1024,7 +803,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.50209206" visible="true" weight="0.26190478" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.50209206" visible="true" weight="0.2373512" />
       <window_info id="Structure" order="1" sideWeight="0.49790794" side_tool="true" weight="0.2590604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Database" order="3" weight="0.32886904" />
@@ -1034,11 +813,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" sideWeight="0.4986577" visible="true" weight="0.58428806" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.4986577" weight="0.58428806" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.32733223" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013423" side_tool="true" weight="0.32569557" />
       <window_info anchor="bottom" id="Thumbnails" order="11" weight="0.32959327" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32733223" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1057,206 +836,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="20/11/2019" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/sdc/old_vata/bonchito.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="88" column="86" lean-forward="true" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/sdc/biddut/subidhaGrohon.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="30" selection-end-line="82" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sdc/OldVataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="309" column="54" lean-forward="true" selection-start-line="309" selection-start-column="54" selection-end-line="309" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sdc/SdcMashikAyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="42" column="39" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="42" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SdgChartCountController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/SdgChartCount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_10_28_112459_create_sdg_chart_counts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sdc/SdcBidhobaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="212" column="37" selection-start-line="212" selection-start-column="37" selection-end-line="212" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sdc/SdcSanitationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="578" column="70" selection-start-line="578" selection-start-column="66" selection-end-line="578" selection-end-column="70" />
-          <folding>
-            <element signature="e#44#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="82" column="68" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/sdc/sanitationDhoron/talika.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="80" column="4" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/holding_tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/holding_tax.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="135" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/holding_tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="136" selection-start-line="5" selection-start-column="127" selection-end-line="5" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/setup_menu/trade_license_tax_fee/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="103" lean-forward="true" selection-start-line="9" selection-start-column="103" selection-end-line="9" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/business_tax/payment.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1518">
-          <caret line="75" column="71" selection-start-line="75" selection-start-column="51" selection-end-line="75" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/banijjik_tax/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8489" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/business_tax/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="345" column="94" selection-start-line="345" selection-start-column="81" selection-end-line="345" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/banijjik_tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="60" column="27" lean-forward="true" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_tax.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="91" column="52" lean-forward="true" selection-start-line="84" selection-start-column="20" selection-end-line="91" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8226">
-          <caret line="892" column="17" lean-forward="true" selection-start-line="892" selection-start-column="17" selection-end-line="892" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/banijjik_tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="40" column="83" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/business_Tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="66" column="59" lean-forward="true" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BanijjikTaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11753">
-          <caret line="515" column="5" selection-start-line="507" selection-start-column="8" selection-end-line="515" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_dhari_talika/holding_tax.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1817">
-          <caret line="79" column="58" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax_print.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/business_tax.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="55" column="25" selection-start-line="46" selection-start-column="19" selection-end-line="55" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BusinessTaxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4272">
-          <caret line="469" column="17" lean-forward="true" selection-start-line="469" selection-start-column="17" selection-end-line="469" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_onadaye_talika/banijjik_tax.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-713">
@@ -1278,31 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8050">
-          <caret line="359" column="3" selection-start-line="359" selection-start-column="3" selection-end-line="359" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
           <caret line="299" column="73" lean-forward="true" selection-start-line="299" selection-start-column="73" selection-end-line="299" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="134" column="13" selection-start-line="134" selection-start-column="13" selection-end-line="134" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="449" column="20" lean-forward="true" selection-start-line="449" selection-start-column="20" selection-end-line="449" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1390,28 +948,245 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/FrontEnd.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/abedon_potro/others_abedon/obobahito_sonod.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="69" column="33" lean-forward="true" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        <state relative-caret-position="1587">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/print/nagorikSonodPrint.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_07_03_062530_create_taxes_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/tax_assesment_form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-874">
+          <caret line="16" column="22" lean-forward="true" selection-end-line="115" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/dashboard_layout/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1932">
+          <caret line="84" column="59" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicShow.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1288">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NagorikAbedonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="46" column="53" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
           <folding>
-            <element signature="e#3411#3436#0#HTML" expanded="true" />
+            <element signature="e#23#63#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/MailSend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="47" column="140" selection-start-line="47" selection-start-column="140" selection-end-line="47" selection-end-column="140" />
+          <folding>
+            <element signature="e#37#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1280" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/publicStatus.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="52" column="66" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="66" />
+          <folding>
+            <element signature="e#1444#1462#0#HTML" expanded="true" />
+            <element signature="e#1541#1561#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="547" column="35" selection-start-line="547" selection-start-column="35" selection-end-line="547" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationFormEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="467" column="95" selection-start-line="467" selection-start-column="91" selection-end-line="467" selection-end-column="95" />
+          <folding>
+            <element signature="e#4752#4770#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/TaxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="291" column="21" selection-start-line="291" selection-start-column="21" selection-end-line="291" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4761" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-728" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/sdc/SdcMashikAyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="56" column="39" lean-forward="true" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1380">
+          <caret line="60" column="21" lean-forward="true" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminRegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1192">
+          <caret line="450" column="62" selection-start-line="450" selection-start-column="62" selection-end-line="450" selection-end-column="62" />
+          <folding>
+            <element signature="e#40#71#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/ResetsPasswords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/dashboard/tax/registrationForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="405" column="134" selection-start-line="405" selection-start-column="123" selection-end-line="405" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/registrationForm.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/front_end/sdc/Bekar15To29/oshikkhito.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="37" column="22" lean-forward="true" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="118" column="47" lean-forward="true" selection-start-line="118" selection-start-column="47" selection-end-line="118" selection-end-column="47" />
         </state>
       </provider>
     </entry>

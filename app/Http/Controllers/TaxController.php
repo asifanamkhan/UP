@@ -129,6 +129,7 @@ class TaxController extends Controller
 
             $tax->holding_no = $request->holding_no;
             $tax->word_no = $request->word_no;
+            $tax->status = 0;
 
             $tax->name = $request->name[$i];
             $tax->bname = $request->bname[$i];
@@ -243,8 +244,6 @@ class TaxController extends Controller
             $tax->biddut_subidha = $request->biddut_subidha;
             $tax->satitation_prithok = $request->satitation_prithok;
 
-
-
             $tax->save();
 
         }
@@ -290,7 +289,7 @@ class TaxController extends Controller
     public function update(Request $request, Tax $tax)
     {
         $tax->update($request->all());
-        return redirect()->route('tax_assesment_form');
+        return back()->with('success','Updated successfully');
     }
 
     /**
