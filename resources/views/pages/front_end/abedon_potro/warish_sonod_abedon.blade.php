@@ -27,7 +27,7 @@
                     <label for="national_id" class="col-sm-6 control-label">ন্যাশনাল আইডি (ইংরেজিতে) </label>
                     <div class="col-sm-6">
                         <input type="text" name="nationid" id="nid" maxlength='17' class="form-control"
-                               onkeypress="return checkaccnumber(event);" placeholder=""/>
+                                placeholder=""/>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,8 @@
                 <div class="form-group">
                     <label for="Birth-date" class="col-sm-6 control-label">জম্ম তারিখ <span>*</span></label>
                     <div class="col-sm-6 date">
-                        <div class="input-group input-append date" id="datePicker">
-                            <input type="text" class="form-control" name="dofb"/>
-                            <span class="input-group-addon add-on"><span
-                                        class="glyphicon glyphicon-calendar"></span></span>
+                        <div class="">
+                            <input type="date" class="form-control" name="dofb"/>
                         </div>
                     </div>
                 </div>
@@ -87,8 +85,7 @@
                 <div class="form-group">
                     <label for="Gender" class="col-sm-3 control-label">লিঙ্গ <span>*</span></label>
                     <div class="col-sm-3">
-                        <select name="gender" id="gender" class="form-control"
-                                onchange="testshowHide(this.value);">
+                        <select name="gender" id="gender" class="form-control">
                             <option value="">চিহ্নিত করুন</option>
                             <option value="male">পুরুষ</option>
                             <option value="female">মহিলা</option>
@@ -181,10 +178,9 @@
                 <div class="form-group">
                     <label for="father-alive" class="col-sm-6 control-label">পিতা জীবিত কিনা</label>
                     <div class="col-sm-6">
-                        <label class="radio-inline"><input type="radio" name="flive" id="flive" value="1">হ্যাঁ </label>
-                        <label class="radio-inline"><input type="radio" name="flive" id="flive" value="0"
-                                                           checked>না</label>
-                        <input type="text" name="fyears" class="form-control" placeholder="পিতার বয়স" disabled/>
+                        <label class="radio-inline"><input type="radio" name="flive" id="fliveHa" value="1">হ্যাঁ </label>
+                        <label class="radio-inline"><input type="radio" name="flive" id="fliveNa" value="0" checked>না</label>
+                        <input type="text" name="fyears" id="fyears" class="form-control" placeholder="পিতার বয়স" disabled/>
                     </div>
                 </div>
             </div>
@@ -192,10 +188,9 @@
                 <div class="form-group">
                     <label for="mother-alive" class="col-sm-6 control-label">মাতা জীবিত কিনা</label>
                     <div class="col-sm-6" id="">
-                        <label class="radio-inline"><input type="radio" name="mlive" id="mlive" value="1">হ্যাঁ </label>
-                        <label class="radio-inline"><input type="radio" name="mlive" id="mlive" value="0"
-                                                           checked>না</label>
-                        <input type="text" name="myears" class="form-control" placeholder="মাতার বয়স" disabled/>
+                        <label class="radio-inline"><input type="radio" name="mlive" id="mliveHa" value="1">হ্যাঁ </label>
+                        <label class="radio-inline"><input type="radio" name="mlive" id="mliveNa" value="0" checked>না</label>
+                        <input type="text" name="myears" id="myears" class="form-control" placeholder="মাতার বয়স" disabled/>
                     </div>
                 </div>
             </div>
@@ -214,7 +209,7 @@
                 <div class="form-group">
                     <label for="Resident" class="col-sm-6 control-label">বাসিন্দা <span>*</span></label>
                     <div class="col-sm-6">
-                        <select name="bashinda" id="bs" class="form-control" onchange="basinda_show_hide(this.value);">
+                        <select name="bashinda" id="bs" class="form-control" >
                             <option value=''>চিহ্নিত করুন</option>
                             <option value='1'>অস্থায়ী</option>
                             <option value='2'>স্থায়ী</option>
@@ -224,10 +219,10 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
+        <div class="row" id="permaHeading">
+            <div class="col-sm-12" style="text-align:center;">
                 <div class="app-heading">
-                    বর্তমান ঠিকানা
+                    <b>স্থায়ী ঠিকানা</b>
                 </div>
             </div>
         </div>
@@ -236,7 +231,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( ইংরেজিতে )
+                       <b> ( ইংরেজিতে )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -266,8 +261,7 @@
                         <div class="form-group">
                             <label for="Word-no" class="col-sm-6 control-label">ওয়ার্ড নং</label>
                             <div class="col-sm-6">
-                                <input type="text" name="p_wordno" id="p_wordno" onkeypress="return numtest();"
-                                       class="form-control"/>
+                                <input type="text" name="p_wordno" id="p_wordno" class="form-control"/>
                             </div>
                         </div>
                     </div>
@@ -309,7 +303,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( বাংলায় )
+                        <b>( বাংলায় )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -383,7 +377,7 @@
         <div class="row" id="permaHeading">
             <div class="col-sm-12" style="text-align:center;">
                 <div class="app-heading">
-                    স্থায়ী ঠিকানা
+                   <b>স্থায়ী ঠিকানা</b>
                 </div>
             </div>
         </div>
@@ -392,7 +386,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( ইংরেজিতে )
+                        <b>( ইংরেজিতে )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -465,7 +459,7 @@
             <div class="col-sm-6">
                 <div class="col-sm-offset-6 col-sm-6">
                     <div class="app-sub-heading">
-                        ( বাংলায় )
+                        <b>( বাংলায় )</b>
                     </div>
                 </div>
                 <div class="row">
@@ -586,7 +580,7 @@
                     <label for="Mobile" class="col-sm-6 control-label small-font">মোবাইল <span>*</span></label>
                     <div class="col-sm-6">
                         <input type="text" minlength="0" name="mob" id="mob" class="form-control" maxlength="11"
-                               onkeypress="return checkaccnumber(event);" placeholder="ইংরেজিতে প্রদান করুন" />
+                                placeholder="ইংরেজিতে প্রদান করুন" />
                     </div>
                 </div>
             </div>
@@ -630,46 +624,46 @@
             <div class="col-sm-12">
                 <div class="form-group">
                     <div class="col-sm-3  col-sm-offset-1 extra-margin">
-                        <input type="text" name="warishname" id="wname" class="form-control"/>
+                        <input type="text" name="warishname[]" id="wname" class="form-control"/>
                     </div>
                     <div class="col-sm-3 extra-margin">
-                        <input type="text" name="warishrel" id="wrel" class="form-control"/>
+                        <input type="text" name="warishrel[]" id="wrel" class="form-control"/>
                     </div>
                     <div class="col-sm-3 extra-margin">
-                        <input type="text" name="warishage" minlength="0" maxlength="" id="wage" placeholder="ইংরেজিতে"
-                               class="form-control" onkeypress="return checkaccnumber(event);"/>
+                        <input type="text" name="warishage[]" minlength="0" maxlength="" id="wage" placeholder="ইংরেজিতে"
+                               class="form-control" />
                     </div>
                     <div class="col-sm-2 extra-margin">
-                        <input type="button" name="nwarish" value='নতুন ওয়ারিশ' class="addButton btn btn-info"/>
+                        <input type="button" id="addButton" value='নতুন ওয়ারিশ' class="addButton btn btn-info"/>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="form-group hide" id="itemRows">
-                    <div class=" col-sm-3  col-sm-offset-1 sub-extra-margin">
-                        <input type="text" class="form-control" name="name"/>
-                    </div>
-                    <div class=" col-sm-3 sub-extra-margin">
-                        <input type="text" class="form-control" name="rel"/>
-                    </div>
-                    <div class=" col-sm-3 sub-extra-margin">
-                        <input type="text" class="form-control" name="age"/>
-                    </div>
-                    <div class="col-sm-2 sub-extra-margin">
-                        <input type="button" value="Remove" class="removeButton btn btn-danger btn-sm"/>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{--<div class="row">--}}
+            {{--<div class="col-sm-12">--}}
+                {{--<div class="form-group hide" id="itemRows">--}}
+                    {{--<div class=" col-sm-3  col-sm-offset-1 sub-extra-margin">--}}
+                        {{--<input type="text" class="form-control" name="name"/>--}}
+                    {{--</div>--}}
+                    {{--<div class=" col-sm-3 sub-extra-margin">--}}
+                        {{--<input type="text" class="form-control" name="rel"/>--}}
+                    {{--</div>--}}
+                    {{--<div class=" col-sm-3 sub-extra-margin">--}}
+                        {{--<input type="text" class="form-control" name="age"/>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-sm-2 sub-extra-margin">--}}
+                        {{--<input type="button" value="Remove" class="removeButton btn btn-danger btn-sm"/>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+        <div id="append"></div>
 
 
         <div class="row">
             <div class="col-sm-offset-6 col-sm-6 button-style">
                 <button type="submit" id="submit_button" class="btn btn-primary">দাখিল করুন</button>
-                <input type="hidden" name="token" value="{{$number =time().str_random(5) }}">
                 <input type="hidden" name="status" value="0">
             </div>
         </div>
@@ -678,31 +672,85 @@
 
 @section('script')
     <script src="https://demos.creative-tim.com/paper-bootstrap-wizard/assets/js/jquery.validate.min.js"></script>
+    {{--<script>--}}
+        {{--$('#defaultForm').validate({--}}
+            {{--rules: {--}}
+                {{--efname: {--}}
+                    {{--required: true,--}}
+                    {{--minlength: 3--}}
+                {{--},--}}
+                {{--bfname: {--}}
+                    {{--required: true,--}}
+                    {{--minlength: 3--}}
+
+                {{--}--}}
+
+            {{--},--}}
+            {{--messages:{--}}
+                {{--efname:{--}}
+                    {{--required:"father name is required"--}}
+                {{--}--}}
+            {{--}--}}
+        {{--});--}}
+    {{--</script>--}}
     <script>
-        $('#defaultForm').validate({
-            rules: {
-                efname: {
-                    required: true,
-                    minlength: 3
-                },
-                bfname: {
-                    required: true,
-                    minlength: 3
 
-                }
 
-            },
-            messages:{
-                efname:{
-                    required:"father name is required"
-                }
+        $('#mliveHa').on('click',function () {
+
+            $('#myears').prop('disabled',false)
+
+        });
+        $('#mliveNa').on('click',function () {
+
+            $('#myears').prop('disabled',true)
+
+        });
+        $('#fliveHa').on('click',function () {
+
+            $('#fyears').prop('disabled',false)
+
+        });
+        $('#fliveNa').on('click',function () {
+
+            $('#fyears').prop('disabled',true)
+
+        });
+
+        var x = 0;
+        $('#addButton').on('click', function (e) {
+            //e.preventDefault();
+
+            var max_fields = 30;
+            if (x < max_fields) {
+                x++;
+                $('#append').append('<div class="row">\n' +
+                    '            <div class="col-sm-12">\n' +
+                    '                <div class="form-group">\n' +
+                    '                    <div class="col-sm-3  col-sm-offset-1 extra-margin">\n' +
+                    '                        <input type="text" name="warishname[]" id="wname" class="form-control"/>\n' +
+                    '                    </div>\n' +
+                    '                    <div class="col-sm-3 extra-margin">\n' +
+                    '                        <input type="text" name="warishrel[]" id="wrel" class="form-control"/>\n' +
+                    '                    </div>\n' +
+                    '                    <div class="col-sm-3 extra-margin">\n' +
+                    '                        <input type="text" name="warishage[]" minlength="0" maxlength="" id="wage" placeholder="ইংরেজিতে"\n' +
+                    '                               class="form-control" />\n' +
+                    '                    </div>\n' +
+                    '                    <div class="col-sm-2 extra-margin">\n' +
+                    '                        <input type="button" id="minusButton" value="-"  class=" btn btn-danger"/>\n' +
+                    '                    </div>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '        </div>');
+
             }
         });
-    </script>
-    <script>/*
-        $(document).on('click', '#submit_button', function (e) {
 
-            alert('ধন্যবাদ !! আপনার আবেদনটি গ্রহন করা হয়েছে');
-        });*/
+        $(document).on("click", "#minusButton", function (e) {
+            e.preventDefault();
+            $(this).parent('div').parent().remove();
+            x--;
+        });
     </script>
 @endsection

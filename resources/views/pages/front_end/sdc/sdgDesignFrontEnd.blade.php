@@ -14,16 +14,19 @@
         .mt{
             margin-top: 3%;
         }
+        .dropdown-menu>li>a{
+            color: black !important;
+        }
     </style>
     <div class="panel panel-default mb-5">
         <div class="panel-body" >
             <div class="row" style="margin-bottom:10px;margin-top:10px;">
                 <div class="col-sm-2 mt" >
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
-                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১
+                                <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcDoridroPoribar')}}">দরিদ্র পরিবারের তালিকা</a></li>
@@ -36,11 +39,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ২
+                                <b>এসডিজি ২</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcOldVataGrohonkari')}}">বয়স্ক ভাতা গ্রহণকারীর তালিকা</a></li>
@@ -55,11 +58,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৩
+                                <b>এসডিজি ৩</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdc0To5AgeNoBirthCerShishu')}}">০ থেকে ৫ বয়সী জন্ম নিবন্ধনহীন শিশুর তালিকা</a></li>
@@ -72,11 +75,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৪
+                                <b>এসডিজি ৪</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcBidhobaVataGrohon')}}">বিধবার ভাতা গ্রহণকারীর তালিকা</a></li>
@@ -89,11 +92,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৫
+                                <b>এসডিজি ৫</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcBiddutGrohon')}}">বিদ্যুৎ সুবিধা গ্রহণকারী পরিবারের তালিকা</a></li>
@@ -106,11 +109,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৬
+                                <b>এসডিজি ৬</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdc15To29EduBekar')}}">১৫ থেকে ২৯ বছর বয়সী প্রশিক্ষণ প্রাপ্ত শিক্ষিত বেকার তালিকা</a></li>
@@ -123,11 +126,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt" >
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৭
+                                <b>এসডিজি ৭</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcNirapodPani')}}">নিরাপদ পানি পান করা পরিবারের তালিকা</a></li>
@@ -140,11 +143,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৮
+                                <b>এসডিজি ৮</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcInternetHa')}}">ইন্টারনেট সুবিধা পাওয়া পরিবারের তালিকা</a></li>
@@ -157,11 +160,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ৯
+                                <b>এসডিজি ৯</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcSanitationHa')}}">স্বাস্থ্য সম্মত স্যানিটেশন ব্যবহার করা পরিবারের তালিকা</a></li>
@@ -174,11 +177,11 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
                             <li class="dropdown ">
                                 <img data-hover="dropdown" data-delay="100" data-close-others="false"  class="btn dot dropdown-toggle" data-toggle="dropdown" src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১০
+                                <b>এসডিজি ১০</b>
                                 <ul class="dropdown-menu">
                                     <li class="divider"></li>
                                     <li><a href="{{route('sdcPrithokSanitationHa')}}">পৃথক স্যানিটেশন ব্যবহার করা পরিবারের তালিকা</a></li>
@@ -193,91 +196,91 @@
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcMashikAy')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১১
+                            <a href="{{route('sdcMashikAy')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১১</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcVumihin')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১২
+                            <a href="{{route('sdcVumihin')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১২</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcNariKormojibi')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৩
+                            <a href="{{route('sdcNariKormojibi')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৩</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdc14To18Nari')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৪
+                            <a href="{{route('sdc14To18Nari')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৪</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcPeshajibi')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৫
+                            <a href="{{route('sdcPeshajibi')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৫</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcEducation')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৬
+                            <a href="{{route('sdcEducation')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৬</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcFreelancer')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৭
+                            <a href="{{route('sdcFreelancer')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৭</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcProbashi')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৮
+                            <a href="{{route('sdcProbashi')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৮</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcBloodGroup')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ১৯
+                            <a href="{{route('sdcBloodGroup')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ১৯</b>
                             </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-2 mt">
-                    <div class="navbar-collapse collapse" id="menubar" >
+                    <div class=" " id="menubar" >
                         <ul class="nav navbar-nav nav" >
-                            <a href="{{route('sdcNirokkhor15To45')}}"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
-                                এসডিজি ২০
+                            <a href="{{route('sdcNirokkhor15To45')}}" class="without_drop"><img  class="btn dot"src="{{url('images/sdg/CRT20190507164451OL.png')}}" alt="">
+                                <b>এসডিজি ২০</b>
                             </a>
                         </ul>
                     </div>

@@ -88,8 +88,8 @@
 
 
                     {{--<li class="dropdown ">--}}
-                        {{--<a href="{{route('frontendRegistration')}}"  data-delay="100" data-close-others="false" style="color: white"> &nbsp;রেজিস্ট্রেশন ফরম--}}
-                        {{--</a>--}}
+                    {{--<a href="{{route('frontendRegistration')}}"  data-delay="100" data-close-others="false" style="color: white"> &nbsp;রেজিস্ট্রেশন ফরম--}}
+                    {{--</a>--}}
                     {{--</li>--}}
 
                     <li class="dropdown ">
@@ -203,7 +203,7 @@
                 </div>
                 <div class="site-name-wrapper">
                     <span id="sitename">
-                        <a href="#">৩ নং রুদাঘরা ইউন‌িয়ন পর‌িষদ</a>
+                        <a href="#">৩ নং রুদাঘরা ইউনিয়ন পরিষদ</a>
                     </span>
                 </div>
             </div>
@@ -272,3 +272,4 @@
         window.open(url,'_blank')
     })
 </script>
+

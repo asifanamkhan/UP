@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\WarishGonTalika;
 use App\WarishSonodAbedon;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -38,8 +39,81 @@ class WarishSonodAbedonController extends Controller
      */
     public function store(Request $request)
     {
-        WarishSonodAbedon::create($request->all());
-        return view('pages.front_end.abedon_potro.warish_sonod_abedon');
+        //WarishSonodAbedon::create($request->all());
+        $token = time().mt_rand(100, 999);
+        $warish =  new WarishSonodAbedon();
+
+        $warish->delivery_type = $request->delivery_type ;
+        $warish->nationid = $request->nationid ;
+        $warish->bcno = $request->bcno ;
+        $warish->pno = $request->pno ;
+        $warish->dofb = $request->dofb ;
+        $warish->ename = $request->ename ;
+        $warish->bname = $request->bname ;
+        $warish->gender = $request->gender ;
+        $warish->mstatus = $request->mstatus ;
+        $warish->eWname = $request->eWname ;
+        $warish->bWname = $request->bWname ;
+        $warish->eHname = $request->eHname ;
+        $warish->bHname = $request->bHname ;
+        $warish->efname = $request->efname ;
+        $warish->bfname = $request->bfname ;
+        $warish->emname = $request->emname ;
+        $warish->bmane = $request->bmane ;
+        $warish->flive = $request->flive ;
+        $warish->fyears = $request->fyears ;
+        $warish->mlive = $request->mlive ;
+        $warish->myears = $request->myears ;
+        $warish->ocupt = $request->ocupt ;
+        $warish->bashinda = $request->bashinda ;
+        $warish->p_gram = $request->p_gram ;
+        $warish->p_rbs = $request->p_rbs ;
+        $warish->p_wordno = $request->p_wordno ;
+        $warish->p_dis = $request->p_dis ;
+        $warish->p_thana = $request->p_thana ;
+        $warish->p_postof = $request->p_postof ;
+        $warish->pb_gram = $request->pb_gram ;
+        $warish->pb_rbs = $request->pb_rbs ;
+        $warish->pb_wordno = $request->pb_wordno ;
+        $warish->pb_dis = $request->pb_dis ;
+        $warish->pb_thana = $request->pb_thana ;
+        $warish->pb_postof = $request->pb_postof ;
+        $warish->per_gram = $request->per_gram ;
+        $warish->per_rbs = $request->per_rbs ;
+        $warish->per_wordno = $request->per_wordno ;
+        $warish->per_dis = $request->per_dis ;
+        $warish->per_thana = $request->per_thana ;
+        $warish->per_postof = $request->per_postof ;
+        $warish->perb_gram = $request->perb_gram ;
+        $warish->perb_rbs = $request->perb_rbs ;
+        $warish->perb_wordno = $request->perb_wordno ;
+        $warish->perb_dis = $request->perb_dis ;
+        $warish->perb_thana = $request->perb_thana ;
+        $warish->perb_postof = $request->perb_postof ;
+        $warish->english_applicant_name = $request->english_applicant_name ;
+        $warish->bangla_applicant_name = $request->bangla_applicant_name ;
+        $warish->english_applicant_father_name = $request->english_applicant_father_name ;
+        $warish->bangla_applicant_father_name = $request->bangla_applicant_father_name ;
+        $warish->mob = $request->mob ;
+        $warish->email = $request->email ;
+        $warish->token = $token ;
+
+        $warish->save();
+
+
+        for ($i=0; $i < count($request->warishname) ; $i++) {
+            $warishGonTalika = new WarishGonTalika();
+
+            $warishGonTalika->warishname = $request->warishname[$i];
+            $warishGonTalika->warishrel = $request->warishrel[$i];
+            $warishGonTalika->warishage = $request->warishage[$i];
+            $warishGonTalika->token = $token;
+
+            $warishGonTalika->save();
+
+        }
+
+        return back()->with('success','Information added successfully');
     }
 
     /**
